@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -9,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        lg: '1200px',
+        xl: '1200px',
         md: '800px',
         sm: '360px',
       },
@@ -17,16 +18,19 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
-    colors: {
-      'tokamak-blue': {
-        DEFAULT: '#0070ED',
-        dark: '#0057E6',
+      colors: {
+        'tokamak-blue': {
+          DEFAULT: '#0070ED',
+          dark: '#0057E6',
+        },
+        'trh-red': '#FF0420',
+        'trh-green': '#06D863',
+        'text-negative': '#FD3D51',
+        'text-warning': '#FF7E12',
       },
-      'trh-red': '#FF0420',
-      'trh-green': '#06D863',
-      'text-negative': '#FD3D51',
-      'text-warning': '#FF7E12',
+    },
+    fontFamily: {
+      sans: ['Proxima Nova', ...fontFamily.sans],
     },
   },
   plugins: [],

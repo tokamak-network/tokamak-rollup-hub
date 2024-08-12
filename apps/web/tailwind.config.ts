@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        '2xl': '1920px',
         xl: '1200px',
         md: '800px',
         sm: '360px',
@@ -22,6 +23,10 @@ const config: Config = {
         'tokamak-blue': {
           DEFAULT: '#0070ED',
           dark: '#0057E6',
+        },
+        'trh-gray': {
+          light: '#D8DFE9',
+          DEFAULT: '#616D7E',
         },
         'trh-red': '#FF0420',
         'trh-green': '#06D863',

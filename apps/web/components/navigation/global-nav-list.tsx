@@ -15,7 +15,7 @@ export function NavList({ infos }: { infos: NavInfo[] }) {
   const pathname = usePathname();
 
   return (
-    <ul className="hidden w-[311px] gap-[45px] md:flex md:gap-[45px] xl:gap-[60px]">
+    <ul className="hidden w-[312px] gap-[45px] md:flex md:justify-between md:gap-[45px] xl:gap-[60px]">
       {infos.map((nav, index) => {
         const isActive = pathname.includes(nav.href);
         return (

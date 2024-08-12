@@ -12,14 +12,14 @@ export default function GlobalNav() {
   ];
 
   return (
-    <div className="flex h-[78px] w-full items-center justify-between px-[20px] md:px-[30px]">
-      <div className="flex h-auto w-[213px]">
+    <div className="relative flex h-[78px] min-h-[78px] w-full items-center justify-between px-[20px] md:px-[30px]">
+      <div className="flex">
         <Link href={'/'} className="flex items-center justify-center gap-[10px]">
           <Image src={Symbol} alt="tokamak rollup hub symbol" />
           <Image src={TokamakRollupHub} alt="Tokamak Rollup Hub" className="hidden xl:inline" />
         </Link>
       </div>
-      <nav>
+      <nav className="absolute left-[50%] ml-[-156px]">
         <NavList infos={infos} />
       </nav>
       <div>

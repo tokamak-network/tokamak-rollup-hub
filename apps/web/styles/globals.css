@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -25,5 +19,14 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply flex items-center justify-center gap-[6px] rounded-full bg-tokamak-blue px-[15px] py-[12px] text-sm text-white transition-colors hover:bg-tokamak-blue-dark;
+  }
+  .secondary-btn {
+    @apply flex items-center justify-center gap-[6px] rounded-full bg-black px-[15px] py-[12px] text-sm text-white ring-1 ring-[#1D2838] transition-colors hover:bg-opacity-25 hover:ring-[#ADB3BA];
   }
 }

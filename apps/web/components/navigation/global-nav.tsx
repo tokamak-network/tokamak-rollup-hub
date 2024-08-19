@@ -23,7 +23,11 @@ export default function GlobalNav() {
         <NavList infos={infos} />
       </nav>
       <div>
-        <div className="h-17 w-[115px] bg-green-300">Connect Wallet</div>
+        <Link href="/connect-wallet">
+          <button className="rounded-full px-6 py-2 text-sm font-normal ring-1 ring-[#1D2838] transition-colors hover:ring-tokamak-blue">
+            Connect Wallet
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export default function WalletList() {
       <div className="mt-5 flex flex-col gap-2">
         <div className="rounded-lg bg-[#1F2128] p-[15px] ring-1 ring-[#313442] transition-colors hover:cursor-pointer hover:ring-tokamak-blue">
           <div className="flex items-center gap-4">
-            <Image src={MetamaskIcon} />
+            <Image src={MetamaskIcon} alt="metamask" />
             <div className="flex flex-col leading-[18px]">
               <h3 className="font-semibold">Connect Wallet</h3>
               <p className="text-sm text-[#8B8B93]">Easy-to-use browser extension.</p>

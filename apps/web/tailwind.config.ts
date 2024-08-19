@@ -27,6 +27,7 @@ const config: Config = {
         'trh-gray': {
           light: '#D8DFE9',
           DEFAULT: '#616D7E',
+          'close-modal': '#64646F',
         },
         'trh-red': '#FF0420',
         'trh-green': '#06D863',

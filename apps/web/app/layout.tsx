@@ -10,8 +10,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  auth,
 }: Readonly<{
   children: React.ReactNode;
+  auth: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -20,6 +22,7 @@ export default function RootLayout({
           <GlobalNav />
           <div className="flex max-h-full max-w-full flex-grow flex-row overflow-auto">
             {children}
+            {auth}
           </div>
           <Footer />
         </div>

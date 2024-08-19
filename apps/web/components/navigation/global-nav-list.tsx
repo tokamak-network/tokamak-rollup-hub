@@ -27,7 +27,7 @@ export function NavList({ infos }: { infos: NavInfo[] }) {
               'text-tokamak-blue': isActive,
             })}
           >
-            <li className="flex items-center justify-center gap-[6px] text-center font-semibold">
+            <li className="flex items-center justify-center gap-[6px] text-center font-semibold transition-colors">
               {nav.name}
               {nav.dropDown ? <Image src={ArrowDown} alt={nav.name} /> : null}
             </li>

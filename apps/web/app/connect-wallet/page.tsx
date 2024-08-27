@@ -1,4 +1,4 @@
-import WalletList from '@/components/wallets/wallet-list';
+import WalletList from './wallet-list';
 
 export default function ConnectWallet() {
   return (

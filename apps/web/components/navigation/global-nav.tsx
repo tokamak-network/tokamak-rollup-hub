@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Symbol from '../../public/symbol-nav.svg';
 import TokamakRollupHub from '../../public/tokamakRollupHub-nav.svg';
 import { NavInfo, NavList } from './global-nav-list';
+import { BurgerBtn } from '../buttons/burger-btn';
+import { WalletBoard } from '@/app/connect-wallet/wallet-board';
 
 export default function GlobalNav() {
   const infos: NavInfo[] = [
@@ -22,12 +24,11 @@ export default function GlobalNav() {
       <nav className="absolute left-[50%] ml-[-156px]">
         <NavList infos={infos} />
       </nav>
-      <div>
-        <Link href="/connect-wallet">
-          <button className="rounded-full px-6 py-2 text-sm font-normal ring-1 ring-[#1D2838] transition-colors hover:ring-tokamak-blue">
-            Connect Wallet
-          </button>
-        </Link>
+      <div className="flex gap-4">
+        <WalletBoard />
+        <div className="md:hidden">
+          <BurgerBtn />
+        </div>
       </div>
     </div>
   );

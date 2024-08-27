@@ -1,4 +1,4 @@
-import { type Chain } from 'viem'
+import { type Chain } from 'viem';
 
 export const thanosSepolia = {
   id: 111551119090,
@@ -10,4 +10,4 @@ export const thanosSepolia = {
   blockExplorers: {
     default: { name: 'Blockscout', url: 'https://explorer.thanos-sepolia.tokamak.network' },
   },
-} as const satisfies Chain
+} as const satisfies Chain;

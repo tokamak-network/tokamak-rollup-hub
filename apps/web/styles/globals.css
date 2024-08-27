@@ -30,6 +30,6 @@ body {
     @apply flex items-center justify-center gap-[6px] rounded-full bg-black px-[15px] py-[12px] text-sm text-white ring-1 ring-[#1D2838] transition-colors hover:bg-opacity-25 hover:ring-[#ADB3BA];
   }
   .wallet-btn {
-    @apply w-[145px] text-center rounded-full px-4 py-[10px] text-sm leading-[17px] font-normal ring-2 ring-[#1D2838] transition-colors hover:ring-tokamak-blue-dark
+    @apply w-[145px] rounded-full px-4 py-[10px] text-center text-sm font-normal leading-[17px] ring-2 ring-[#1D2838] transition-colors hover:ring-tokamak-blue-dark;
   }
 }

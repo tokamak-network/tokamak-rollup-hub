@@ -29,11 +29,11 @@ export function WalletArea({ address }: WalletAreaProps) {
   const { connectors, disconnect } = useDisconnect();
 
   return (
-    <details className="dropdown">
-      <summary className="wallet-btn list-none hover:cursor-pointer">
+    <div className="dropdown dropdown-hover">
+      <div tabIndex={0} role='button' className="wallet-btn list-none hover:cursor-pointer">
         {trimAddress(address)}
-      </summary>
-      <ul className="dropdown-content z-50 mt-3 rounded-lg bg-black px-2 py-2 ring-2 ring-[#1D2838] *:transition-colors">
+      </div>
+      <ul tabIndex={0} className="dropdown-content z-50 mt-1.5 rounded-lg bg-black px-2 py-2 ring-2 ring-[#1D2838] *:transition-colors">
         <li>
           <button
             onClick={() => {
@@ -73,6 +73,6 @@ export function WalletArea({ address }: WalletAreaProps) {
           })}
         </li>
       </ul>
-    </details>
+    </div>
   );
 }

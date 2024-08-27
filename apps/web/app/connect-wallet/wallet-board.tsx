@@ -31,9 +31,7 @@ export function WalletBoard() {
 
   return (
     <div className="relative flex items-center gap-4">
-      {isConnected ? (
-        <SwitchNetwork isThanos={isThanos} />
-      ) : null}
+      {isConnected ? <SwitchNetwork isThanos={isThanos} /> : null}
       {isConnected && !isThanos ? <ChangeNetworkToThanos /> : null}
       {isConnected ? <WalletArea address={address} /> : <ConnectWalletBtn />}
     </div>

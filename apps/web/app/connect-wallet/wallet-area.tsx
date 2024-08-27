@@ -30,10 +30,13 @@ export function WalletArea({ address }: WalletAreaProps) {
 
   return (
     <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role='button' className="wallet-btn list-none hover:cursor-pointer">
+      <div tabIndex={0} role="button" className="wallet-btn list-none hover:cursor-pointer">
         {trimAddress(address)}
       </div>
-      <ul tabIndex={0} className="dropdown-content z-50 mt-1.5 rounded-lg bg-black px-2 py-2 ring-2 ring-[#1D2838] *:transition-colors">
+      <ul
+        tabIndex={0}
+        className="dropdown-content z-50 mt-1.5 rounded-lg bg-black px-2 py-2 ring-2 ring-[#1D2838] *:transition-colors"
+      >
         <li>
           <button
             onClick={() => {

@@ -1,5 +1,5 @@
+import WalletList from '@/app/connect-wallet/wallet-list';
 import Modal from '@/components/modal';
-import WalletList from '@/components/wallets/wallet-list';
 
 export default function ModalConnectWallet() {
   return (

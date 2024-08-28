@@ -19,6 +19,9 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      backgroundColor: {
+        "nav-blue": "rgba(49, 131, 255, 0.25)",
+      },
       colors: {
         'tokamak-blue': {
           DEFAULT: '#0070ED',

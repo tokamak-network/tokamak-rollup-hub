@@ -2,19 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Symbol from '../../public/symbol-nav.svg';
 import TokamakRollupHub from '../../public/tokamakRollupHub-nav.svg';
-import { NavInfo, NavList } from './global-nav-list';
+import { NavMenu } from './global-nav-menu';
 import { BurgerBtn } from '../buttons/burger-btn';
 import { WalletBoard } from '@/app/connect-wallet/wallet-board';
 
 export default function GlobalNav() {
-  const infos: NavInfo[] = [
-    { href: '/deploy', name: 'Deploy', dropDown: false },
-    { href: '/discover', name: 'Discover', dropDown: true },
-    { href: '/more', name: 'More', dropDown: true },
-  ];
-
   return (
-    <div className="relative flex h-[78px] min-h-[78px] w-full items-center justify-between px-[20px] md:px-[30px]">
+    <div className="relative flex h-[78px] min-h-[78px] w-full items-center justify-between px-[20px] md:px-[30px] overflow-x-clip overflow-y-visible">
+      <div className="absolute left-[calc(50%-500px)] rounded-[100%] -top-[87px] min-h-[174px] min-w-[1000px] bg-nav-blue blur-3xl"></div>
       <div className="flex">
         <Link href={'/'} className="flex items-center justify-center gap-[10px]">
           <Image src={Symbol} alt="tokamak rollup hub symbol" />
@@ -22,7 +17,7 @@ export default function GlobalNav() {
         </Link>
       </div>
       <nav className="absolute left-[50%] ml-[-156px]">
-        <NavList infos={infos} />
+        <NavMenu />
       </nav>
       <div className="flex gap-4">
         <WalletBoard />

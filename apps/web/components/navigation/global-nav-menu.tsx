@@ -32,7 +32,7 @@ const NormalItem = ({
           'font-semibold': !isSub,
           'text-[13px] font-medium': isSub,
         },
-        'transition-colors group',
+        'group transition-colors',
       )}
     >
       <Link href={href}>{children}</Link>
@@ -40,8 +40,16 @@ const NormalItem = ({
   );
 };
 
-const DropDownContainer = ({ name, currentPath, children }: { name: string; currentPath: string; children: React.ReactNode }) => {
-  const isSelected = currentPath.includes(name.toLowerCase())
+const DropDownContainer = ({
+  name,
+  currentPath,
+  children,
+}: {
+  name: string;
+  currentPath: string;
+  children: React.ReactNode;
+}) => {
+  const isSelected = currentPath.includes(name.toLowerCase());
   return (
     <div className="dropdown dropdown-hover">
       <div
@@ -52,15 +60,19 @@ const DropDownContainer = ({ name, currentPath, children }: { name: string; curr
             'hover:text-tokamak-blue': !isSelected,
             'text-tokamak-blue': isSelected,
           },
-          "flex items-center justify-center gap-[6px] text-center font-semibold group *:transition"
+          'group flex items-center justify-center gap-[6px] text-center font-semibold *:transition',
         )}
       >
         {name}
-        <Image src={ArrowDown} alt="arrow-down" className='group-hover:rotate-180 group-focus:rotate-180' />
+        <Image
+          src={ArrowDown}
+          alt="arrow-down"
+          className="group-hover:rotate-180 group-focus:rotate-180"
+        />
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content rounded-lg bg-black ring-2 ring-[#1D2838] p-[18px] w-[121px] gap-[15px] mt-1"
+        className="menu dropdown-content mt-1 w-[121px] gap-[15px] rounded-lg bg-black p-[18px] ring-2 ring-[#1D2838]"
       >
         {children}
       </ul>
@@ -104,7 +116,7 @@ export function NavMenu() {
     },
   ];
 
-  const isSelected = (currentPath: string): boolean => pathname.includes(currentPath)
+  const isSelected = (currentPath: string): boolean => pathname.includes(currentPath);
 
   return (
     <div className="hidden w-[312px] gap-[45px] md:flex md:justify-between md:gap-[45px] xl:gap-[60px]">
@@ -120,15 +132,44 @@ export function NavMenu() {
             <DropDownContainer name={item.name} currentPath={pathname} key={index}>
               {item.subItems.map((subItem, index) => {
                 return (
-                  <NormalItem isSub={true} href={subItem.href as string} currentPath={pathname} key={index}>
-                    {subItem.name === 'Tokamak OP' ? <p>Tokamak <span className={clsx({
-                      'text-tokamak-blue': pathname.includes(subItem.href as string),
-                      'text-trh-red': !pathname.includes(subItem.href as string),
-                    }, 'group-hover:text-tokamak-blue')}>OP</span></p> : null}
-                    {subItem.name === 'Tokamak ZK+' ? <p>Tokamak <span className={clsx({
-                      'text-tokamak-blue': pathname.includes(subItem.href as string),
-                      'text-trh-green': !pathname.includes(subItem.href as string),
-                    }, 'group-hover:text-tokamak-blue')}>ZK+</span></p> : null}
+                  <NormalItem
+                    isSub={true}
+                    href={subItem.href as string}
+                    currentPath={pathname}
+                    key={index}
+                  >
+                    {subItem.name === 'Tokamak OP' ? (
+                      <p>
+                        Tokamak{' '}
+                        <span
+                          className={clsx(
+                            {
+                              'text-tokamak-blue': pathname.includes(subItem.href as string),
+                              'text-trh-red': !pathname.includes(subItem.href as string),
+                            },
+                            'group-hover:text-tokamak-blue',
+                          )}
+                        >
+                          OP
+                        </span>
+                      </p>
+                    ) : null}
+                    {subItem.name === 'Tokamak ZK+' ? (
+                      <p>
+                        Tokamak{' '}
+                        <span
+                          className={clsx(
+                            {
+                              'text-tokamak-blue': pathname.includes(subItem.href as string),
+                              'text-trh-green': !pathname.includes(subItem.href as string),
+                            },
+                            'group-hover:text-tokamak-blue',
+                          )}
+                        >
+                          ZK+
+                        </span>
+                      </p>
+                    ) : null}
                     {!subItem.name.includes('Tokamak') ? subItem.name : null}
                   </NormalItem>
                 );

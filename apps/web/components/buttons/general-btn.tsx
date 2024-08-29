@@ -3,13 +3,14 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 interface GeneralButtonProps {
   text: string;
   style: 'primary' | 'secondary';
-  size?: 'default' | 'landingPage';
+  size?: 'default' | 'long' | 'landingPage';
   arrow?: 'left' | 'right';
 }
 
 export default function GeneralBtn({ text, style, size = 'default', arrow }: GeneralButtonProps) {
   const sizeVariants: { [key: string]: string } = {
     default: '',
+    long: 'w-[180px]',
     landingPage: 'w-[150px] md:w-[180px]',
   };
 

@@ -104,6 +104,8 @@ export function NavMenu() {
     },
   ];
 
+  const isSelected = (currentPath: string): boolean => pathname.includes(currentPath)
+
   return (
     <div className="hidden w-[312px] gap-[45px] md:flex md:justify-between md:gap-[45px] xl:gap-[60px]">
       {itemInfos.map((item, index) => {
@@ -119,8 +121,14 @@ export function NavMenu() {
               {item.subItems.map((subItem, index) => {
                 return (
                   <NormalItem isSub={true} href={subItem.href as string} currentPath={pathname} key={index}>
-                    {subItem.name === 'Tokamak OP' ? <p>Tokamak <span className='text-trh-red group-hover:text-tokamak-blue'>OP</span></p> : null}
-                    {subItem.name === 'Tokamak ZK+' ? <p>Tokamak <span className='text-trh-green group-hover:text-tokamak-blue'>ZK+</span></p> : null}
+                    {subItem.name === 'Tokamak OP' ? <p>Tokamak <span className={clsx({
+                      'text-tokamak-blue': pathname.includes(subItem.href as string),
+                      'text-trh-red': !pathname.includes(subItem.href as string),
+                    }, 'group-hover:text-tokamak-blue')}>OP</span></p> : null}
+                    {subItem.name === 'Tokamak ZK+' ? <p>Tokamak <span className={clsx({
+                      'text-tokamak-blue': pathname.includes(subItem.href as string),
+                      'text-trh-green': !pathname.includes(subItem.href as string),
+                    }, 'group-hover:text-tokamak-blue')}>ZK+</span></p> : null}
                     {!subItem.name.includes('Tokamak') ? subItem.name : null}
                   </NormalItem>
                 );

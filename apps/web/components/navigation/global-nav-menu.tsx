@@ -116,8 +116,6 @@ export function NavMenu() {
     },
   ];
 
-  const isSelected = (currentPath: string): boolean => pathname.includes(currentPath);
-
   return (
     <div className="hidden w-[312px] gap-[45px] md:flex md:justify-between md:gap-[45px] xl:gap-[60px]">
       {itemInfos.map((item, index) => {

@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Web3Providers>
-          <div className="flex h-screen w-screen flex-col">
+          <div>
             <GlobalNav />
-            <div className="flex max-h-full max-w-full flex-grow flex-row overflow-auto">
+            <div className="flex-1 overflow-auto">
               {children}
               {wallet}
             </div>

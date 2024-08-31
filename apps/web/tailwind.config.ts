@@ -18,6 +18,8 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-card':
+          'linear-gradient(112deg, rgba(29, 40, 56, 0.50) 0%, rgba(29, 40, 56, 0.35) 100%)',
       },
       backgroundColor: {
         'nav-blue': 'rgba(49, 131, 255, 0.25)',

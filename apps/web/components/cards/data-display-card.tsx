@@ -18,9 +18,9 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
       className={clsx(
         {
           'hover:ring-tokamak-blue': !isDisabled,
-          'opacity-60': isDisabled,
+          'cursor-not-allowed opacity-60': isDisabled,
         },
-        'mb-[25px] flex flex-col items-center rounded-2xl bg-[#1D283880] p-[20px] text-center ring-2 ring-transparent last:mb-0 md:mb-0 md:w-1/3',
+        'mb-[25px] flex flex-col items-center rounded-2xl bg-gradient-card p-[20px] text-center ring-2 ring-transparent last:mb-0 md:mb-0 md:w-1/3',
       )}
       {...props}
     >

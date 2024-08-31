@@ -2,6 +2,9 @@ import { DevResourceCard } from '@/components/cards/dev-resource-card';
 import { HorisonStack, VetrticalStack } from './shape-stack-animation';
 import { deployEnvironment, opDevResource, zkDevResource } from '@/lib/constants';
 import { DataDisplayCard } from '@/components/cards/data-display-card';
+import Link from 'next/link';
+import { FormInput } from '@/components/inputs/form-input';
+import { FormDevnet } from './(devnet)/form-devnet';
 
 export default function Deploy() {
   return (
@@ -21,7 +24,7 @@ export default function Deploy() {
           <DevResourceCard devResourceProps={zkDevResource} />
         </div>
       </div>
-      <div className="mb-[39px] mt-[120px]">
+      <div className="mt-[120px] w-full">
         <h1 className="mb-[18px] text-center text-4xl font-semibold">Environment</h1>
         <p className="text-center text-[18px] text-trh-gray">
           Choose an environment to create your own rollups.{' '}
@@ -33,7 +36,7 @@ export default function Deploy() {
           Thanos Sepolia testnet and mainnet are supported.
         </p>
       </div>
-      <div className="md:flex md:gap-[25px]">
+      <div className="mt-[39px] md:flex md:gap-[25px]">
         {deployEnvironment.map(({ title, description, isDisabled }, index) => {
           return (
             <DataDisplayCard
@@ -44,6 +47,21 @@ export default function Deploy() {
             />
           );
         })}
+      </div>
+      <div className="mt-[120px]">
+        <h1 className="mb-[18px] text-center text-4xl font-semibold">Your Rollup Details</h1>
+        <div className="text-center text-[18px] text-trh-gray">
+          <p>Enter the information required for your own rollup.</p>
+          <p>
+            If you're looking for more information on each of these items, check out these{' '}
+            <Link href={'#'}>
+              <span className="text-tokamak-blue underline underline-offset-2">documents.</span>
+            </Link>
+          </p>
+        </div>
+      </div>
+      <div className="mt-[39px] w-full pb-[60px]">
+        <FormDevnet />
       </div>
     </div>
   );

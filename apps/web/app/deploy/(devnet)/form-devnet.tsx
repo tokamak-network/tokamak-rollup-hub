@@ -1,10 +1,14 @@
-import GeneralBtn from '@/components/buttons/general-btn';
+'use client';
+import { GeneralBtn } from '@/components/buttons/general-btn';
 import { FormInput } from '@/components/inputs/form-input';
 import Link from 'next/link';
+import { handleForm } from './actions';
+import { useFormState } from 'react-dom';
 
 export function FormDevnet() {
+  const [state, dispatch] = useFormState(handleForm, null);
   return (
-    <form className="flex flex-col items-center">
+    <form action={dispatch} className="flex flex-col items-center">
       <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card p-5 md:flex-row">
         <div className="w-full">
           <FormInput
@@ -13,6 +17,7 @@ export function FormDevnet() {
             name="rollup-name"
             placeholder="Sample Name"
             required={true}
+            errors={state?.fieldErrors.rollupName}
           />
         </div>
         <div className="w-full">
@@ -22,6 +27,7 @@ export function FormDevnet() {
             name="chain-id"
             placeholder="ex. 111551119090"
             required={true}
+            errors={state?.fieldErrors.chainId}
           />
           <p className="mt-[9px] text-[13px] text-trh-gray">
             Please enter the value you registered in{' '}
@@ -54,6 +60,7 @@ export function FormDevnet() {
                 name="admin-address"
                 placeholder="Input your admin address"
                 required={true}
+                errors={state?.fieldErrors.adminAddress}
               />
             </div>
             <div className="w-full">
@@ -63,6 +70,7 @@ export function FormDevnet() {
                 name="sequencer-address"
                 placeholder="Input your sequencer address"
                 required={true}
+                errors={state?.fieldErrors.sequencerAddress}
               />
             </div>
           </div>
@@ -74,6 +82,7 @@ export function FormDevnet() {
                 name="batcher-address"
                 placeholder="Input your batcher address"
                 required={true}
+                errors={state?.fieldErrors.batcherAddress}
               />
             </div>
             <div className="w-full">
@@ -83,12 +92,13 @@ export function FormDevnet() {
                 name="proposer-address"
                 placeholder="Input your proposer address"
                 required={true}
+                errors={state?.fieldErrors.proposerAddress}
               />
             </div>
           </div>
         </div>
       </div>
-      <GeneralBtn text="Deploy Rollup" style="primary" size="long" />
+      <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />
     </form>
   );
 }

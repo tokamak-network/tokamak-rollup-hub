@@ -1,21 +1,23 @@
+'use client'
 import Link from 'next/link';
-import GeneralBtn from '../buttons/general-btn';
+import { GeneralBtn } from '../buttons/general-btn';
+import { Dispatch, SetStateAction } from 'react';
 
 export interface DevResourceProps {
   type: 'op' | 'zk+';
-  isActive: boolean;
+  btnText: string;
+  isDisabled: boolean;
   description: string;
   docsUrl: string;
+  setResource: Dispatch<SetStateAction<string>>;
   superScriptColor: 'red' | 'green';
 }
 
-export function DevResourceCard({ devResourceProps }: { devResourceProps: DevResourceProps }) {
+export function DevResourceCard({ type, btnText, isDisabled, description, docsUrl, setResource, superScriptColor }: DevResourceProps) {
   const supColorVariants: { [key: string]: string } = {
     red: 'text-trh-red',
     green: 'text-trh-green',
   };
-
-  const { type, isActive, description, docsUrl, superScriptColor } = devResourceProps || {};
 
   return (
     <div className="flex flex-col items-center">
@@ -28,7 +30,7 @@ export function DevResourceCard({ devResourceProps }: { devResourceProps: DevRes
           <Link href={docsUrl}>For additional information, check out Documentation.</Link>
         </p>
       </div>
-      <GeneralBtn text="Choose" style="primary" size="long" />
+      <GeneralBtn onClick={() => setResource(type as string)} isDisabled={isDisabled} text={btnText} styleType="primary" size="lg" />
     </div>
   );
 }

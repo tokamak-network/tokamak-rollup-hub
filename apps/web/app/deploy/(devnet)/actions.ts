@@ -1,5 +1,6 @@
 'use server';
 import { devnetTemplate } from '@/lib/constants';
+import { redirect } from 'next/navigation';
 import { isAddress } from 'viem';
 import { z } from 'zod';
 
@@ -45,6 +46,5 @@ export async function handleForm(prevState: any, formData: FormData) {
     template['l2OutputOracleProposer'] = data.proposerAddress as string
     template['l1GenesisBlockTimestamp'] = Math.floor(Date.now() / 1000).toString(16)
 
-    console.log(template)
-    // await new Promise((resolve) => setTimeout(resolve, 2000))
+    redirect(`/deploy/local?template=${encodeURIComponent(JSON.stringify(template))}`)
 }

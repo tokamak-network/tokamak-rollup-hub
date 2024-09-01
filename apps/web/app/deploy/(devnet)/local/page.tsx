@@ -4,10 +4,10 @@ import { ImageBtn } from "@/components/buttons/image-button";
 import CopyIcon from "../../../../public/icon-copy-default.svg"
 import { devnetTemplate } from "@/lib/constants"
 import JSONPretty from "react-json-pretty"
+import { useSearchParams } from "next/navigation";
 
 const downloadJson = (data: any, filename: string) => {
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
+    const blob = new Blob([data], { type: 'application/json' });
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
@@ -31,6 +31,11 @@ export default function LocalDeployPage() {
         alert('Copied to clipboard.');
     }
 
+    const searchParams = useSearchParams()
+    const template = searchParams.get('template')
+
+    console.log(template)
+
     return (
         <div className="max-w-[355px] md:max-w-[740px] xl:max-w-[1200px] xl:flex-rowitems-center xl:h-screen">
             <h1 className="text-4xl font-semibold text-center mb-[39px]">Local Deployment Guide</h1>
@@ -42,7 +47,7 @@ export default function LocalDeployPage() {
                             <p className="mb-[15px]">Please refer to this document for any prerequisite installations before deploying the rollup in your local environment.</p>
                             <p>Download the JSON file generated based on your input.  Your own rollup will be created.</p>
                         </div>
-                        <GeneralBtn text='Download File' isDisabled={false} styleType='primary' size='md' onClick={() => downloadJson(devnetTemplate, 'devnetL1-template.json')} />
+                        <GeneralBtn text='Download File' isDisabled={false} styleType='primary' size='md' onClick={() => downloadJson(template, 'devnetL1-template.json')} />
                     </div>
                     <div className="flex flex-col gap-[9px]">
                         <p className="text-[#7D899A] font-medium">First, copy the repository below to the PCs you want to deploy locally.</p>
@@ -89,7 +94,7 @@ export default function LocalDeployPage() {
                 <div className="w-full xl:w-1/2 xl:max-h-[950px] flex flex-col bg-gradient-card p-5 gap-5 rounded-2xl">
                     <h3 className="text-xl font-semibold">Rollup information</h3>
                     <div className="bg-black rounded-2xl p-4 overflow-auto">
-                        <JSONPretty style={{ fontSize: "0.8rem" }} data={devnetTemplate} theme={{
+                        <JSONPretty style={{ fontSize: "0.8rem" }} data={template} theme={{
                             'key': 'color:#92E391',
                             'string': 'color:#ABD6FC',
                             'value': 'color:#82C0FA',

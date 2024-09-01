@@ -2,7 +2,6 @@
 import { GeneralBtn } from '@/components/buttons/general-btn';
 import { ImageBtn } from '@/components/buttons/image-button';
 import CopyIcon from '../../../../public/icon-copy-default.svg';
-import { devnetTemplate } from '@/lib/constants';
 import JSONPretty from 'react-json-pretty';
 import { useSearchParams } from 'next/navigation';
 

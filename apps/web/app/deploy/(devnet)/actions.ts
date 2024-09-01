@@ -1,4 +1,5 @@
 'use server';
+import { devnetTemplate } from '@/lib/constants';
 import { isAddress } from 'viem';
 import { z } from 'zod';
 
@@ -26,5 +27,24 @@ export async function handleForm(prevState: any, formData: FormData) {
         console.log(result.error.flatten())
         return result.error.flatten()
     }
+
+    let template = devnetTemplate
+    template['l2ChainID'] = +(data.chainId as string)
+
+    template['finalSystemOwner'] = data.adminAddress as string
+    template['superchainConfigGuardian'] = data.adminAddress as string
+    template['l2OutputOracleChallenger'] = data.adminAddress as string
+    template['proxyAdminOwner'] = data.adminAddress as string
+    template['baseFeeVaultRecipient'] = data.adminAddress as string
+    template['l1FeeVaultRecipient'] = data.adminAddress as string
+    template['sequencerFeeVaultRecipient'] = data.adminAddress as string
+    template['governanceTokenOwner'] = data.adminAddress as string
+
+    template['p2pSequencerAddress'] = data.sequencerAddress as string
+    template['batchSenderAddress'] = data.batcherAddress as string
+    template['l2OutputOracleProposer'] = data.proposerAddress as string
+    template['l1GenesisBlockTimestamp'] = Math.floor(Date.now() / 1000).toString(16)
+
+    console.log(template)
     // await new Promise((resolve) => setTimeout(resolve, 2000))
 }

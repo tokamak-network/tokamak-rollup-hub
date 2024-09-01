@@ -20,13 +20,13 @@ export default function Deploy() {
           <div className="h-[200px] xl:h-[300px]">
             <VetrticalStack />
           </div>
-          <DevResourceCard type={opDevResource.type} btnText={opDevResource.btnText} isDisabled={opDevResource.isDisabled} description={opDevResource.description} docsUrl={opDevResource.docsUrl} setResource={setResource} superScriptColor={opDevResource.superScriptColor} />
+          <DevResourceCard type={opDevResource.type as 'op' | 'zk+'} btnText={opDevResource.btnText} isDisabled={opDevResource.isDisabled} description={opDevResource.description} docsUrl={opDevResource.docsUrl} setResource={setResource} superScriptColor={opDevResource.superScriptColor as 'red' | 'green'} />
         </div>
         <div className="md:w-1/2">
           <div className="h-[200px] xl:h-[300px]">
             <HorisonStack />
           </div>
-          <DevResourceCard type={zkDevResource.type} btnText={zkDevResource.btnText} isDisabled={zkDevResource.isDisabled} description={zkDevResource.description} docsUrl={zkDevResource.docsUrl} setResource={setResource} superScriptColor={zkDevResource.superScriptColor} />
+          <DevResourceCard type={zkDevResource.type as 'op' | 'zk+'} btnText={zkDevResource.btnText} isDisabled={zkDevResource.isDisabled} description={zkDevResource.description} docsUrl={zkDevResource.docsUrl} setResource={setResource} superScriptColor={zkDevResource.superScriptColor as 'red' | 'green'} />
         </div>
       </div>
       <div className={clsx({

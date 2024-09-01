@@ -8,7 +8,7 @@ interface GeneralButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   text: string;
   isDisabled: boolean;
   styleType: 'primary' | 'secondary';
-  size?: 'default' | 'lg' | '2xl' | 'landingPage';
+  size?: 'default' | 'md' | 'lg' | '2xl' | 'landingPage';
   arrow?: 'left' | 'right';
 }
 
@@ -22,6 +22,7 @@ export const GeneralBtn: React.FC<GeneralButtonProps> = ({
 }) => {
   const sizeVariants: { [key: string]: string } = {
     default: '',
+    md: 'w-[160px]',
     lg: 'w-[180px]',
     '2xl': 'w-[300px]',
     landingPage: 'w-[150px] md:w-[180px]',

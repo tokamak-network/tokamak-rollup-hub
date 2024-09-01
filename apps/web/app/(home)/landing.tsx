@@ -36,7 +36,7 @@ export default function Landing() {
         <Image
           src={VisualLanding}
           alt="visual"
-          className="bottom-0 z-10 w-[380px] md:absolute md:right-0 md:w-auto xl:top-0 2xl:static"
+          className="bottom-0 z-10 w-[332px] md:absolute md:right-0 md:w-auto xl:top-0 2xl:static"
         />
       </div>
     </div>

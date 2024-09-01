@@ -11,23 +11,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  wallet,
+  modal_wallet,
 }: Readonly<{
   children: React.ReactNode;
-  wallet: React.ReactNode;
+  modal_wallet: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>
         <Web3Providers>
+          <GlobalNav />
           <div>
-            <GlobalNav />
-            <div className="flex-1 overflow-auto">
-              {children}
-              {wallet}
-            </div>
-            <Footer />
+            {children}
+            {modal_wallet}
           </div>
+          <Footer />
         </Web3Providers>
       </body>
     </html>

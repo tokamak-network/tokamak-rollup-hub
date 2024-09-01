@@ -5,6 +5,19 @@ import CopyIcon from "../../../../public/icon-copy-default.svg"
 import { devnetTemplate } from "@/lib/constants"
 import JSONPretty from "react-json-pretty"
 
+const downloadJson = (data: any, filename: string) => {
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const href = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = href;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
+
 export default function LocalDeployPage() {
     const cloneRepoValue = 'git clone https://github.com/tokamak-network/tokamak-thanos'
     const makeBuildValue = 'make build'
@@ -29,7 +42,7 @@ export default function LocalDeployPage() {
                             <p className="mb-[15px]">Please refer to this document for any prerequisite installations before deploying the rollup in your local environment.</p>
                             <p>Download the JSON file generated based on your input.  Your own rollup will be created.</p>
                         </div>
-                        <GeneralBtn text='Download File' isDisabled={false} styleType='primary' size='md' />
+                        <GeneralBtn text='Download File' isDisabled={false} styleType='primary' size='md' onClick={() => downloadJson(devnetTemplate, 'devnetL1-template.json')} />
                     </div>
                     <div className="flex flex-col gap-[9px]">
                         <p className="text-[#7D899A] font-medium">First, copy the repository below to the PCs you want to deploy locally.</p>

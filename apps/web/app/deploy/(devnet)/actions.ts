@@ -29,7 +29,7 @@ export async function handleForm(prevState: any, formData: FormData) {
     return result.error.flatten();
   }
 
-  let template = devnetTemplate;
+  const template = devnetTemplate;
   template['l2ChainID'] = +(data.chainId as string);
 
   template['finalSystemOwner'] = data.adminAddress as string;

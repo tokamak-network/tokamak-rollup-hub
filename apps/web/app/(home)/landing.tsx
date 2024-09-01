@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import VisualLanding from '../../public/visual-landing.svg';
-import GeneralBtn from '@/components/buttons/general-btn';
+import { GeneralBtn } from '@/components/buttons/general-btn';
 import Link from 'next/link';
 
 export default function Landing() {
@@ -28,9 +28,9 @@ export default function Landing() {
           </div>
           <div className="flex gap-[15px]">
             <Link href="/deploy">
-              <GeneralBtn text="Deploy Now" style="primary" size="landingPage" arrow="right" />
+              <GeneralBtn isDisabled={false} text="Deploy Now" styleType="primary" size="landingPage" arrow="right" />
             </Link>
-            <GeneralBtn text="Documentation" style="secondary" size="landingPage" />
+            <GeneralBtn isDisabled={false} text="Documentation" styleType="secondary" size="landingPage" />
           </div>
         </div>
         <Image

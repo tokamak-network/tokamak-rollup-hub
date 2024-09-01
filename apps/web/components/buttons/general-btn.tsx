@@ -1,16 +1,29 @@
+'use client'
+import React from 'react';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
+import clsx from 'clsx';
+import { useFormStatus } from 'react-dom';
 
-interface GeneralButtonProps {
+interface GeneralButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  style: 'primary' | 'secondary';
-  size?: 'default' | 'long' | 'landingPage';
+  isDisabled: boolean;
+  styleType: 'primary' | 'secondary';
+  size?: 'default' | 'lg' | '2xl' | 'landingPage';
   arrow?: 'left' | 'right';
 }
 
-export default function GeneralBtn({ text, style, size = 'default', arrow }: GeneralButtonProps) {
+export const GeneralBtn: React.FC<GeneralButtonProps> = ({
+  text,
+  isDisabled,
+  styleType,
+  size = 'default',
+  arrow,
+  ...props
+}) => {
   const sizeVariants: { [key: string]: string } = {
     default: '',
-    long: 'w-[180px]',
+    lg: 'w-[180px]',
+    '2xl': 'w-[300px]',
     landingPage: 'w-[150px] md:w-[180px]',
   };
 
@@ -19,10 +32,18 @@ export default function GeneralBtn({ text, style, size = 'default', arrow }: Gen
     secondary: 'secondary-btn',
   };
 
+  const { pending, data } = useFormStatus()
+
+  console.log(data)
+
   return (
-    <button className={`${sizeVariants[size]} ${styleVariants[style]}`}>
+    <button disabled={isDisabled ? isDisabled : pending} className={clsx({
+      "bg-[#0F141C] text-[#626D7D] hover:bg-[#0F141C]": isDisabled,
+    }, `${sizeVariants[size]} ${styleVariants[styleType]} disabled:hover:cursor-not-allowed`)}
+      {...props}
+    >
       {arrow == 'left' ? <ArrowLeftIcon className="size-[14px] stroke-white stroke-1" /> : null}
-      {text}
+      {pending ? <span className='loading loading-spinner loading-sm' /> : text}
       {arrow == 'right' ? <ArrowRightIcon className="size-[14px] stroke-white stroke-1" /> : null}
     </button>
   );

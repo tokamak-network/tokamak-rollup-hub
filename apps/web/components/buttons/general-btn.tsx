@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
@@ -33,19 +33,24 @@ export const GeneralBtn: React.FC<GeneralButtonProps> = ({
     secondary: 'secondary-btn',
   };
 
-  const { pending, data } = useFormStatus()
+  const { pending, data } = useFormStatus();
 
-  console.log(data)
+  console.log(data);
 
   return (
-    <button disabled={isDisabled ? isDisabled : pending} className={clsx({
-      "bg-[#0F141C] text-[#626D7D] hover:bg-[#0F141C]": isDisabled,
-    }, `${sizeVariants[size]} ${styleVariants[styleType]} disabled:hover:cursor-not-allowed`)}
+    <button
+      disabled={isDisabled ? isDisabled : pending}
+      className={clsx(
+        {
+          'bg-[#0F141C] text-[#626D7D] hover:bg-[#0F141C]': isDisabled,
+        },
+        `${sizeVariants[size]} ${styleVariants[styleType]} disabled:hover:cursor-not-allowed`,
+      )}
       {...props}
     >
       {arrow == 'left' ? <ArrowLeftIcon className="size-[14px] stroke-white stroke-1" /> : null}
-      {pending ? <span className='loading loading-spinner loading-sm' /> : text}
+      {pending ? <span className="loading loading-spinner loading-sm" /> : text}
       {arrow == 'right' ? <ArrowRightIcon className="size-[14px] stroke-white stroke-1" /> : null}
     </button>
   );
-}
+};

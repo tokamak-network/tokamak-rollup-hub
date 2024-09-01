@@ -28,9 +28,20 @@ export default function Landing() {
           </div>
           <div className="flex gap-[15px]">
             <Link href="/deploy">
-              <GeneralBtn isDisabled={false} text="Deploy Now" styleType="primary" size="landingPage" arrow="right" />
+              <GeneralBtn
+                isDisabled={false}
+                text="Deploy Now"
+                styleType="primary"
+                size="landingPage"
+                arrow="right"
+              />
             </Link>
-            <GeneralBtn isDisabled={false} text="Documentation" styleType="secondary" size="landingPage" />
+            <GeneralBtn
+              isDisabled={false}
+              text="Documentation"
+              styleType="secondary"
+              size="landingPage"
+            />
           </div>
         </div>
         <Image

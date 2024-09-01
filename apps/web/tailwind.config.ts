@@ -142,6 +142,6 @@ const config: Config = {
       sans: ['Proxima Nova', ...fontFamily.sans],
     },
   },
-  plugins: [require('daisyui'), require('tailwind-scrollbar-hide')],
+  plugins: [require('daisyui')],
 };
 export default config;

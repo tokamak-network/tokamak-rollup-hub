@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { DevResourceCard } from '@/components/cards/dev-resource-card';
 import { HorisonStack, VetrticalStack } from './shape-stack-animation';
 import { deployEnvironment, opDevResource, zkDevResource } from '@/lib/constants';
@@ -9,8 +9,8 @@ import { useState } from 'react';
 import clsx from 'clsx';
 
 export default function Deploy() {
-  const [selectedDevResource, setResource] = useState('')
-  const [selectedEnv, setEnv] = useState('')
+  const [selectedDevResource, setResource] = useState('');
+  const [selectedEnv, setEnv] = useState('');
 
   return (
     <div className="flex max-w-[355px] flex-col items-center md:max-w-[740px] xl:max-w-[1200px]">
@@ -20,19 +20,37 @@ export default function Deploy() {
           <div className="h-[200px] xl:h-[300px]">
             <VetrticalStack />
           </div>
-          <DevResourceCard type={opDevResource.type as 'op' | 'zk+'} btnText={opDevResource.btnText} isDisabled={opDevResource.isDisabled} description={opDevResource.description} docsUrl={opDevResource.docsUrl} setResource={setResource} superScriptColor={opDevResource.superScriptColor as 'red' | 'green'} />
+          <DevResourceCard
+            type={opDevResource.type as 'op' | 'zk+'}
+            btnText={opDevResource.btnText}
+            isDisabled={opDevResource.isDisabled}
+            description={opDevResource.description}
+            docsUrl={opDevResource.docsUrl}
+            setResource={setResource}
+            superScriptColor={opDevResource.superScriptColor as 'red' | 'green'}
+          />
         </div>
         <div className="md:w-1/2">
           <div className="h-[200px] xl:h-[300px]">
             <HorisonStack />
           </div>
-          <DevResourceCard type={zkDevResource.type as 'op' | 'zk+'} btnText={zkDevResource.btnText} isDisabled={zkDevResource.isDisabled} description={zkDevResource.description} docsUrl={zkDevResource.docsUrl} setResource={setResource} superScriptColor={zkDevResource.superScriptColor as 'red' | 'green'} />
+          <DevResourceCard
+            type={zkDevResource.type as 'op' | 'zk+'}
+            btnText={zkDevResource.btnText}
+            isDisabled={zkDevResource.isDisabled}
+            description={zkDevResource.description}
+            docsUrl={zkDevResource.docsUrl}
+            setResource={setResource}
+            superScriptColor={zkDevResource.superScriptColor as 'red' | 'green'}
+          />
         </div>
       </div>
-      <div className={clsx({
-        'visible': selectedDevResource === 'op',
-        'invisible': selectedDevResource === '',
-      })}>
+      <div
+        className={clsx({
+          visible: selectedDevResource === 'op',
+          invisible: selectedDevResource === '',
+        })}
+      >
         <div className="mt-[120px] w-full">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Environment</h1>
           <p className="text-center text-[18px] text-trh-gray">
@@ -54,16 +72,18 @@ export default function Deploy() {
                 description={description}
                 isDisabled={isDisabled}
                 selectedState={selectedEnv}
-                onClick={() => selectedEnv === '' ? setEnv(title.toLowerCase()) : setEnv('')}
+                onClick={() => (selectedEnv === '' ? setEnv(title.toLowerCase()) : setEnv(''))}
               />
             );
           })}
         </div>
       </div>
-      <div className={clsx({
-        'visible': selectedEnv === 'devnet',
-        'invisible': selectedEnv === '',
-      })}>
+      <div
+        className={clsx({
+          visible: selectedEnv === 'devnet',
+          invisible: selectedEnv === '',
+        })}
+      >
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Your Rollup Details</h1>
           <div className="text-center text-[18px] text-trh-gray">

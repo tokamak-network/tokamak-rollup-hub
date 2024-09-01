@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { GeneralBtn } from '../buttons/general-btn';
 import { Dispatch, SetStateAction } from 'react';
@@ -13,7 +13,15 @@ export interface DevResourceProps {
   superScriptColor: 'red' | 'green';
 }
 
-export function DevResourceCard({ type, btnText, isDisabled, description, docsUrl, setResource, superScriptColor }: DevResourceProps) {
+export function DevResourceCard({
+  type,
+  btnText,
+  isDisabled,
+  description,
+  docsUrl,
+  setResource,
+  superScriptColor,
+}: DevResourceProps) {
   const supColorVariants: { [key: string]: string } = {
     red: 'text-trh-red',
     green: 'text-trh-green',
@@ -30,7 +38,13 @@ export function DevResourceCard({ type, btnText, isDisabled, description, docsUr
           <Link href={docsUrl}>For additional information, check out Documentation.</Link>
         </p>
       </div>
-      <GeneralBtn onClick={() => setResource(type as string)} isDisabled={isDisabled} text={btnText} styleType="primary" size="lg" />
+      <GeneralBtn
+        onClick={() => setResource(type as string)}
+        isDisabled={isDisabled}
+        text={btnText}
+        styleType="primary"
+        size="lg"
+      />
     </div>
   );
 }

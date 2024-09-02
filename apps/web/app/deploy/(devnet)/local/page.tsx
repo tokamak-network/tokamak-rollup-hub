@@ -4,6 +4,7 @@ import { ImageBtn } from '@/components/buttons/image-button';
 import CopyIcon from '../../../../public/icon-copy-default.svg';
 import JSONPretty from 'react-json-pretty';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 const downloadJson = (data: any, filename: string) => {
   const blob = new Blob([data], { type: 'application/json' });
@@ -15,6 +16,39 @@ const downloadJson = (data: any, filename: string) => {
   link.click();
   document.body.removeChild(link);
 };
+
+function DownloadBtn() {
+  const searchParams = useSearchParams();
+  const template = searchParams.get('template');
+
+  return (
+    <GeneralBtn
+      text="Download File"
+      isDisabled={false}
+      styleType="primary"
+      size="md"
+      onClick={() => downloadJson(template, 'devnetL1-template.json')}
+    />
+  )
+}
+
+function JSONView() {
+  const searchParams = useSearchParams();
+  const template = searchParams.get('template');
+
+  return (
+    <JSONPretty
+      style={{ fontSize: '0.8rem' }}
+      data={template}
+      theme={{
+        key: 'color:#92E391',
+        string: 'color:#ABD6FC',
+        value: 'color:#82C0FA',
+        boolean: 'color:#82C0FA',
+      }}
+    ></JSONPretty>
+  )
+}
 
 export default function LocalDeployPage() {
   const cloneRepoValue = 'git clone https://github.com/tokamak-network/tokamak-thanos';
@@ -29,10 +63,6 @@ export default function LocalDeployPage() {
     alert('Copied to clipboard.');
   };
 
-  const searchParams = useSearchParams();
-  const template = searchParams.get('template');
-
-  console.log(template);
 
   return (
     <div className="xl:flex-rowitems-center max-w-[355px] md:max-w-[740px] xl:h-screen xl:max-w-[1200px]">
@@ -51,13 +81,9 @@ export default function LocalDeployPage() {
                 created.
               </p>
             </div>
-            <GeneralBtn
-              text="Download File"
-              isDisabled={false}
-              styleType="primary"
-              size="md"
-              onClick={() => downloadJson(template, 'devnetL1-template.json')}
-            />
+            <Suspense fallback={<h1>Loding...</h1>}>
+              <DownloadBtn />
+            </Suspense>
           </div>
           <div className="flex flex-col gap-[9px]">
             <p className="font-medium text-[#7D899A]">
@@ -147,16 +173,9 @@ export default function LocalDeployPage() {
         <div className="flex w-full flex-col gap-5 rounded-2xl bg-gradient-card p-5 xl:max-h-[950px] xl:w-1/2">
           <h3 className="text-xl font-semibold">Rollup information</h3>
           <div className="overflow-auto rounded-2xl bg-black p-4">
-            <JSONPretty
-              style={{ fontSize: '0.8rem' }}
-              data={template}
-              theme={{
-                key: 'color:#92E391',
-                string: 'color:#ABD6FC',
-                value: 'color:#82C0FA',
-                boolean: 'color:#82C0FA',
-              }}
-            ></JSONPretty>
+            <Suspense>
+              <JSONView />
+            </Suspense>
           </div>
         </div>
       </div>

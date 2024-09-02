@@ -33,9 +33,7 @@ export const GeneralBtn: React.FC<GeneralButtonProps> = ({
     secondary: 'secondary-btn',
   };
 
-  const { pending, data } = useFormStatus();
-
-  console.log(data);
+  const { pending } = useFormStatus();
 
   return (
     <button

@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className='bg-black text-white'>
         <Web3Providers>
           <GlobalNav />
           <div>

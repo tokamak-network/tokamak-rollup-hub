@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
+import daisyui from 'daisyui';
 
 const config: Config = {
   content: [
@@ -142,6 +143,9 @@ const config: Config = {
       sans: ['Proxima Nova', ...fontFamily.sans],
     },
   },
-  plugins: [require('daisyui')],
+  plugins: [daisyui],
+  daisyui: {
+    logs: false,
+  },
 };
 export default config;

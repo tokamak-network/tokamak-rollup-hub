@@ -29,7 +29,7 @@ function DownloadBtn() {
       size="md"
       onClick={() => downloadJson(template, 'devnetL1-template.json')}
     />
-  )
+  );
 }
 
 function JSONView() {
@@ -47,7 +47,7 @@ function JSONView() {
         boolean: 'color:#82C0FA',
       }}
     ></JSONPretty>
-  )
+  );
 }
 
 export default function LocalDeployPage() {
@@ -62,7 +62,6 @@ export default function LocalDeployPage() {
     await navigator.clipboard.writeText(text);
     alert('Copied to clipboard.');
   };
-
 
   return (
     <div className="xl:flex-rowitems-center max-w-[355px] md:max-w-[740px] xl:h-screen xl:max-w-[1200px]">

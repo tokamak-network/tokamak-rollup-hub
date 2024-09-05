@@ -13,7 +13,7 @@ export default function Deploy() {
   const [selectedEnv, setEnv] = useState('');
 
   return (
-    <div className="flex max-w-[355px] flex-col items-center md:max-w-[740px] xl:max-w-[1200px]">
+    <div className="flex max-w-[355px] flex-col items-center py-[60px] md:max-w-[740px] xl:max-w-[1200px]">
       <h1 className="mb-[39px] text-4xl font-semibold">Deploy</h1>
       <div className="flex w-full flex-col items-center justify-center gap-[30px] md:flex-row">
         <div className="md:w-1/2">

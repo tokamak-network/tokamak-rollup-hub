@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Landing() {
   return (
     <div className="flex max-w-[360px] flex-col items-center gap-[30px] py-[30px] md:relative md:max-h-[920px] md:w-full md:max-w-[1620px] md:flex-row md:items-start xl:h-[552px] xl:items-center xl:py-0">
-      <div className="z-20 flex w-fit flex-col items-center gap-[30px]">
+      <div className="z-20 flex w-fit flex-col items-center gap-[30px] md:items-start">
         <div className="flex flex-col items-center justify-start gap-3 text-balance md:items-start">
           <div className="flex justify-center md:justify-start">
             <p className="text-center text-sm font-semibold text-tokamak-blue md:text-[21px]">

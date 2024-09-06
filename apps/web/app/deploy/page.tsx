@@ -85,11 +85,11 @@ export default function Deploy() {
         })}
       >
         <div className="mt-[120px]">
-          <h1 className="mb-[18px] text-center text-4xl font-semibold">Your Rollup Details</h1>
+          <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
           <div className="text-center text-[18px] text-trh-gray">
-            <p>Enter the information required for your own rollup.</p>
+            <p>Provide the necessary information to set up your rollup in devnet mode</p>
             <p>
-              If you&apos;re looking for more information on each of these items, check out these{' '}
+              For more details on these items, refer to the following{' '}
               <Link href={'#'}>
                 <span className="text-tokamak-blue underline underline-offset-2">documents.</span>
               </Link>

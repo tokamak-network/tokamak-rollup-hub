@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import CircleCancel from '../../public/icon-circle-cancel.svg';
 import CircleError from '../../public/icon-circle-error.svg';
-import { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
 interface FormInputProps {
@@ -15,10 +15,16 @@ interface FormInputProps {
 }
 
 export function FormInput({ type, label, name, placeholder, required, errors }: FormInputProps) {
-  const inputRef = useRef(null);
+  const [inputState, setInputState] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
   const handleInputClear = () => {
-    // @ts-ignore
-    inputRef.current.value = '';
+    if (inputRef.current !== null) {
+      inputRef.current.value = '';
+    }
+    setInputState(false);
+  };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    return e.target.value !== '' ? setInputState(true) : setInputState(false);
   };
 
   return (
@@ -37,11 +43,17 @@ export function FormInput({ type, label, name, placeholder, required, errors }: 
           ref={inputRef}
           placeholder={placeholder}
           type={type}
+          onChange={handleInputChange}
           required={required}
           className="w-full bg-transparent caret-tokamak-blue outline-none placeholder:text-[#626D7D] [&::-webkit-inner-spin-button]:appearance-none"
         />
-        <button onClick={handleInputClear}>
-          <Image className="opacity-50" src={errors ? CircleError : CircleCancel} alt="cancel" />
+        <button
+          className={clsx({
+            block: inputState,
+            hidden: !inputState,
+          })}
+          onClick={handleInputClear}
+        >
         </button>
       </div>
       {errors

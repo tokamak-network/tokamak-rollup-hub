@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { GeneralBtn } from '../buttons/general-btn';
 import { Dispatch, SetStateAction } from 'react';
@@ -32,7 +31,7 @@ export function DevResourceCard({
       <h2 className="mb-[18px] text-[32px] font-bold">
         Tokamak <sup className={`${supColorVariants[superScriptColor]}`}>{type.toUpperCase()}</sup>
       </h2>
-      <div className="item-center mb-[30px] flex flex-col justify-between text-center text-lg font-medium md:h-[250px] xl:h-[130px]">
+      <div className="item-center mb-[30px] flex flex-col justify-center text-center text-[17px] font-medium md:h-[250px] xl:h-[130px]">
         <p className="text-trh-gray">{description}</p>
         <p className="text-tokamak-blue underline underline-offset-4">
           <Link href={docsUrl}>For additional information, check out Documentation.</Link>

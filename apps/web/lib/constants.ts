@@ -22,19 +22,19 @@ export const deployEnvironment = [
   {
     title: 'Devnet',
     description:
-      'Deploy on devnet where you can run it in your local environment. It can be used during development and allows you to experiment before deploying to testnet or mainnet.',
+      'Deploy in devnet mode to run your rollup or Appchain locally. This approach is ideal for development and testing before moving to a Testnet or Mainnet deployment.',
     isDisabled: false,
   },
   {
     title: 'Testnet',
     description:
-      'The Thanos Testnet is a test-only network built with the same environment as the mainnet so that you can risk-free test your applications and smart contracts before deploying them to the mainnet environment.',
+      'Deploy your Rollup or Appchain in Testnet mode using the TRH service. Inspired from the Thanos testnet, this mode ensures robust security, tools, and features for seamless deployment and functionality. We currently provide instructions for cloud deployment.',
     isDisabled: true,
   },
   {
     title: 'Mainnet',
     description:
-      'Thanos Mainnet is an innovative L2 solution that inherits the security of Ethereum while enabling fast and secure blockchain services.',
+      'Deploy your Rollup or Appchain in Mainnet mode using our Tokamak OP Stack, benefiting from Ethereum’s security. Enjoy additional features such as custom fee token for your appchain, extra incentives in TON for operators, and participation in the Tokamak DAO.',
     isDisabled: true,
   },
 ];

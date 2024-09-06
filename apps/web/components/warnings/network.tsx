@@ -1,24 +1,8 @@
 'use client';
-import clsx from 'clsx';
-import { useEffect, useState } from 'react';
 
 export function ChangeNetworkToThanos() {
-  const [appear, setAppear] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => setAppear(false), 5000);
-  }, []);
-
   return (
-    <div
-      className={clsx(
-        {
-          hidden: !appear,
-          'inline-block': appear,
-        },
-        'absolute -left-1/2 top-full z-50 mt-6 animate-bounce',
-      )}
-    >
+    <div className="absolute -left-1/2 top-full z-50 mt-6 animate-bounce">
       <div className="rounded-[3px] bg-[#13131A] p-2 text-[12px] ring-[1px] ring-[#4B5563]">
         <p className="text-center">Please connect to Thanos</p>
         <p>

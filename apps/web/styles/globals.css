@@ -13,7 +13,7 @@
     @apply flex items-center justify-center gap-[6px] rounded-full bg-tokamak-blue px-[15px] py-[12px] text-sm text-white transition-colors hover:bg-tokamak-blue-dark;
   }
   .secondary-btn {
-    @apply flex items-center justify-center gap-[6px] rounded-full bg-black px-[15px] py-[12px] text-sm text-white ring-1 ring-[#1D2838] transition-colors hover:bg-opacity-25 hover:ring-[#ADB3BA];
+    @apply flex items-center justify-center gap-[6px] rounded-full bg-black bg-opacity-25 px-[15px] py-[12px] text-sm text-white ring-1 ring-[#1D2838] transition-colors hover:ring-[#ADB3BA];
   }
   .wallet-btn {
     @apply w-[145px] rounded-full px-4 py-[10px] text-center text-sm font-normal leading-[17px] ring-2 ring-[#1D2838] transition-colors hover:ring-tokamak-blue-dark;

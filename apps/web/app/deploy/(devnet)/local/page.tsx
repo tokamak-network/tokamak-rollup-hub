@@ -1,10 +1,9 @@
 'use client';
 import { GeneralBtn } from '@/components/buttons/general-btn';
-import { ImageBtn } from '@/components/buttons/image-button';
-import CopyIcon from '../../../../public/icon-copy-default.svg';
 import JSONPretty from 'react-json-pretty';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import { CopyBtn } from '@/components/buttons/copy-button';
 
 const downloadJson = (data: any, filename: string) => {
   const blob = new Blob([data], { type: 'application/json' });
@@ -58,11 +57,6 @@ export default function LocalDeployPage() {
   const versionScriptValue = './versions.sh';
   const dockerComposeVersionValue = 'docker compose version';
 
-  const copyToClipboard = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    alert('Copied to clipboard.');
-  };
-
   return (
     <div className="xl:flex-rowitems-center max-w-[355px] md:max-w-[740px] xl:max-w-[1200px]">
       <h1 className="mb-[39px] text-center text-4xl font-semibold">Local Deployment Guide</h1>
@@ -95,7 +89,7 @@ export default function LocalDeployPage() {
                 className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                 readOnly
               />
-              <ImageBtn image={CopyIcon} onClick={() => copyToClipboard(cloneRepoValue)} />
+              <CopyBtn text={cloneRepoValue} />
             </div>
           </div>
           <div className="flex flex-col gap-[9px]">
@@ -113,7 +107,7 @@ export default function LocalDeployPage() {
                 className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                 readOnly
               />
-              <ImageBtn image={CopyIcon} onClick={() => copyToClipboard(makeBuildValue)} />
+              <CopyBtn text={makeBuildValue} />
             </div>
           </div>
           <div className="flex flex-col gap-[9px]">
@@ -128,7 +122,7 @@ export default function LocalDeployPage() {
                 className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                 readOnly
               />
-              <ImageBtn image={CopyIcon} onClick={() => copyToClipboard(devnetUpValue)} />
+              <CopyBtn text={devnetUpValue} />
             </div>
           </div>
           <div className="flex flex-col gap-[9px]">
@@ -143,7 +137,7 @@ export default function LocalDeployPage() {
                   className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                   readOnly
                 />
-                <ImageBtn image={CopyIcon} onClick={() => copyToClipboard(cdGettingStartedValue)} />
+                <CopyBtn text={cdGettingStartedValue} />
               </div>
               <div className="flex w-full items-center justify-between gap-2 rounded-xl border-[1px] border-[#192232] bg-[#080A0E] px-[15px] py-[10px]">
                 <input
@@ -152,7 +146,7 @@ export default function LocalDeployPage() {
                   className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                   readOnly
                 />
-                <ImageBtn image={CopyIcon} onClick={() => copyToClipboard(versionScriptValue)} />
+                <CopyBtn text={versionScriptValue} />
               </div>
               <div className="flex w-full items-center justify-between gap-2 rounded-xl border-[1px] border-[#192232] bg-[#080A0E] px-[15px] py-[10px]">
                 <input
@@ -161,10 +155,7 @@ export default function LocalDeployPage() {
                   className="w-full overflow-x-scroll bg-transparent text-white caret-tokamak-blue outline-none"
                   readOnly
                 />
-                <ImageBtn
-                  image={CopyIcon}
-                  onClick={() => copyToClipboard(dockerComposeVersionValue)}
-                />
+                <CopyBtn text={dockerComposeVersionValue} />
               </div>
             </div>
           </div>

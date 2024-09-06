@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { GeneralBtn } from '../buttons/general-btn';
-import { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 
 export interface DevResourceProps {
   type: 'op' | 'zk+';
@@ -8,7 +8,7 @@ export interface DevResourceProps {
   isDisabled: boolean;
   description: string;
   docsUrl: string;
-  setResource: Dispatch<SetStateAction<string>>;
+  handler: React.MouseEventHandler<HTMLButtonElement>;
   superScriptColor: 'red' | 'green';
 }
 
@@ -18,7 +18,7 @@ export function DevResourceCard({
   isDisabled,
   description,
   docsUrl,
-  setResource,
+  handler,
   superScriptColor,
 }: DevResourceProps) {
   const supColorVariants: { [key: string]: string } = {
@@ -38,7 +38,7 @@ export function DevResourceCard({
         </p>
       </div>
       <GeneralBtn
-        onClick={() => setResource(type as string)}
+        onClick={handler}
         isDisabled={isDisabled}
         text={btnText}
         styleType="primary"

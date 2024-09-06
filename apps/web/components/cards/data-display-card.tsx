@@ -32,7 +32,7 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
       <div className="mb-[15px]">
         <h3 className="text-3xl font-bold">{title}</h3>
       </div>
-      <div className="flex flex-col justify-between">
+      <div className="flex h-full flex-col justify-between">
         <p className="font-medium text-trh-gray">{description}</p>
         {isDisabled ? (
           <p className="font-medium text-trh-gray">

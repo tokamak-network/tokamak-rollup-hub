@@ -47,8 +47,8 @@ export default function Deploy() {
       </div>
       <div
         className={clsx({
-          visible: selectedDevResource === 'op',
-          invisible: selectedDevResource === '',
+          block: selectedDevResource === 'op',
+          hidden: selectedDevResource === '',
         })}
       >
         <div className="mt-[120px] w-full">
@@ -80,8 +80,8 @@ export default function Deploy() {
       </div>
       <div
         className={clsx({
-          visible: selectedEnv === 'devnet',
-          invisible: selectedEnv === '',
+          block: selectedEnv === 'devnet',
+          hidden: selectedEnv === '',
         })}
       >
         <div className="mt-[120px]">

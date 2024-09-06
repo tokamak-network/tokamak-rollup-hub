@@ -64,7 +64,7 @@ export default function LocalDeployPage() {
   };
 
   return (
-    <div className="xl:flex-rowitems-center max-w-[355px] md:max-w-[740px] xl:h-screen xl:max-w-[1200px]">
+    <div className="xl:flex-rowitems-center max-w-[355px] md:max-w-[740px] xl:max-w-[1200px]">
       <h1 className="mb-[39px] text-center text-4xl font-semibold">Local Deployment Guide</h1>
       <div className="flex flex-col xl:flex-row">
         <div className="flex w-full flex-col gap-[33px] p-5 xl:w-1/2">

@@ -3,9 +3,9 @@ description: Suggestion for a tokamak-rollup-hub
 labels: ['suggestion']
 body:
   - type: markdown
-      attributes:
-        value: |
-          Thanks for taking the time to fill out this suggestion!
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this suggestion!
   - type: textarea
     attributes:
       label: What suggestions

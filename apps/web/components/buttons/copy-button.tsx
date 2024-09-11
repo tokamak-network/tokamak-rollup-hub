@@ -9,11 +9,10 @@ interface CopyBtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-export const CopyBtn: React.FC<CopyBtnProps> = ({ text, ...props }) => {
+export function CopyBtn({ text }: CopyBtnProps) {
   const [copied, setCopied] = useState(false);
   return (
     <button
-      {...props}
       onClick={() => {
         copyToClipboard(text, setCopied);
       }}
@@ -25,4 +24,4 @@ export const CopyBtn: React.FC<CopyBtnProps> = ({ text, ...props }) => {
       )}
     </button>
   );
-};
+}

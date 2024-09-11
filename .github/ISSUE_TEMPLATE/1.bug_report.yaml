@@ -1,5 +1,5 @@
 name: Report a bug
-description: Report a Tokamak-Rollup-Hub bug.
+description: Report a tokamak-rollup-hub bug.
 labels: ['bug']
 assignees:
   - ohbyeongmin

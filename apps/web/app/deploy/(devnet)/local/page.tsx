@@ -21,12 +21,14 @@ export default function LocalDeployPage() {
             rollup in your local environment.
           </p>
           <VersionTable />
-          {leftSectionGuide.map((step, index) => {
-            if (step.jsonDownloadBtnProps && template !== null) {
-              step.jsonDownloadBtnProps.json = template;
-            }
-            return <StepCard key={index} {...step} />;
-          })}
+          <Suspense>
+            {leftSectionGuide.map((step, index) => {
+              if (step.jsonDownloadBtnProps && template !== null) {
+                step.jsonDownloadBtnProps.json = template;
+              }
+              return <StepCard key={index} {...step} />;
+            })}
+          </Suspense>
         </div>
         <div className="-mt-[7px] flex w-full flex-col gap-[33px] p-5 xl:mt-0 xl:w-1/2">
           {rightSectionGuide.map((step, index) => (

@@ -21,14 +21,12 @@ export default function LocalDeployPage() {
             rollup in your local environment.
           </p>
           <VersionTable />
-          <Suspense>
-            {leftSectionGuide.map((step, index) => {
-              if (step.jsonDownloadBtnProps && template !== null) {
-                step.jsonDownloadBtnProps.json = template;
-              }
-              return <StepCard key={index} {...step} />;
-            })}
-          </Suspense>
+          {leftSectionGuide.map((step, index) => {
+            if (step.jsonDownloadBtnProps && template !== null) {
+              step.jsonDownloadBtnProps.json = template;
+            }
+            return <StepCard key={index} {...step} />;
+          })}
         </div>
         <div className="-mt-[7px] flex w-full flex-col gap-[33px] p-5 xl:mt-0 xl:w-1/2">
           {rightSectionGuide.map((step, index) => (
@@ -37,9 +35,7 @@ export default function LocalDeployPage() {
           <div className="flex w-full flex-col gap-5 rounded-2xl bg-gradient-card p-5 xl:max-h-[920px]">
             <h3 className="text-xl font-semibold">Rollup information</h3>
             <div className="overflow-auto rounded-2xl bg-black p-4">
-              <Suspense>
-                <JsonView contents={template} />
-              </Suspense>
+              <JsonView contents={template} />
             </div>
           </div>
         </div>

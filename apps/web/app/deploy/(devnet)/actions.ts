@@ -4,14 +4,23 @@ import { redirect } from 'next/navigation';
 import { isAddress } from 'viem';
 import { z } from 'zod';
 
-const Address = z.custom<string>(isAddress, 'Invalid Address');
+const rollupNameSchema = z
+  .string()
+  .min(2, 'Rollup Name should contain at least 2 characters')
+  .refine((s) => !s.includes(' '), 'No Space in Rollup Name')
+  .refine(
+    (s) => /^[a-zA-Z]+[-]?[a-zA-Z ]+$/.test(s ?? ''),
+    'Rollup Name should contain only alphabets',
+  );
+const addressSchema = z.custom<string>(isAddress, 'Invalid Address');
+
 const formSchema = z.object({
-  rollupName: z.string(),
+  rollupName: rollupNameSchema,
   chainId: z.string(),
-  adminAddress: Address,
-  sequencerAddress: Address,
-  batcherAddress: Address,
-  proposerAddress: Address,
+  adminAddress: addressSchema,
+  sequencerAddress: addressSchema,
+  batcherAddress: addressSchema,
+  proposerAddress: addressSchema,
 });
 
 export async function handleForm(prevState: any, formData: FormData) {
@@ -25,7 +34,6 @@ export async function handleForm(prevState: any, formData: FormData) {
   };
   const result = formSchema.safeParse(data);
   if (!result.success) {
-    console.log(result.error.flatten());
     return result.error.flatten();
   }
 

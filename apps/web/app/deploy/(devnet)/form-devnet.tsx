@@ -1,7 +1,6 @@
 'use client';
 import { GeneralBtn } from '@/components/buttons/general-btn';
 import { FormInput } from '@/components/inputs/form-input';
-import Link from 'next/link';
 import { handleForm } from './actions';
 import { useFormState } from 'react-dom';
 
@@ -9,7 +8,7 @@ export function FormDevnet() {
   const [state, dispatch] = useFormState(handleForm, null);
   return (
     <form action={dispatch} className="flex flex-col items-center">
-      <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card p-5 md:flex-row">
+      <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card px-5 pb-6 pt-5 md:flex-row">
         <div className="w-full">
           <FormInput
             type="text"
@@ -29,13 +28,6 @@ export function FormDevnet() {
             required={true}
             errors={state?.fieldErrors.chainId}
           />
-          <p className="mt-[9px] text-[13px] text-trh-gray">
-            Please enter the value you registered in{' '}
-            <Link href="#">
-              <span className="text-tokamak-blue underline underline-offset-1">Chainlist</span>
-            </Link>{' '}
-            beforehand
-          </p>
         </div>
       </div>
       <div className="mb-[39px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card p-5 xl:flex-row">

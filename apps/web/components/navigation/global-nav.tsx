@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Symbol from '../../public/symbol-nav.svg';
+import Symbol from '../../public/symbol-trh.svg';
 import TokamakRollupHub from '../../public/tokamakRollupHub-nav.svg';
 import { NavMenu } from './global-nav-menu';
 import { BurgerBtn } from '../buttons/burger-btn';

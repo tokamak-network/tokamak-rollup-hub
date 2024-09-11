@@ -1,6 +1,5 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
 import { VersionTable } from '@/components/tables/version-table';
 import JsonView from '@/components/pretty-view/json-view';
 import { leftSectionGuide, rightSectionGuide } from './guide-steps';

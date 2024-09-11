@@ -1,0 +1,22 @@
+name: Suggestion
+description: Suggestion for a tokamak-rollup-hub
+labels: ['suggestion']
+body:
+  - type: markdown
+      attributes:
+        value: |
+          Thanks for taking the time to fill out this suggestion!
+  - type: textarea
+    attributes:
+      label: What suggestions
+      description: Please describe in detail what the suggestion is about. Anything is fine, whether it’s adding new features, improving the UI, etc. Using various resources (e.g., screenshots) would be even better!
+      placeholder: 'Make UI more pretty like this.'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected outputs
+      description: Please describe the expected outputs when this suggestion is implemented.
+      placeholder: 'This makes for a better user experience.'
+    validations:
+      required: true

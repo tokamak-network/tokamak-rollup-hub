@@ -1,0 +1,40 @@
+name: Report a bug
+description: Report a Tokamak-Rollup-Hub bug.
+labels: ['bug']
+assignees:
+  - ohbyeongmin
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: A step-by-step description of how to reproduce the issue, based on the linked reproduction. Screenshots can be provided in the issue body below. If using code blocks, make sure that [syntax highlighting is correct](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) and double check that the rendered preview is not broken.
+      placeholder: |
+        1. Start the application in development (next dev)
+        2. Click X
+        3. Y will happen
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Current vs. Expected behavior
+      description: |
+        A clear and concise description of what the bug is (e.g., screenshots, logs, etc.), and what you expected to happen.
+
+        **Skipping this/failure to provide complete information of the bug will result in the issue being closed.**
+      placeholder: 'Following the steps from the previous section, I expected A to happen, but I observed B instead.'
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge

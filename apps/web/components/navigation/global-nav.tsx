@@ -19,11 +19,9 @@ export default function hGlobalNav() {
       <nav className="absolute left-[50%] ml-[-156px]">
         <NavMenu />
       </nav>
-      <div className="flex gap-4">
+      <div className="z-10 flex items-center gap-4">
         <WalletBoard />
-        <div className="md:hidden">
-          <BurgerBtn />
-        </div>
+        <BurgerBtn />
       </div>
     </div>
   );

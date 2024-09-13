@@ -4,12 +4,7 @@ import { usePathname } from 'next/navigation';
 import ArrowDown from '../../public/icon-arrow-down.svg';
 import Image from 'next/image';
 import clsx from 'clsx';
-
-type ItemInfo = {
-  name: string;
-  href?: string;
-  subItems?: ItemInfo[];
-};
+import { menus } from './menus';
 
 const NormalItem = ({
   href,
@@ -83,42 +78,9 @@ const DropDownContainer = ({
 export function NavMenu() {
   const pathname = usePathname();
 
-  const itemInfos: ItemInfo[] = [
-    {
-      name: 'Deploy',
-      href: '/deploy',
-    },
-    {
-      name: 'Discover',
-      subItems: [
-        {
-          name: 'Tokamak OP',
-          href: '/discover/tokamak-op',
-        },
-        {
-          name: 'Tokamak ZK+',
-          href: '/discover/tokamak-zk',
-        },
-      ],
-    },
-    {
-      name: 'More',
-      subItems: [
-        {
-          name: 'User Guide',
-          href: '/more/user-guide',
-        },
-        {
-          name: 'Get Help',
-          href: '/more/help',
-        },
-      ],
-    },
-  ];
-
   return (
     <div className="hidden w-[312px] gap-[45px] md:flex md:justify-between md:gap-[45px] xl:gap-[60px]">
-      {itemInfos.map((item, index) => {
+      {menus.map((item, index) => {
         if (item.href && !item.subItems) {
           return (
             <NormalItem isSub={false} href={item.href} currentPath={pathname} key={index}>

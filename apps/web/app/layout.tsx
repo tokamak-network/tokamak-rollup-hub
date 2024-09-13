@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css';
 import GlobalNav from '@/components/navigation/global-nav';
-import Footer from '@/components/footer';
+import Footer from '@/components/footers/footer';
 import { Web3Providers } from './web3provider';
 
 export const metadata: Metadata = {

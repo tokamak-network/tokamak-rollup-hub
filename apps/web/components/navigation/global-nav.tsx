@@ -6,7 +6,7 @@ import { NavMenu } from './global-nav-menu';
 import { BurgerBtn } from '../buttons/burger-btn';
 import { WalletBoard } from '@/app/connect-wallet/wallet-board';
 
-export default function hGlobalNav() {
+export default function GlobalNav() {
   return (
     <div className="fixed z-50 flex h-[78px] min-h-[78px] w-full items-center justify-between overflow-x-clip overflow-y-visible bg-black bg-opacity-90 px-[20px] md:px-[30px]">
       <div className="absolute -top-[120px] left-[calc(50%-500px)] min-h-[174px] min-w-[1000px] rounded-[100%] bg-nav-blue blur-3xl"></div>

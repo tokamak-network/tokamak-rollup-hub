@@ -3,7 +3,7 @@ import { megaFooterCategorys } from './mega-footer-info';
 
 export function MegaFooter() {
   return (
-    <div className="mt-[100px] flex w-full flex-wrap justify-between border-b border-t border-white pt-5 md:border-t-0 xl:mt-[10px]">
+    <div className="mt-[100px] flex w-full flex-wrap justify-between border-b border-t border-[#1D2838] pt-5 md:border-t-0 xl:mt-[10px]">
       {megaFooterCategorys.map((category, index) => (
         <div key={index} className="mb-5 flex w-full flex-col gap-1 sm:w-1/2 md:w-auto">
           <h3 className="text-xl">{category.title}</h3>

@@ -67,10 +67,6 @@ export const megaFooterCategorys: Category[] = [
         link: 'https://dao.tokamak.network/#/',
       },
       {
-        name: 'Launchpad',
-        link: 'https://tonstarter.tokamak.network/',
-      },
-      {
         name: 'Price Dashboard',
         link: 'https://price.tokamak.network/#/',
       },
@@ -109,7 +105,7 @@ export const megaFooterCategorys: Category[] = [
         link: 'https://x.com/tokamak_network',
       },
       {
-        name: 'Discord (EN)',
+        name: 'Discord',
         link: 'https://discord.com/invite/J4chV2zuAK',
       },
       {

@@ -1,13 +1,12 @@
 'use client';
-import { useSearchParams } from 'next/navigation';
 import { VersionTable } from '@/components/tables/version-table';
 import JsonView from '@/components/pretty-view/json-view';
 import { leftSectionGuide, rightSectionGuide } from './guide-steps';
 import { StepCard } from '@/components/cards/step-card';
+import useLocalStorageState from '@/hooks/local-storage';
 
-export default function LocalDeployPage() {
-  const searchParams = useSearchParams();
-  const template = searchParams.get('template');
+export default function DeployDevnetPage() {
+  const [template] = useLocalStorageState<string>('template', '');
 
   return (
     <div className="xl:flex-rowitems-center max-w-[355px] py-[60px] md:max-w-[740px] xl:max-w-[1200px]">
@@ -22,7 +21,7 @@ export default function LocalDeployPage() {
           <VersionTable />
           {leftSectionGuide.map((step, index) => {
             if (step.jsonDownloadBtnProps && template !== null) {
-              step.jsonDownloadBtnProps.json = template;
+              step.jsonDownloadBtnProps.json = JSON.stringify(template);
             }
             return <StepCard key={index} {...step} />;
           })}

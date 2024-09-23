@@ -3,9 +3,19 @@ import { GeneralBtn } from '@/components/buttons/general-btn';
 import { FormInput } from '@/components/inputs/form-input';
 import { handleForm } from './actions';
 import { useFormState } from 'react-dom';
+import { useEffect } from 'react';
+import { redirect } from 'next/navigation';
 
 export function FormDevnet() {
   const [state, dispatch] = useFormState(handleForm, null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && state?.success) {
+      localStorage.setItem('template', JSON.stringify(state.template));
+      redirect('/deploy/devnet');
+    }
+  }, [state]);
+
   return (
     <form action={dispatch} className="flex flex-col items-center">
       <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card px-5 pb-6 pt-5 md:flex-row">
@@ -16,7 +26,7 @@ export function FormDevnet() {
             name="rollup-name"
             placeholder="Sample Name"
             required={true}
-            errors={state?.fieldErrors.rollupName}
+            errors={state?.errors?.fieldErrors.rollupName}
           />
         </div>
         <div className="w-full">
@@ -26,7 +36,7 @@ export function FormDevnet() {
             name="chain-id"
             placeholder="ex. 111551119090"
             required={true}
-            errors={state?.fieldErrors.chainId}
+            errors={state?.errors?.fieldErrors.chainId}
           />
         </div>
       </div>
@@ -52,7 +62,7 @@ export function FormDevnet() {
                 name="admin-address"
                 placeholder="Input your admin address"
                 required={true}
-                errors={state?.fieldErrors.adminAddress}
+                errors={state?.errors?.fieldErrors.adminAddress}
               />
             </div>
             <div className="w-full">
@@ -62,7 +72,7 @@ export function FormDevnet() {
                 name="sequencer-address"
                 placeholder="Input your sequencer address"
                 required={true}
-                errors={state?.fieldErrors.sequencerAddress}
+                errors={state?.errors?.fieldErrors.sequencerAddress}
               />
             </div>
           </div>
@@ -74,7 +84,7 @@ export function FormDevnet() {
                 name="batcher-address"
                 placeholder="Input your batcher address"
                 required={true}
-                errors={state?.fieldErrors.batcherAddress}
+                errors={state?.errors?.fieldErrors.batcherAddress}
               />
             </div>
             <div className="w-full">
@@ -84,7 +94,7 @@ export function FormDevnet() {
                 name="proposer-address"
                 placeholder="Input your proposer address"
                 required={true}
-                errors={state?.fieldErrors.proposerAddress}
+                errors={state?.errors?.fieldErrors.proposerAddress}
               />
             </div>
           </div>

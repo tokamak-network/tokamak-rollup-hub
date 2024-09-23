@@ -1,6 +1,5 @@
 'use server';
 import { devnetTemplate } from '@/lib/constants';
-import { redirect } from 'next/navigation';
 import { isAddress } from 'viem';
 import { z } from 'zod';
 

@@ -34,7 +34,10 @@ export async function handleForm(prevState: any, formData: FormData) {
   };
   const result = formSchema.safeParse(data);
   if (!result.success) {
-    return result.error.flatten();
+    return {
+      success: false,
+      errors: result.error.flatten(),
+    };
   }
 
   const template = devnetTemplate;
@@ -54,5 +57,8 @@ export async function handleForm(prevState: any, formData: FormData) {
   template['l2OutputOracleProposer'] = data.proposerAddress as string;
   template['l1GenesisBlockTimestamp'] = Math.floor(Date.now() / 1000).toString(16);
 
-  redirect(`/deploy/local?template=${encodeURIComponent(JSON.stringify(template))}`);
+  return {
+    success: true,
+    template: template,
+  };
 }

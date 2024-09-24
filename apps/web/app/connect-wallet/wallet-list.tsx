@@ -26,7 +26,7 @@ export default function WalletList() {
     if (isConnected) {
       router.back();
     }
-  }, [isConnected]);
+  }, [isConnected, router]);
 
   if (!ready || connectors.length == 0) {
     return null;

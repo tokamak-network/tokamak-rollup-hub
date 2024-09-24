@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="bg-black text-white">
         <Web3Providers>
           <GlobalNav />
-          <div>
+          <div className="min-h-[calc(100vh-78px)]">
             {children}
             {modal_wallet}
           </div>

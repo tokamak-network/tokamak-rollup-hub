@@ -1,7 +1,14 @@
+import { MegaFooter } from '@/components/footers/mega-footer';
+
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-[calc(100vh-78px-200px)] min-h-[720px] w-full justify-center pt-[78px] md:min-h-[920px] md:justify-between md:pl-[45px] md:pr-0 xl:flex-col xl:items-center xl:justify-center xl:px-[30px]">
+    <div className="min-h-[calc(100vh-78px)]">
       {children}
+      <div className="flex w-full justify-center px-[30px]">
+        <div className="w-full md:max-w-[1620px]">
+          <MegaFooter />
+        </div>
+      </div>
     </div>
   );
 }

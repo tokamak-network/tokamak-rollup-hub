@@ -52,7 +52,7 @@ export function StepCard({
 }: StepCardProps) {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex gap-2 text-[#7D899A] md:text-[18px]">
+      <div className="flex gap-2 text-[#7E7E8F] dark:text-[#7D899A] md:text-[18px]">
         <span>{step}.</span>
         <div>
           {descriptions.map((description, index) => (

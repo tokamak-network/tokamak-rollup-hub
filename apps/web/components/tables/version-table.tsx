@@ -62,9 +62,9 @@ export function VersionTable() {
   ];
 
   return (
-    <table className="rounded-[4px] text-white ring-1 ring-[#303F5A] *:px-3">
+    <table className="rounded-[4px] ring-1 ring-[#D1D5DB] *:px-3 dark:text-white dark:ring-[#303F5A]">
       <thead className="font-bold">
-        <tr className="border-b border-[#303F5A] *:border-[#303F5A] *:px-3 *:py-[10px] md:text-left">
+        <tr className="border-b border-[#D1D5DB] *:border-[#D1D5DB] *:px-3 *:py-[10px] dark:border-[#303F5A] *:dark:border-[#303F5A] md:text-left">
           <th className="border-r">Dependency</th>
           <th className="border-r">Version</th>
           <th>Version Check Command</th>
@@ -74,7 +74,7 @@ export function VersionTable() {
         {dependencies.map((dependency, index) => (
           <tr
             key={index}
-            className="border-b border-[#303F5A] *:border-[#303F5A] *:px-3 *:py-[10px] last:border-b-0"
+            className="border-b border-[#D1D5DB] *:border-[#D1D5DB] *:px-3 *:py-[10px] last:border-b-0 dark:border-[#303F5A] *:dark:border-[#303F5A]"
           >
             <td className="border-r">
               <Link href={dependency.installLink} rel="noopener noreferrer" target="_blank">
@@ -87,12 +87,12 @@ export function VersionTable() {
               </Link>
             </td>
             <td className="border-r">
-              <span className="rounded-[3px] border border-white border-opacity-10 bg-[#232634] px-[6px] py-[2px] text-sm font-normal">
+              <span className="rounded-[3px] border border-[#E9E9EE] bg-[#F2F3F8] px-[6px] py-[2px] text-sm font-normal dark:border-white dark:border-opacity-10 dark:bg-[#232634]">
                 {dependency.version}
               </span>
             </td>
             <td className="w-full">
-              <span className="rounded-[3px] border border-white border-opacity-10 bg-[#232634] px-[6px] py-[2px] text-sm font-normal">
+              <span className="rounded-[3px] border border-[#E9E9EE] bg-[#F2F3F8] px-[6px] py-[2px] text-sm font-normal dark:border-white dark:border-opacity-10 dark:bg-[#232634]">
                 {dependency.versionCheck}
               </span>
             </td>

@@ -36,7 +36,7 @@ export function WalletArea({ address }: WalletAreaProps) {
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-50 w-auto -translate-x-[25px] translate-y-2 rounded-lg bg-black px-[10px] py-[10.5px] ring-2 ring-[#1D2838] *:transition-colors"
+        className="dropdown-content z-50 w-auto -translate-x-[25px] translate-y-2 rounded-lg bg-white px-[10px] py-[10.5px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
       >
         <li>
           <button
@@ -45,9 +45,13 @@ export function WalletArea({ address }: WalletAreaProps) {
               copyToClipboard(text, setCopied);
             }}
             disabled={copied}
-            className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] *:transition-all hover:bg-base-200"
+            className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-base-200"
           >
-            {copied ? <Image src={CopiedIcon} alt="copied" /> : <Image src={CopyIcon} alt="copy" />}
+            {copied ? (
+              <Image src={CopiedIcon} alt="copied" />
+            ) : (
+              <Image src={CopyIcon} alt="copy" className="light:invert" />
+            )}
             <span
               className={clsx(
                 {
@@ -68,9 +72,9 @@ export function WalletArea({ address }: WalletAreaProps) {
                   disconnect({ connector });
                 }}
                 key={connector.id}
-                className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-base-200"
+                className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-base-200"
               >
-                <Image src={DisconnectIcon} alt="disconnect" />
+                <Image src={DisconnectIcon} alt="disconnect" className="light:invert" />
                 <span className="whitespace-nowrap text-[13px] tracking-[0.26px]">Disconnect</span>
               </button>
             ) : null;

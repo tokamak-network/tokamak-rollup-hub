@@ -9,7 +9,6 @@ export function ThemeSwitchBtn() {
   const [mount, setMount] = useState<boolean>(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
-  console.log(currentTheme);
 
   useEffect(() => {
     setMount(true);
@@ -20,7 +19,7 @@ export function ThemeSwitchBtn() {
   }
 
   return (
-    <div className="flex w-[150px] items-center justify-between gap-2 px-2 py-[7.5px] text-[13px]">
+    <div className="items-ceenter flex w-[150px] gap-2 px-2 py-[7.5px] text-left text-[13px]">
       {currentTheme === 'dark' ? (
         <Image src={LightMode} alt="light-mode" />
       ) : (
@@ -39,8 +38,8 @@ export function ThemeSwitchBtn() {
             checked={currentTheme === 'dark' ? false : true}
             onChange={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
           />
-          <div className="absolute top-1 h-2 w-8 rounded-full dark:bg-[#BEC1C6]" />
-          <div className="absolute h-4 w-4 rounded-full bg-blue-500 transition-transform peer-checked:translate-x-4 dark:bg-white" />
+          <div className="absolute top-[6px] h-2 w-8 rounded-full bg-[#9DC0F1] dark:bg-[#BEC1C6]" />
+          <div className="absolute top-[1.5px] h-4 w-4 rounded-full bg-blue-500 transition-transform peer-checked:translate-x-4 dark:bg-white" />
         </label>
       </div>
     </div>

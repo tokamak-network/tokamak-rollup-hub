@@ -23,7 +23,7 @@ export default function Landing() {
                   <br className="hidden md:inline xl:hidden" />
                   <span className="inline md:hidden xl:inline">&nbsp;</span>Rollup
                 </p>
-                <p className="text-center font-medium text-trh-gray md:text-left md:text-[20px]">
+                <p className="text-center font-medium text-[#7A7E87] dark:text-trh-gray md:text-left md:text-[20px]">
                   Instantly create a fully customizable L2 rollup{' '}
                   <br className="inline xl:hidden" />
                   that is secure and fast.

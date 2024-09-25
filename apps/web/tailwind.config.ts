@@ -2,6 +2,8 @@ import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import daisyui from 'daisyui';
 
+import plugin from 'tailwindcss/plugin';
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -144,7 +146,12 @@ const config: Config = {
       sans: ['Proxima Nova', ...fontFamily.sans],
     },
   },
-  plugins: [daisyui],
+  plugins: [
+    daisyui,
+    plugin(function ({ addVariant }) {
+      addVariant('light', 'html:not(.dark) &');
+    }),
+  ],
   daisyui: {
     logs: false,
   },

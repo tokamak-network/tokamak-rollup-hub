@@ -40,7 +40,7 @@ export const GeneralBtn: React.FC<GeneralButtonProps> = ({
       disabled={isDisabled ? isDisabled : pending}
       className={clsx(
         {
-          'bg-[#0F141C] text-[#626D7D] hover:bg-[#0F141C]': isDisabled,
+          'text-[#626D7D] hover:bg-[#0F141C]': isDisabled,
         },
         `${sizeVariants[size]} ${styleVariants[styleType]} disabled:hover:cursor-not-allowed`,
       )}

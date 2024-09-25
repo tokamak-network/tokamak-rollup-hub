@@ -89,7 +89,7 @@ export default function Deploy() {
       >
         <div className="mt-[120px] w-full">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Environment</h1>
-          <p className="text-center text-[18px] text-trh-gray">
+          <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
             Choose an environment to create your own rollups.{' '}
             <span className="hidden xl:inline">
               Thanos Sepolia testnet and mainnet are supported.
@@ -123,7 +123,7 @@ export default function Deploy() {
       >
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
-          <div className="text-center text-[18px] text-trh-gray">
+          <div className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
             <p>Provide the necessary information to set up your rollup in devnet mode</p>
             <p>
               For more details on these items, refer to the following{' '}

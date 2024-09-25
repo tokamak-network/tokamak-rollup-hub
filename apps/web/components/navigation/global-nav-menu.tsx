@@ -1,10 +1,9 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ArrowDown from '../../public/icon-arrow-down.svg';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { menus } from './menus';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 const NormalItem = ({
   href,
@@ -24,7 +23,7 @@ const NormalItem = ({
         {
           'hover:text-tokamak-blue': !isSelected,
           'text-tokamak-blue': isSelected,
-          'font-semibold': !isSub,
+          'flex flex-col justify-center font-semibold': !isSub,
           'text-[13px] font-medium': isSub,
         },
         'group transition-colors',
@@ -55,19 +54,15 @@ const DropDownContainer = ({
             'hover:text-tokamak-blue': !isSelected,
             'text-tokamak-blue': isSelected,
           },
-          'group flex items-center justify-center gap-[6px] text-center font-semibold *:transition',
+          'group flex h-8 items-center justify-center gap-[6px] text-center font-semibold transition',
         )}
       >
         {name}
-        <Image
-          src={ArrowDown}
-          alt="arrow-down"
-          className="group-hover:rotate-180 group-focus:rotate-180"
-        />
+        <ChevronDownIcon className="h-4 stroke-[#CCCCCC] transition-transform group-hover:rotate-180 group-focus:rotate-180 dark:stroke-[#616D7E]" />
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content mt-1 w-[121px] gap-[15px] rounded-lg bg-black p-[18px] ring-2 ring-[#1D2838]"
+        className="menu dropdown-content w-[121px] gap-[15px] rounded-lg p-[18px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
       >
         {children}
       </ul>

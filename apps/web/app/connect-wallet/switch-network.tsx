@@ -24,18 +24,18 @@ export function SwitchNetwork({ isThanos }: SwitchNetworkProps) {
         {isThanos ? (
           <ThanosCircleSymbol networkType="testnet" />
         ) : (
-          <div className="flex items-center justify-center rounded-full p-[6px] ring-2 ring-[#1D2838]">
+          <div className="flex items-center justify-center rounded-full p-[6px] ring-2 ring-[#E8EDF2] dark:ring-[#1D2838]">
             <Image src={DangerIcon} alt="Thanos" />
           </div>
         )}
       </button>
-      <dialog id="switch_network_modal" className="modal bg-black bg-opacity-75">
-        <div className="modal-box w-[360px] bg-black ring-1 ring-[#232429]">
+      <dialog id="switch_network_modal" className="modal bg-black bg-opacity-55 dark:bg-opacity-75">
+        <div className="modal-box w-[360px] bg-white ring-1 ring-[#E8EDF2] dark:bg-black dark:ring-[#232429]">
           <div className="mb-[21px] flex items-center justify-between">
             <h3 className="text-xl font-semibold">Switch Networks</h3>
             <form method="dialog">
               <button className="flex items-center justify-center">
-                <XMarkIcon className="size-6 text-trh-gray-close-modal" />
+                <XMarkIcon className="size-6 fill-[#9A9AAF] text-trh-gray-close-modal dark:fill-[#64646F]" />
               </button>
             </form>
           </div>

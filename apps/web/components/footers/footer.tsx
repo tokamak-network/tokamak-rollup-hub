@@ -7,9 +7,11 @@ export default function Footer() {
     <div className="flex w-full justify-center px-[30px]">
       <div className="w-full md:max-w-[1620px]">
         <footer className="flex h-[78px] w-full items-center justify-between text-balance">
-          <p className="flex font-['Open_Sans'] text-[11px] font-normal text-trh-gray">
+          <p className="flex font-['Open_Sans'] text-[11px] font-normal text-[#999] dark:text-trh-gray">
             <span>Copyright &copy;2024</span>
-            <span className="text-trh-gray-light">&nbsp;Tokamak Network&nbsp;</span>
+            <span className="text-[#1C1C1C] dark:text-trh-gray-light">
+              &nbsp;Tokamak Network&nbsp;
+            </span>
             <span className="hidden md:inline">All Rights Reserved.</span>
           </p>
           <div
@@ -21,7 +23,7 @@ export default function Footer() {
               });
             }}
           >
-            <Image src={ArrowTop} alt="top" />
+            <Image src={ArrowTop} alt="top" className="invert-[50%]" />
           </div>
         </footer>
       </div>

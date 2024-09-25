@@ -6,11 +6,11 @@ export function MegaFooter() {
     <div className="mt-[100px] flex w-full flex-wrap justify-between border-b border-t border-[#1D2838] pt-5 md:border-t-0 xl:mt-[10px]">
       {megaFooterCategorys.map((category, index) => (
         <div key={index} className="mb-5 flex w-full flex-col gap-1 sm:w-1/2 md:w-auto">
-          <h3 className="text-xl">{category.title}</h3>
+          <h3 className="text-xl font-bold dark:text-[#D8DFE9]">{category.title}</h3>
           <ol className="flex flex-col gap-1 text-sm text-trh-gray">
             {category.items.map((item, index) => (
               <Link key={index} href={item.link} rel="noopener noreferrer" target="_blank">
-                <li>
+                <li className="text-[#4C4C4C] dark:text-[#616D7E]">
                   {item.name}
                   {item.super ? <sup>{item.super}</sup> : null}
                 </li>

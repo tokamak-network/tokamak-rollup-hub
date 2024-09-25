@@ -20,7 +20,11 @@ export function CopyBtn({ text }: CopyBtnProps) {
       {copied ? (
         <Image src={CheckIcon} className="h-6 w-6" alt="copied" />
       ) : (
-        <Image src={CopyIcon} className="h-6 w-6 opacity-45" alt="copy" />
+        <Image
+          src={CopyIcon}
+          className="h-6 w-6 opacity-20 light:invert dark:opacity-45"
+          alt="copy"
+        />
       )}
     </button>
   );

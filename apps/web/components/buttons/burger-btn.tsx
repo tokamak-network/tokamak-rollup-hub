@@ -28,16 +28,20 @@ export function BurgerBtn() {
   return (
     <>
       <button
-        className="rounded-md ring-1 ring-[#535353] md:hidden"
+        className="rounded-md ring-1 ring-[#E8EDF2] dark:ring-[#535353] md:hidden"
         onClick={() => (document.getElementById('mobile-menu') as any).showModal()}
       >
-        <Image src={BurgerIcon} alt="burger" className="size-[35px]" />
+        <Image
+          src={BurgerIcon}
+          alt="burger"
+          className="size-[35px] light:opacity-55 light:invert"
+        />
       </button>
-      <dialog id="mobile-menu" className="modal bg-black p-[20px]" ref={dialogMenu}>
+      <dialog id="mobile-menu" className="modal bg-white p-[20px] dark:bg-black" ref={dialogMenu}>
         <div className="modal-top flex h-full w-full flex-col rounded-[0px]">
           <form method="dialog" className="flex w-full justify-end">
             <button className="flex items-center justify-center">
-              <XMarkIcon className="size-[31px] text-white" />
+              <XMarkIcon className="size-[31px] text-[#9A9AAF] dark:text-white" />
             </button>
           </form>
           <div className="flex h-full w-full flex-col items-center justify-center gap-10">
@@ -65,7 +69,7 @@ export function BurgerBtn() {
                               {
                                 '*:text-tokamak-blue': sub.href && currentPath.includes(sub.href),
                               },
-                              'text-lg font-medium text-[#D9D9D9]',
+                              'text-lg font-medium text-[#2E2E3A] dark:text-[#D9D9D9]',
                             )}
                           >
                             {sub.name === 'Tokamak OP' ? (

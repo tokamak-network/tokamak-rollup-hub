@@ -18,7 +18,7 @@ export function FormDevnet() {
 
   return (
     <form action={dispatch} className="flex flex-col items-center">
-      <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card px-5 pb-6 pt-5 md:flex-row">
+      <div className="mb-[30px] flex w-full flex-col gap-[30px] rounded-2xl px-5 pb-6 pt-5 light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card md:flex-row">
         <div className="w-full">
           <FormInput
             type="text"
@@ -40,16 +40,16 @@ export function FormDevnet() {
           />
         </div>
       </div>
-      <div className="mb-[39px] flex w-full flex-col gap-[30px] rounded-2xl bg-gradient-card p-5 xl:flex-row">
+      <div className="mb-[39px] flex w-full flex-col gap-[30px] rounded-2xl p-5 light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:flex-row">
         <div className="w-full xl:w-1/2">
           <h3 className="mb-3 text-center text-xl font-semibold xl:text-left">Address Set-up</h3>
-          <p className="text-center font-medium text-trh-gray xl:text-left">
+          <p className="text-center font-medium text-[#7E7E8F] dark:text-trh-gray xl:text-left">
             Please list the main addresses that will be used in your rollup.{' '}
             <span className="hidden xl:inline">
               The required ones are automatically populated and can be edited.
             </span>
           </p>
-          <p className="text-center font-medium text-trh-gray xl:hidden">
+          <p className="text-center font-medium text-[#7E7E8F] dark:text-trh-gray xl:hidden">
             The required ones are automatically populated and can be edited.
           </p>
         </div>

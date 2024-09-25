@@ -40,13 +40,13 @@ export function FormInput({ type, label, name, placeholder, required, errors }: 
 
   return (
     <label className="flex flex-col gap-2">
-      <span className="text-[#7D899A]">{label}</span>
+      <span className="text-[#7E7E8F] dark:text-[#7D899A]">{label}</span>
       <div
         className={clsx(
           {
             'ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:ring-2': errorState,
           },
-          'flex items-center gap-2 rounded-md border-none bg-[#080A0E] px-[15px] py-[10px] outline-none ring-1 ring-[#303F5A] focus-within:ring-tokamak-blue',
+          'flex items-center gap-2 rounded-md border-none px-[15px] py-[10px] outline-none ring-1 ring-[#E8EDF2] focus-within:ring-tokamak-blue dark:bg-[#080A0E] dark:ring-[#303F5A]',
         )}
       >
         <input
@@ -65,11 +65,15 @@ export function FormInput({ type, label, name, placeholder, required, errors }: 
           })}
           onClick={handleInputClear}
         >
-          <Image
-            className="opacity-50"
-            src={errorState ? CircleError : CircleCancel}
-            alt="cancel"
-          />
+          {errorState ? (
+            <Image src={CircleError} alt="error" />
+          ) : (
+            <Image
+              className="opacity-25 light:invert dark:opacity-50"
+              src={CircleCancel}
+              alt="error"
+            />
+          )}
         </button>
       </div>
       {errorState && errors

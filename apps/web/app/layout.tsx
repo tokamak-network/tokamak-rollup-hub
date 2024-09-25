@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import GlobalNav from '@/components/navigation/global-nav';
 import Footer from '@/components/footers/footer';
 import { Web3Providers } from './web3provider';
+import ThemeProvider from './theme-provider';
 
 export const metadata: Metadata = {
   title: 'Tokamak Rollup Hub',
@@ -18,15 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
-        <Web3Providers>
-          <GlobalNav />
-          <div className="min-h-[calc(100vh-78px)]">
-            {children}
-            {modal_wallet}
-          </div>
-          <Footer />
-        </Web3Providers>
+      <body className="bg-white text-[#1C1C1C] *:transition-colors dark:bg-black dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+          <Web3Providers>
+            <GlobalNav />
+            <div className="min-h-[calc(100vh-78px)]">
+              {children}
+              {modal_wallet}
+            </div>
+            <Footer />
+          </Web3Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

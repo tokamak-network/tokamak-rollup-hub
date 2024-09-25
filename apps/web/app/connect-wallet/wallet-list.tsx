@@ -37,7 +37,7 @@ export default function WalletList() {
       <div className="flex items-center justify-between">
         <h1 className="text-[20px] font-semibold">Connect Wallet</h1>
         <button onClick={onCloseClick}>
-          <XMarkIcon className="-mr-1 size-6 text-trh-gray-close-modal" />
+          <XMarkIcon className="-mr-1 size-6 fill-[#9A9AAF] text-trh-gray-close-modal dark:fill-[#64646F]" />
         </button>
       </div>
       <div className="mt-5 flex flex-col gap-2">
@@ -46,20 +46,22 @@ export default function WalletList() {
             <button
               key={connector.id}
               onClick={() => connect({ connector })}
-              className="rounded-lg bg-[#1F2128] p-[15px] ring-1 ring-[#313442] transition-colors hover:ring-tokamak-blue"
+              className="rounded-lg p-[15px] ring-1 ring-[#E8EDF2] transition-colors hover:ring-tokamak-blue dark:bg-[#1F2128] dark:ring-[#313442]"
             >
               <div className="flex items-center gap-4">
                 <Image src={MetamaskIcon} alt="metamask" />
                 <div className="flex flex-col leading-[18px]">
                   <h3 className="flex justify-start font-semibold">{connector.name}</h3>
-                  <p className="text-sm text-[#8B8B93]">Easy-to-use browser extension.</p>
+                  <p className="text-sm text-[#7E7E8F] dark:text-[#8B8B93]">
+                    Easy-to-use browser extension.
+                  </p>
                 </div>
               </div>
             </button>
           ) : null;
         })}
       </div>
-      <p className="mt-6 text-sm text-[#C1C2D9]">
+      <p className="mt-6 text-sm text-[#7E7E8F] dark:text-[#C1C2D9]">
         <span>New to Ethereum? </span>
         <Link href="/">
           <span className="underline">Learn more about wallets</span>

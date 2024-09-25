@@ -23,7 +23,7 @@ const NormalItem = ({
         {
           'hover:text-tokamak-blue': !isSelected,
           'text-tokamak-blue': isSelected,
-          'font-semibold': !isSub,
+          'flex flex-col justify-center font-semibold': !isSub,
           'text-[13px] font-medium': isSub,
         },
         'group transition-colors',
@@ -54,7 +54,7 @@ const DropDownContainer = ({
             'hover:text-tokamak-blue': !isSelected,
             'text-tokamak-blue': isSelected,
           },
-          'group flex items-center justify-center gap-[6px] text-center font-semibold transition',
+          'group flex h-8 items-center justify-center gap-[6px] text-center font-semibold transition',
         )}
       >
         {name}
@@ -62,7 +62,7 @@ const DropDownContainer = ({
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content mt-1 w-[121px] gap-[15px] rounded-lg p-[18px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
+        className="menu dropdown-content w-[121px] gap-[15px] rounded-lg p-[18px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
       >
         {children}
       </ul>

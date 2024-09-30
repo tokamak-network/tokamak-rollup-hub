@@ -4,7 +4,7 @@ export const opDevResource = {
   isDisabled: false,
   btnText: 'Choose',
   description:
-    'Customized L2 stack built on Optimism, which offers fast and affordable computation and state updates by using optimistic rollup. Along with Optimism’s capabilities, this stack also includes a flexible transaction fee to enhance the user experience.',
+    'A tailored Layer 2 stack built on Optimism, offering fast and low-cost computation and state updates using optimistic rollup technology. Along with a flexible transaction fee structure, this stack introduces seigniorage as an additional revenue source for operators, and other features to optimize the user experience.',
   docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
   superScriptColor: 'red',
 };
@@ -15,7 +15,7 @@ export const zkDevResource = {
   isDisabled: true,
   btnText: 'Coming Soon',
   description:
-    'Cutting-edge virtual machine for L2, designed to work with ZKSNARKS. It supports a previously unseen L2 rollup architecture that reduces computational complexity without compromising security or privacy.',
+    'An advanced virtual machine for Layer 2, optimized for compatibility with ZKSNARKS. It features an innovative L2 rollup architecture that reduces computational complexity while preserving security and privacy.',
   docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
   superScriptColor: 'green',
 };
@@ -30,7 +30,7 @@ export const deployEnvironment = [
   {
     title: 'Testnet',
     description:
-      'Deploy your Rollup or Appchain in Testnet mode using the TRH service. Inspired from the Thanos testnet, this mode ensures robust security, tools, and features for seamless deployment and functionality. We currently provide instructions for cloud deployment.',
+      'Deploy your Rollup or Appchain in Testnet mode using the TRH service. Inspired from the Thanos testnet, this mode ensures robust security, tools, and features for seamless deployment and functionality.',
     isDisabled: true,
   },
   {

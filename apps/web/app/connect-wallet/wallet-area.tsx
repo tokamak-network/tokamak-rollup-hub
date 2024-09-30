@@ -30,13 +30,13 @@ export function WalletArea({ address }: WalletAreaProps) {
   const { connectors, disconnect } = useDisconnect();
 
   return (
-    <div className="dropdown dropdown-hover">
+    <div className="dropdown dropdown-hover flex h-[58px] flex-col justify-center">
       <div tabIndex={0} role="button" className="wallet-btn list-none hover:cursor-pointer">
         {trimAddress(address)}
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-50 w-auto -translate-x-[25px] translate-y-2 rounded-lg bg-white px-[10px] py-[10.5px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
+        className="dropdown-content z-50 w-auto -translate-x-[25px] translate-y-[88.14px] rounded-lg bg-white px-[10px] py-[10.5px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
       >
         <li>
           <button

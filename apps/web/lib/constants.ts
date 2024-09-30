@@ -5,7 +5,8 @@ export const opDevResource = {
   btnText: 'Choose',
   description:
     'A tailored Layer 2 stack built on Optimism, offering fast and low-cost computation and state updates using optimistic rollup technology. Along with a flexible transaction fee structure, this stack introduces seigniorage as an additional revenue source for operators, and other features to optimize the user experience.',
-  docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
+  docsUrl:
+    'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/l2-on-demand-stack#tokamak-op',
   superScriptColor: 'red',
 };
 
@@ -16,7 +17,8 @@ export const zkDevResource = {
   btnText: 'Coming Soon',
   description:
     'An advanced virtual machine for Layer 2, optimized for compatibility with ZKSNARKS. It features an innovative L2 rollup architecture that reduces computational complexity while preserving security and privacy.',
-  docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
+  docsUrl:
+    'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/l2-on-demand-stack#tokamak-zk-coming-soon',
   superScriptColor: 'green',
 };
 

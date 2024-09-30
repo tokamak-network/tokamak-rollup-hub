@@ -130,7 +130,7 @@ export default function Deploy() {
               For more details on these items, refer to the following{' '}
               <Link
                 href={
-                  'https://onther-max.notion.site/Step-by-Step-Guide-111f35cdc600810a8546f5abab2f7f1e'
+                  'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/step-by-step-guide#rollup-details'
                 }
                 rel="noopener noreferrer"
                 target="_blank"

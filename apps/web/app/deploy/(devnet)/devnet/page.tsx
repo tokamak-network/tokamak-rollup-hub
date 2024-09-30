@@ -32,7 +32,7 @@ export default function DeployDevnetPage() {
             Please refer to this {''}
             <Link
               href={
-                'https://onther-max.notion.site/Step-by-Step-Guide-111f35cdc600810a8546f5abab2f7f1e'
+                'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/step-by-step-guide#process-guide-for-devnet-deployment'
               }
               rel="noopener noreferrer"
               target="_blank"

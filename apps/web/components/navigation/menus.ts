@@ -30,7 +30,7 @@ export const menus: ItemInfo[] = [
       {
         name: 'User Guide',
         externalLink: true,
-        href: 'https://onther-max.notion.site/Devnet-111f35cdc60080fb8c60ec357f10e429',
+        href: 'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet',
       },
       {
         name: 'Get Help',

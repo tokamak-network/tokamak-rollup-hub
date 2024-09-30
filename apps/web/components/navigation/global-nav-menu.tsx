@@ -9,11 +9,13 @@ const NormalItem = ({
   href,
   currentPath,
   isSub = false,
+  externalLink,
   children,
 }: {
   href: string;
   currentPath: string;
   isSub: boolean;
+  externalLink?: boolean;
   children: React.ReactNode;
 }) => {
   const isSelected = currentPath.includes(href);
@@ -29,7 +31,13 @@ const NormalItem = ({
         'group transition-colors',
       )}
     >
-      <Link href={href}>{children}</Link>
+      {externalLink ? (
+        <Link href={href} rel="noopener noreferrer" target="_blank">
+          {children}
+        </Link>
+      ) : (
+        <Link href={href}>{children}</Link>
+      )}
     </div>
   );
 };
@@ -90,6 +98,7 @@ export function NavMenu() {
                   <NormalItem
                     isSub={true}
                     href={subItem.href as string}
+                    externalLink={subItem.externalLink}
                     currentPath={pathname}
                     key={index}
                   >

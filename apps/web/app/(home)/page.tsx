@@ -3,6 +3,7 @@ import VisualLanding from '../../public/visual-landing.svg';
 import { GeneralBtn } from '@/components/buttons/general-btn';
 import Link from 'next/link';
 
+// TODO: Documents links
 export default function Landing() {
   return (
     <div className="min-h-[calc(100vh-78px-200px)] xl:flex xl:flex-col xl:justify-center">
@@ -40,12 +41,18 @@ export default function Landing() {
                   arrow="right"
                 />
               </Link>
-              <GeneralBtn
-                isDisabled={false}
-                text="Documentation"
-                styleType="secondary"
-                size="landingPage"
-              />
+              <Link
+                href="https://onther-max.notion.site/Devnet-111f35cdc60080fb8c60ec357f10e429"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <GeneralBtn
+                  isDisabled={false}
+                  text="Documentation"
+                  styleType="secondary"
+                  size="landingPage"
+                />
+              </Link>
             </div>
           </div>
           <div className="w-full md:absolute md:bottom-0 md:right-0 md:w-auto">

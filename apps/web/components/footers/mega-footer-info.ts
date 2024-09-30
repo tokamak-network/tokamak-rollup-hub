@@ -109,7 +109,7 @@ export const megaFooterCategorys: Category[] = [
         link: 'https://discord.com/invite/J4chV2zuAK',
       },
       {
-        name: 'Telegram',
+        name: 'Telegram (EN)',
         link: 'https://t.me/tokamak_network',
       },
       {

@@ -6,7 +6,9 @@ import { StepCard } from '@/components/cards/step-card';
 import useLocalStorageState from '@/hooks/local-storage';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
+// TODO: documents link
 export default function DeployDevnetPage() {
   const [template] = useLocalStorageState<string>('template', '');
   const [mount, setMount] = useState<boolean>(false);
@@ -27,8 +29,18 @@ export default function DeployDevnetPage() {
         <div className="flex w-full flex-col gap-[33px] p-5 xl:w-1/2">
           <h3 className="block text-[21px] font-semibold">How to deploy rollup locally</h3>
           <p className="-mt-[18px] font-medium text-[#7E7E8F] dark:text-[#7D899A]">
-            Please refer to this document for any prerequisite installations before deploying the
-            rollup in your local environment.
+            Please refer to this {''}
+            <Link
+              href={
+                'https://onther-max.notion.site/Step-by-Step-Guide-111f35cdc600810a8546f5abab2f7f1e'
+              }
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="text-tokamak-blue underline underline-offset-2">documents</span>
+            </Link>
+            {''} for any prerequisite installations before deploying the rollup in your local
+            environment.
           </p>
           <VersionTable />
           {leftSectionGuide.map((step, index) => {

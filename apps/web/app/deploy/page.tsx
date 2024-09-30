@@ -8,6 +8,7 @@ import { FormDevnet } from './(devnet)/form-devnet';
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
 
+// TODO: documents link
 export default function Deploy() {
   const [selectedDevResource, setResource] = useState('');
   const [selectedEnv, setEnv] = useState('');
@@ -127,7 +128,13 @@ export default function Deploy() {
             <p>Provide the necessary information to set up your rollup in devnet mode</p>
             <p>
               For more details on these items, refer to the following{' '}
-              <Link href={'#'}>
+              <Link
+                href={
+                  'https://onther-max.notion.site/Step-by-Step-Guide-111f35cdc600810a8546f5abab2f7f1e'
+                }
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <span className="text-tokamak-blue underline underline-offset-2">documents.</span>
               </Link>
             </p>

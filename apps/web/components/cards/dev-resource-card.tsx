@@ -34,7 +34,9 @@ export function DevResourceCard({
       <div className="item-center mb-[30px] flex flex-col justify-center text-center text-[17px] font-medium md:h-[250px] xl:h-[130px]">
         <p className="text-[#7E7E8F] dark:text-trh-gray">{description}</p>
         <p className="text-tokamak-blue underline underline-offset-4">
-          <Link href={docsUrl}>For additional information, check out Documentation.</Link>
+          <Link href={docsUrl} rel="noopener noreferrer" target="_blank">
+            For additional information, check out Documentation.
+          </Link>
         </p>
       </div>
       <GeneralBtn

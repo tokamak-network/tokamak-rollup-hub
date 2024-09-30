@@ -1,9 +1,11 @@
 interface ItemInfo {
   name: string;
   href?: string;
+  externalLink?: boolean;
   subItems?: ItemInfo[];
 }
 
+// TODO: documents link
 export const menus: ItemInfo[] = [
   {
     name: 'Deploy',
@@ -27,11 +29,13 @@ export const menus: ItemInfo[] = [
     subItems: [
       {
         name: 'User Guide',
-        href: '/more/user-guide',
+        externalLink: true,
+        href: 'https://onther-max.notion.site/Devnet-111f35cdc60080fb8c60ec357f10e429',
       },
       {
         name: 'Get Help',
-        href: '/more/help',
+        externalLink: true,
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSf2-6373Pn4KkOyoP4VjPXgO1vabDyK1qTjtNV_s1ccfzcywA/viewform',
       },
     ],
   },

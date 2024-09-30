@@ -1,20 +1,22 @@
+// TODO: documents link
 export const opDevResource = {
   type: 'op',
   isDisabled: false,
   btnText: 'Choose',
   description:
     'Customized L2 stack built on Optimism, which offers fast and affordable computation and state updates by using optimistic rollup. Along with Optimism’s capabilities, this stack also includes a flexible transaction fee to enhance the user experience.',
-  docsUrl: '#',
+  docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
   superScriptColor: 'red',
 };
 
+// TODO: documents link
 export const zkDevResource = {
   type: 'zk+',
   isDisabled: true,
   btnText: 'Coming Soon',
   description:
     'Cutting-edge virtual machine for L2, designed to work with ZKSNARKS. It supports a previously unseen L2 rollup architecture that reduces computational complexity without compromising security or privacy.',
-  docsUrl: '#',
+  docsUrl: 'https://onther-max.notion.site/L2-On-Demand-Stack-111f35cdc60081c597acd4bbffedad80',
   superScriptColor: 'green',
 };
 

@@ -28,7 +28,7 @@ export function FormDevnet({ address }: FormDevnetProps) {
             type="text"
             label="Rollup Name"
             name="rollup-name"
-            placeholder="Sample Name"
+            placeholder="Name your rollup"
             required={true}
             errors={state?.errors?.fieldErrors.rollupName}
           />

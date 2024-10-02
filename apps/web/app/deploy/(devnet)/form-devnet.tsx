@@ -6,7 +6,11 @@ import { useFormState } from 'react-dom';
 import { useEffect } from 'react';
 import { redirect } from 'next/navigation';
 
-export function FormDevnet() {
+interface FormDevnetProps {
+  address: `0x${string}` | undefined;
+}
+
+export function FormDevnet({ address }: FormDevnetProps) {
   const [state, dispatch] = useFormState(handleForm, null);
 
   useEffect(() => {
@@ -62,6 +66,7 @@ export function FormDevnet() {
                 name="admin-address"
                 placeholder="Input your admin address"
                 required={true}
+                address={address}
                 errors={state?.errors?.fieldErrors.adminAddress}
               />
             </div>
@@ -72,6 +77,7 @@ export function FormDevnet() {
                 name="sequencer-address"
                 placeholder="Input your sequencer address"
                 required={true}
+                address={address}
                 errors={state?.errors?.fieldErrors.sequencerAddress}
               />
             </div>
@@ -84,6 +90,7 @@ export function FormDevnet() {
                 name="batcher-address"
                 placeholder="Input your batcher address"
                 required={true}
+                address={address}
                 errors={state?.errors?.fieldErrors.batcherAddress}
               />
             </div>
@@ -94,6 +101,7 @@ export function FormDevnet() {
                 name="proposer-address"
                 placeholder="Input your proposer address"
                 required={true}
+                address={address}
                 errors={state?.errors?.fieldErrors.proposerAddress}
               />
             </div>

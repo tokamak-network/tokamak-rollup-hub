@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FormDevnet } from './(devnet)/form-devnet';
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
+import { useAccount } from 'wagmi';
 
 // TODO: documents link
 export default function Deploy() {
@@ -14,6 +15,7 @@ export default function Deploy() {
   const [selectedEnv, setEnv] = useState('');
   const envRef = useRef<HTMLDivElement>(null);
   const rollupConfRef = useRef<HTMLDivElement>(null);
+  const { address } = useAccount();
 
   const promiseResource = (type: string) =>
     new Promise((resolve) => {
@@ -141,7 +143,7 @@ export default function Deploy() {
           </div>
         </div>
         <div className="mt-[39px] w-full pb-[60px]">
-          <FormDevnet />
+          <FormDevnet address={address} />
         </div>
       </div>
     </div>

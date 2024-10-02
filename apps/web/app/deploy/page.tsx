@@ -132,7 +132,7 @@ export default function Deploy() {
               For more details on these items, refer to the following{' '}
               <Link
                 href={
-                  'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/step-by-step-guide#rollup-details'
+                  'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/parameter-definitions?r=aTfC9Gun6WmtEQZlRXnO'
                 }
                 rel="noopener noreferrer"
                 target="_blank"

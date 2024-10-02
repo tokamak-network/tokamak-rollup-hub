@@ -4,23 +4,34 @@ import { XMarkIcon } from '@heroicons/react/24/solid';
 import { ThanosCircleSymbol } from '@/components/symbols/thanos';
 import { NetworkSwitchBtn } from '@/components/buttons/network-switch-btn';
 import { thanosSepolia } from '@/lib/chains';
-import { useSwitchChain } from 'wagmi';
+import { useChainId, useSwitchChain } from 'wagmi';
+import { ChangeNetworkToThanos } from '@/components/warnings/network';
+import { useEffect, useState } from 'react';
 
 // TODO: if mainnet publish, add feature and symbol
 
-interface SwitchNetworkProps {
-  isThanos: boolean;
-}
-
-export function SwitchNetwork({ isThanos }: SwitchNetworkProps) {
+export function SwitchNetwork() {
   const { switchChain } = useSwitchChain();
+  const [isThanos, setIsThanos] = useState(false);
+  const chainId = useChainId();
+
+  useEffect(() => {
+    if (chainId === thanosSepolia.id) {
+      setIsThanos(true);
+    } else {
+      setIsThanos(false);
+    }
+  }, [chainId]);
 
   const handleSwitchNetwork = (chainId: number) => {
     switchChain({ chainId: chainId });
   };
   return (
     <>
-      <button onClick={() => (document.getElementById('switch_network_modal') as any).showModal()}>
+      <button
+        className="relative"
+        onClick={() => (document.getElementById('switch_network_modal') as any).showModal()}
+      >
         {isThanos ? (
           <ThanosCircleSymbol networkType="testnet" />
         ) : (
@@ -28,6 +39,7 @@ export function SwitchNetwork({ isThanos }: SwitchNetworkProps) {
             <Image src={DangerIcon} alt="Thanos" />
           </div>
         )}
+        {!isThanos ? <ChangeNetworkToThanos /> : null}
       </button>
       <dialog id="switch_network_modal" className="modal bg-black bg-opacity-55 dark:bg-opacity-75">
         <div className="modal-box w-[360px] bg-white ring-1 ring-[#E8EDF2] dark:bg-black dark:ring-[#232429]">

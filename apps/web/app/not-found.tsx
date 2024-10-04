@@ -3,13 +3,6 @@ import TRHSymbol from '../public/symbol-trh.svg';
 import Image from 'next/image';
 import { headers } from 'next/headers';
 
-const commingSoonList = [
-  '/discover/tokamak-op',
-  '/discover/tokamak-zk',
-  '/more/user-guide',
-  '/more/help',
-];
-
 export default async function NotFound() {
   const headersList = headers();
   const currentPath = headersList.get('x-current-path');
@@ -19,7 +12,19 @@ export default async function NotFound() {
       <Image src={TRHSymbol} className="size-16" alt="symbol" />
       <div className="flex h-16 flex-col justify-center">
         <h2 className="text-3xl font-bold">
-          {commingSoonList.find((item) => item === currentPath) ? 'Coming Soon' : 'Not Found'}
+          {currentPath === '/discover/tokamak-op' ? (
+            <div>
+              <p>Thanos Testnet Status Page and Details</p>
+              <p>Coming Soon</p>
+            </div>
+          ) : currentPath === '/discover/tokamak-zk' ? (
+            <div>
+              <p>Details about the ZK Stack</p>
+              <p>Coming Soon</p>
+            </div>
+          ) : (
+            'Not Found'
+          )}
         </h2>
         <p>
           Return {''}

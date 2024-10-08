@@ -143,5 +143,3 @@ export default function Deploy() {
     </div>
   );
 }
-
-//Devnet provides a local environment for configuring and testing Rollups or Appchains on your PC, offering default configurations along with pre-funded accounts for development purposes

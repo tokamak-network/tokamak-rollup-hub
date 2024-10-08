@@ -6,7 +6,7 @@ export interface CopyInputProps {
 
 export function CopyInput({ text }: CopyInputProps) {
   return (
-    <div className="flex w-full items-center justify-between gap-2 rounded-xl border-[1px] border-[#E8EDF2] px-[15px] py-[10px] font-normal dark:border-[#192232] dark:bg-[#080A0E]">
+    <div className="flex w-full items-center justify-between gap-2 rounded-xl border-[1px] border-[#E8EDF2] bg-white px-[15px] py-[10px] font-normal dark:border-[#192232] dark:bg-[#080A0E]">
       <input
         type="text"
         value={text}

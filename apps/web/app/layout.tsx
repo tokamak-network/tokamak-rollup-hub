@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white text-[#1C1C1C] *:transition-colors dark:bg-black dark:text-white">
+      <body className="bg-[#FAFBFC] text-[#1C1C1C] *:transition-colors dark:bg-black dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <Web3Providers>
             <GlobalNav />

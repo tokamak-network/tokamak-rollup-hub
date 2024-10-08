@@ -70,7 +70,7 @@ const DropDownContainer = ({
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content w-[121px] gap-[15px] rounded-lg p-[18px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
+        className="menu dropdown-content w-[121px] gap-[15px] rounded-lg bg-white p-[18px] ring-2 ring-[#E8EDF2] dark:bg-black dark:ring-[#1D2838]"
       >
         {children}
       </ul>

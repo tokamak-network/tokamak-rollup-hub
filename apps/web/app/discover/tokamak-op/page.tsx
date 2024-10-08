@@ -73,7 +73,7 @@ export default function TokamakOP() {
         Tokamak <sup className="text-trh-red">OP</sup>
       </h1>
       <div className="relative max-h-[516px] w-full overflow-hidden md:max-h-max">
-        <div className="absolute left-0 top-0 z-[9999] flex h-full w-full items-center justify-center bg-[FAFBFC] bg-opacity-65 backdrop-blur-[5px] dark:bg-black dark:bg-opacity-65">
+        <div className="absolute left-0 top-0 z-[10] flex h-full w-full items-center justify-center bg-[FAFBFC] bg-opacity-65 backdrop-blur-[5px] dark:bg-black dark:bg-opacity-65">
           <ComingSoon text="Thanos Testnet Status Page and Details" />
         </div>
         <picture>

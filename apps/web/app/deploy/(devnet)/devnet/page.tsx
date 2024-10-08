@@ -43,9 +43,6 @@ export default function DeployDevnetPage() {
           </p>
           <VersionTable />
           {leftSectionGuide.map((step, index) => {
-            if (step.jsonDownloadBtnProps && template !== null) {
-              step.jsonDownloadBtnProps.json = JSON.stringify(template);
-            }
             return <StepCard key={index} {...step} />;
           })}
         </div>

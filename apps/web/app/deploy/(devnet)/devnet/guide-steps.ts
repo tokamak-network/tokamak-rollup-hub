@@ -33,7 +33,7 @@ export const leftSectionGuide: StepCardProps[] = [
     },
   },
   {
-    step: 5,
+    step: 3,
     descriptions: [
       {
         text: 'Go to the repository you cloned and type make build. This will install the various files for the rollup deployment.',
@@ -46,7 +46,7 @@ export const leftSectionGuide: StepCardProps[] = [
     },
   },
   {
-    step: 6,
+    step: 4,
     descriptions: [
       {
         text: 'When all is done, type make devnet-up to deploy the rollup with the information from the build.',

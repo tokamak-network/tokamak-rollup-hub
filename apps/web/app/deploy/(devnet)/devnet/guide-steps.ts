@@ -33,39 +33,6 @@ export const leftSectionGuide: StepCardProps[] = [
     },
   },
   {
-    step: 3,
-    descriptions: [
-      {
-        text: 'Download the JSON file generated based on your input.',
-        fontStyle: 'medium',
-        margin: false,
-      },
-    ],
-    jsonDownloadBtnProps: {
-      json: '',
-      outputFileName: 'devnetL1-template',
-    },
-  },
-  {
-    step: 4,
-    descriptions: [
-      {
-        text: 'After downloading, overwrite',
-        fontStyle: 'medium',
-        margin: false,
-      },
-      {
-        text: './packages/tokamak/contracts-bedrock/deploy-config/devnetL1-template.json',
-        fontStyle: 'normal',
-        fontColor: 'tokamak-blue',
-        margin: false,
-      },
-    ],
-  },
-];
-
-export const rightSectionGuide: StepCardProps[] = [
-  {
     step: 5,
     descriptions: [
       {

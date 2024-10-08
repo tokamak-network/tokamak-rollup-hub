@@ -3,11 +3,10 @@ import { DevResourceCard } from '@/components/cards/dev-resource-card';
 import { HorisonStack, VetrticalStack } from './shape-stack-animation';
 import { deployEnvironment, opDevResource, zkDevResource } from '@/lib/constants';
 import { DataDisplayCard } from '@/components/cards/data-display-card';
-import Link from 'next/link';
-import { FormDevnet } from './(devnet)/form-devnet';
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
-import { useAccount } from 'wagmi';
+import { GeneralBtn } from '@/components/buttons/general-btn';
+import Link from 'next/link';
 
 // TODO: documents link
 export default function Deploy() {
@@ -15,7 +14,6 @@ export default function Deploy() {
   const [selectedEnv, setEnv] = useState('');
   const envRef = useRef<HTMLDivElement>(null);
   const rollupConfRef = useRef<HTMLDivElement>(null);
-  const { address } = useAccount();
 
   const promiseResource = (type: string) =>
     new Promise((resolve) => {
@@ -127,23 +125,20 @@ export default function Deploy() {
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
           <div className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-            <p>Provide the necessary information to set up your rollup in devnet mode</p>
             <p>
-              For more details on these items, refer to the following{' '}
-              <Link
-                href={
-                  'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/parameter-definitions?r=aTfC9Gun6WmtEQZlRXnO'
-                }
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className="text-tokamak-blue underline underline-offset-2">documents.</span>
-              </Link>
+              Devnet is an option that allows you to configure and test Layer 1 and Layer 2 rollups
+              in your local PC environment.
+            </p>
+            <p>
+              Tokamak Rollup Hub does all the work for you to drive your rollups, so you can focus
+              on your tests and goals.
             </p>
           </div>
         </div>
-        <div className="mt-[39px] w-full pb-[60px]">
-          <FormDevnet address={address} />
+        <div className="mt-[39px] flex w-full justify-center pb-[60px]">
+          <Link href={'/deploy/devnet'}>
+            <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />
+          </Link>
         </div>
       </div>
     </div>

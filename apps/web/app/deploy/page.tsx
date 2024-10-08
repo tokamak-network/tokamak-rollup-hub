@@ -126,12 +126,11 @@ export default function Deploy() {
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
           <div className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
             <p>
-              Devnet is an option that allows you to configure and test Layer 1 and Layer 2 rollups
-              in your local PC environment.
+              Devnet provides a local environment for configuring and testing Rollups or Appchains
             </p>
             <p>
-              Tokamak Rollup Hub does all the work for you to drive your rollups, so you can focus
-              on your tests and goals.
+              on your PC, offering default configurations along with pre-funded accounts for
+              development purposes
             </p>
           </div>
         </div>
@@ -144,3 +143,5 @@ export default function Deploy() {
     </div>
   );
 }
+
+//Devnet provides a local environment for configuring and testing Rollups or Appchains on your PC, offering default configurations along with pre-funded accounts for development purposes

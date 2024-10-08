@@ -4,11 +4,12 @@ import EthSymbolDark from '../../public/symbol-ethereum-dark.svg';
 import { useTheme } from 'next-themes';
 
 export function EthCircleSymbol() {
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div className="">
-      {theme === 'dark' && <Image src={EthSymbolDark} alt="eth" className="size-[35px]" />}
-      {theme === 'light' && <Image src={EthSymbolWhite} alt="eth" className="size-[35px]" />}
+      {currentTheme === 'dark' && <Image src={EthSymbolDark} alt="eth" className="size-[35px]" />}
+      {currentTheme === 'light' && <Image src={EthSymbolWhite} alt="eth" className="size-[35px]" />}
     </div>
   );
 }

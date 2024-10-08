@@ -11,7 +11,8 @@ import { devnetTemplate } from '@/lib/constants';
 // TODO: documents link
 export default function DeployDevnetPage() {
   const [mount, setMount] = useState<boolean>(false);
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   useEffect(() => {
     setMount(true);
@@ -50,7 +51,7 @@ export default function DeployDevnetPage() {
           <div className="flex w-full flex-col gap-5 rounded-2xl p-5 light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:max-h-[1290px]">
             <h3 className="text-xl font-semibold">Rollup information</h3>
             <div className="overflow-auto rounded-2xl p-4 light:ring-1 light:ring-[#E8EDF2] dark:bg-black">
-              <JsonView contents={JSON.stringify(devnetTemplate)} theme={theme} />
+              <JsonView contents={JSON.stringify(devnetTemplate)} theme={currentTheme} />
             </div>
           </div>
         </div>

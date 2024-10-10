@@ -12,6 +12,7 @@
     "ecmaVersion": 2021,
     "sourceType": "module"
   },
+  "ignorePatterns": ["!.*", "dist", "node-modules"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/ban-ts-comment": "off",

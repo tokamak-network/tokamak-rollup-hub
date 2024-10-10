@@ -25,8 +25,7 @@ export default function Landing() {
                   <span className="inline md:hidden xl:inline">&nbsp;</span>Rollup
                 </p>
                 <p className="text-center font-medium text-[#7A7E87] dark:text-trh-gray md:text-left md:text-[20px]">
-                  Instantly create a fully customizable L2 rollup{' '}
-                  <br className="inline xl:hidden" />
+                  Create a fully customizable L2 rollup <br className="inline xl:hidden" />
                   that is secure and fast.
                 </p>
               </div>
@@ -42,7 +41,7 @@ export default function Landing() {
                 />
               </Link>
               <Link
-                href="https://onther-max.notion.site/Devnet-111f35cdc60080fb8c60ec357f10e429"
+                href="https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub"
                 rel="noopener noreferrer"
                 target="_blank"
               >

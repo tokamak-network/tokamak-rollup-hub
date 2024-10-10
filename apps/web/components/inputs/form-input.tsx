@@ -12,9 +12,18 @@ interface FormInputProps {
   placeholder: string;
   required: boolean;
   errors?: string[];
+  address?: `0x${string}` | undefined;
 }
 
-export function FormInput({ type, label, name, placeholder, required, errors }: FormInputProps) {
+export function FormInput({
+  type,
+  label,
+  name,
+  placeholder,
+  required,
+  errors,
+  address,
+}: FormInputProps) {
   const [inputState, setInputState] = useState(false);
   const [errorState, setErrorState] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -33,10 +42,13 @@ export function FormInput({ type, label, name, placeholder, required, errors }: 
   };
 
   useEffect(() => {
+    if (address !== undefined) {
+      setInputState(true);
+    }
     if (errors !== undefined) {
       setErrorState(true);
     }
-  }, [errors]);
+  }, [errors, address]);
 
   return (
     <label className="flex flex-col gap-2">
@@ -53,6 +65,7 @@ export function FormInput({ type, label, name, placeholder, required, errors }: 
           name={name}
           ref={inputRef}
           placeholder={placeholder}
+          defaultValue={address}
           type={type}
           onChange={handleInputChange}
           required={required}

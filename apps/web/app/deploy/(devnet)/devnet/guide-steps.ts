@@ -36,39 +36,6 @@ export const leftSectionGuide: StepCardProps[] = [
     step: 3,
     descriptions: [
       {
-        text: 'Download the JSON file generated based on your input.',
-        fontStyle: 'medium',
-        margin: false,
-      },
-    ],
-    jsonDownloadBtnProps: {
-      json: '',
-      outputFileName: 'devnetL1-template',
-    },
-  },
-  {
-    step: 4,
-    descriptions: [
-      {
-        text: 'After downloading, overwrite',
-        fontStyle: 'medium',
-        margin: false,
-      },
-      {
-        text: './packages/tokamak/contracts-bedrock/deploy-config/devnetL1-template.json',
-        fontStyle: 'normal',
-        fontColor: 'tokamak-blue',
-        margin: false,
-      },
-    ],
-  },
-];
-
-export const rightSectionGuide: StepCardProps[] = [
-  {
-    step: 5,
-    descriptions: [
-      {
         text: 'Go to the repository you cloned and type make build. This will install the various files for the rollup deployment.',
         fontStyle: 'medium',
         margin: false,
@@ -79,7 +46,7 @@ export const rightSectionGuide: StepCardProps[] = [
     },
   },
   {
-    step: 6,
+    step: 4,
     descriptions: [
       {
         text: 'When all is done, type make devnet-up to deploy the rollup with the information from the build.',

@@ -3,10 +3,10 @@ import { DevResourceCard } from '@/components/cards/dev-resource-card';
 import { HorisonStack, VetrticalStack } from './shape-stack-animation';
 import { deployEnvironment, opDevResource, zkDevResource } from '@/lib/constants';
 import { DataDisplayCard } from '@/components/cards/data-display-card';
-import Link from 'next/link';
-import { FormDevnet } from './(devnet)/form-devnet';
 import { useRef, useState } from 'react';
 import clsx from 'clsx';
+import { GeneralBtn } from '@/components/buttons/general-btn';
+import Link from 'next/link';
 
 // TODO: documents link
 export default function Deploy() {
@@ -125,23 +125,19 @@ export default function Deploy() {
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
           <div className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-            <p>Provide the necessary information to set up your rollup in devnet mode</p>
             <p>
-              For more details on these items, refer to the following{' '}
-              <Link
-                href={
-                  'https://onther-max.notion.site/Step-by-Step-Guide-111f35cdc600810a8546f5abab2f7f1e'
-                }
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className="text-tokamak-blue underline underline-offset-2">documents.</span>
-              </Link>
+              Devnet provides a local environment for configuring and testing Rollups or Appchains
+            </p>
+            <p>
+              on your PC, offering default configurations along with pre-funded accounts for
+              development purposes
             </p>
           </div>
         </div>
-        <div className="mt-[39px] w-full pb-[60px]">
-          <FormDevnet />
+        <div className="mt-[39px] flex w-full justify-center pb-[60px]">
+          <Link href={'/deploy/devnet'}>
+            <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />
+          </Link>
         </div>
       </div>
     </div>

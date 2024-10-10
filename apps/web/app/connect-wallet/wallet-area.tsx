@@ -45,7 +45,7 @@ export function WalletArea({ address }: WalletAreaProps) {
               copyToClipboard(text, setCopied);
             }}
             disabled={copied}
-            className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-base-200"
+            className="group flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-[#1D232A]"
           >
             {copied ? (
               <Image src={CopiedIcon} alt="copied" />
@@ -57,7 +57,7 @@ export function WalletArea({ address }: WalletAreaProps) {
                 {
                   'text-tokamak-blue': copied,
                 },
-                'text-[13px] tracking-[0.26px]',
+                'text-[13px] tracking-[0.26px] group-hover:text-tokamak-blue',
               )}
             >
               Copy Address
@@ -72,10 +72,12 @@ export function WalletArea({ address }: WalletAreaProps) {
                   disconnect({ connector });
                 }}
                 key={connector.id}
-                className="flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-base-200"
+                className="group flex w-full gap-2 rounded-lg px-2 py-[7.5px] hover:bg-slate-100 dark:hover:bg-[#1D232A]"
               >
                 <Image src={DisconnectIcon} alt="disconnect" className="light:invert" />
-                <span className="whitespace-nowrap text-[13px] tracking-[0.26px]">Disconnect</span>
+                <span className="whitespace-nowrap text-[13px] tracking-[0.26px] group-hover:text-[#FD3D51]">
+                  Disconnect
+                </span>
               </button>
             ) : null;
           })}

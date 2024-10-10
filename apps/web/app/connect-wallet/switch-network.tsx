@@ -4,30 +4,48 @@ import { XMarkIcon } from '@heroicons/react/24/solid';
 import { ThanosCircleSymbol } from '@/components/symbols/thanos';
 import { NetworkSwitchBtn } from '@/components/buttons/network-switch-btn';
 import { thanosSepolia } from '@/lib/chains';
-import { useSwitchChain } from 'wagmi';
+import { useAccount, useSwitchChain } from 'wagmi';
+import { ChangeNetworkToThanos } from '@/components/warnings/network';
+import { useEffect, useState } from 'react';
+import { mainnet } from 'viem/chains';
+import { EthCircleSymbol } from '@/components/symbols/ethereum';
 
 // TODO: if mainnet publish, add feature and symbol
 
-interface SwitchNetworkProps {
-  isThanos: boolean;
-}
+type vaildNetworkType = 'thanos-sepolia' | 'ethereum' | undefined;
 
-export function SwitchNetwork({ isThanos }: SwitchNetworkProps) {
+export function SwitchNetwork() {
   const { switchChain } = useSwitchChain();
+  const [networks, setNetworks] = useState<vaildNetworkType>(undefined);
+  const { chainId } = useAccount();
+
+  useEffect(() => {
+    if (chainId === thanosSepolia.id) {
+      setNetworks('thanos-sepolia');
+    } else if (chainId === mainnet.id) {
+      setNetworks('ethereum');
+    } else {
+      setNetworks(undefined);
+    }
+  }, [chainId]);
 
   const handleSwitchNetwork = (chainId: number) => {
     switchChain({ chainId: chainId });
   };
   return (
     <>
-      <button onClick={() => (document.getElementById('switch_network_modal') as any).showModal()}>
-        {isThanos ? (
-          <ThanosCircleSymbol networkType="testnet" />
-        ) : (
+      <button
+        className="relative"
+        onClick={() => (document.getElementById('switch_network_modal') as any).showModal()}
+      >
+        {networks === 'thanos-sepolia' && <ThanosCircleSymbol networkType="testnet" />}
+        {networks === 'ethereum' && <EthCircleSymbol />}
+        {!networks && (
           <div className="flex items-center justify-center rounded-full p-[6px] ring-2 ring-[#E8EDF2] dark:ring-[#1D2838]">
             <Image src={DangerIcon} alt="Thanos" />
           </div>
         )}
+        {!networks && <ChangeNetworkToThanos />}
       </button>
       <dialog id="switch_network_modal" className="modal bg-black bg-opacity-55 dark:bg-opacity-75">
         <div className="modal-box w-[360px] bg-white ring-1 ring-[#E8EDF2] dark:bg-black dark:ring-[#232429]">

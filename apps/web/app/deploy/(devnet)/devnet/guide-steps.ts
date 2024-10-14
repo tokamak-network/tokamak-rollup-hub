@@ -10,13 +10,13 @@ export const leftSectionGuide: StepCardProps[] = [
         margin: true,
       },
       {
-        text: "※ For Mac OS users, we've configured a script to allow for a one-step installation. After you Git clone the repo per Step 2 below, enter the following script to complete the Dependencies installation.",
+        text: "※ For Mac OS or Linux users, we've configured a script to allow for a one-step installation. After you Git clone the repo per Step 2 below, enter the following script to complete the Dependencies installation.",
         fontStyle: 'normal',
         margin: false,
       },
     ],
     copyInputProps: {
-      text: 'install-for-mac.sh',
+      text: 'install-devnet-packages.sh',
     },
   },
   {

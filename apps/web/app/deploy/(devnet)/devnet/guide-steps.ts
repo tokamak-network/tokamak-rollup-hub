@@ -16,7 +16,7 @@ export const leftSectionGuide: StepCardProps[] = [
       },
     ],
     copyInputProps: {
-      text: 'install-devnet-packages.sh',
+      text: './install-devnet-packages.sh',
     },
   },
   {

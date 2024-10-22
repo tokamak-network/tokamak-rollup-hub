@@ -23,7 +23,7 @@ export const leftSectionGuide: StepCardProps[] = [
     step: 2,
     descriptions: [
       {
-        text: 'copy the repository below to the PCs you want to deploy locally.',
+        text: 'Copy the repository below to the PCs you want to deploy locally.',
         fontStyle: 'medium',
         margin: false,
       },

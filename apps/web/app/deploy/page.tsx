@@ -130,7 +130,7 @@ export default function Deploy() {
             </p>
             <p>
               on your PC, offering default configurations along with pre-funded accounts for
-              development purposes
+              development purposes.
             </p>
           </div>
         </div>

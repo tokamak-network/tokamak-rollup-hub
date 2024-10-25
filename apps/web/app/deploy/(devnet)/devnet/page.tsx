@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { devnetTemplate } from '@/lib/constants';
+import { CopyInput } from '@/components/inputs/copy-input';
 
 // TODO: documents link
 export default function DeployDevnetPage() {
@@ -48,7 +49,24 @@ export default function DeployDevnetPage() {
           })}
         </div>
         <div className="-mt-[7px] flex w-full flex-col gap-[33px] p-5 xl:mt-0 xl:w-1/2">
-          <div className="flex w-full flex-col gap-5 rounded-2xl p-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:max-h-[1290px]">
+          <h3 className="block text-[21px] font-semibold">Verify successful deployment</h3>
+          <p className="-mt-[18px] font-medium text-[#7E7E8F] dark:text-[#7D899A]">
+            Execute the following command to verify the deployment. If the response is successful,
+            it confirms that the rollup was deployed successfully.
+          </p>
+          <p className="-mt-[18px] font-medium text-[#7E7E8F] dark:text-[#7D899A]">
+            &bull; Verify the L1 chain
+          </p>
+          <div className="-mt-[18px]">
+            <CopyInput text="cast chain-id --rpc-url http://localhost:8545" />
+          </div>
+          <p className="-mt-[18px] font-medium text-[#7E7E8F] dark:text-[#7D899A]">
+            &bull; Verify the L2 chain
+          </p>
+          <div className="-mt-[18px]">
+            <CopyInput text="cast chain-id --rpc-url http://localhost:9545" />
+          </div>
+          <div className="flex w-full flex-col gap-5 rounded-2xl p-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:max-h-[940px]">
             <h3 className="text-xl font-semibold">Rollup information</h3>
             <div className="overflow-auto rounded-2xl bg-white p-4 light:ring-1 light:ring-[#E8EDF2] dark:bg-black">
               <JsonView contents={JSON.stringify(devnetTemplate)} theme={currentTheme} />

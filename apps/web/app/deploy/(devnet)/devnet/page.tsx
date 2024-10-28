@@ -47,8 +47,6 @@ export default function DeployDevnetPage() {
           {leftSectionGuide.map((step, index) => {
             return <StepCard key={index} {...step} />;
           })}
-        </div>
-        <div className="-mt-[7px] flex w-full flex-col gap-[33px] p-5 xl:mt-0 xl:w-1/2">
           <h3 className="block text-[21px] font-semibold">Verify successful deployment</h3>
           <p className="-mt-[18px] font-medium text-[#7E7E8F] dark:text-[#7D899A]">
             Execute the following command to verify the deployment. If the response is successful,
@@ -66,7 +64,9 @@ export default function DeployDevnetPage() {
           <div className="-mt-[18px]">
             <CopyInput text="cast chain-id --rpc-url http://localhost:9545" />
           </div>
-          <div className="flex w-full flex-col gap-5 rounded-2xl p-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:max-h-[940px]">
+        </div>
+        <div className="-mt-[7px] flex w-full flex-col gap-[33px] p-5 xl:mt-0 xl:w-1/2">
+          <div className="flex w-full flex-col gap-5 rounded-2xl p-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card xl:max-h-[1590px]">
             <h3 className="text-xl font-semibold">Rollup information</h3>
             <div className="overflow-auto rounded-2xl bg-white p-4 light:ring-1 light:ring-[#E8EDF2] dark:bg-black">
               <JsonView contents={JSON.stringify(devnetTemplate)} theme={currentTheme} />

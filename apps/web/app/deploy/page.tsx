@@ -91,10 +91,7 @@ export default function Deploy() {
         <div className="mt-[120px] w-full">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Environment</h1>
           <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-            Choose an environment to create your own rollups.{' '}
-            <span className="hidden xl:inline">
-              Thanos Sepolia testnet and mainnet are supported.
-            </span>
+            Select an environment to begin your rollup deployment.
           </p>
           <p className="text-center text-[18px] text-trh-gray xl:hidden">
             Thanos Sepolia testnet and mainnet are supported.

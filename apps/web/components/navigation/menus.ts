@@ -30,12 +30,12 @@ export const menus: ItemInfo[] = [
       {
         name: 'User Guide',
         externalLink: true,
-        href: 'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub',
+        href: 'https://docs.tokamak.network/home/service-guide/rollup-hub',
       },
       {
         name: 'Get Help',
         externalLink: true,
-        href: 'https://docs.google.com/forms/d/e/1FAIpQLSf2-6373Pn4KkOyoP4VjPXgO1vabDyK1qTjtNV_s1ccfzcywA/viewform',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform',
       },
     ],
   },

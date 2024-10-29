@@ -33,7 +33,7 @@ export default function DeployDevnetPage() {
             Please refer to this {''}
             <Link
               href={
-                'https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub/devnet/step-by-step-guide#process-guide-for-devnet-deployment'
+                'https://docs.tokamak.network/home/service-guide/rollup-hub/devnet/step-by-step-guide#process-guide-for-devnet-deployment'
               }
               rel="noopener noreferrer"
               target="_blank"

@@ -41,7 +41,7 @@ export default function Landing() {
                 />
               </Link>
               <Link
-                href="https://docs.tokamak.network/home/~/changes/9197pJPwvweJ6nTq8KSm/service-guide/rollup-hub"
+                href="https://docs.tokamak.network/home/service-guide/rollup-hub"
                 rel="noopener noreferrer"
                 target="_blank"
               >

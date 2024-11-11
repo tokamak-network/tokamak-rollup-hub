@@ -44,10 +44,10 @@ function MenuElement({ text, url, isSelected = false }: MenuProps) {
       href={url}
       className={clsx(
         {
-          'text-white md:bg-white md:text-[#353C48]': isSelected,
+          'md:bg-white md:text-[#353C48]': isSelected,
           'opacity-25 md:opacity-100': !isSelected,
         },
-        'z-50 flex h-[45px] cursor-pointer items-center justify-center text-nowrap px-5 py-[11px] text-center',
+        'z-50 flex h-[45px] cursor-pointer items-center justify-center text-nowrap px-5 py-[11px] text-center text-white',
       )}
     >
       {text}

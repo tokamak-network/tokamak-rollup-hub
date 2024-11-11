@@ -11,7 +11,7 @@ export function MegaFooter() {
             {category.items.map((item, index) => {
               if (item.multiLink) {
                 return (
-                  <li key={index}>
+                  <li key={index} className="text-[#4C4C4C] dark:text-[#616D7E]">
                     {item.multiLink.items.map((mItem, index) => (
                       <Link key={index} href={mItem.link} rel="noopener noreferrer" target="_blank">
                         {mItem.name}

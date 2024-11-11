@@ -141,9 +141,6 @@ const config: Config = {
         'v-stacks-appear': 'fade-right 1s',
         'h-stacks-appear': 'fade-top 1s',
       },
-      fontFamily: {
-        titillium: ['TitilliumWeb'],
-      },
     },
     fontFamily: {
       sans: ['Proxima Nova', ...fontFamily.sans],

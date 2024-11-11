@@ -1,4 +1,5 @@
 'use client';
+import { Titillium_Web } from 'next/font/google';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -55,6 +56,8 @@ function MenuElement({ text, url, isSelected = false }: MenuProps) {
   );
 }
 
+const titilliumWeb = Titillium_Web({ subsets: ['latin'], weight: '600' });
+
 export default function TokamakGlobalNav() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -71,7 +74,9 @@ export default function TokamakGlobalNav() {
   };
 
   return (
-    <div className="z-50 flex h-[45px] w-full justify-center bg-[#2775FF] font-titillium text-[15px] font-bold">
+    <div
+      className={`${titilliumWeb.className} z-50 flex h-[45px] w-full justify-center bg-[#2775FF] text-[15px]`}
+    >
       <div className="z-50 p-[15px] md:hidden" onClick={scrollLeft}>
         <ChevronLeftIcon className="h-[15px] light:invert" />
       </div>

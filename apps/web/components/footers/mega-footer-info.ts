@@ -33,7 +33,7 @@ export const megaFooterCategorys: Category[] = [
     ],
   },
   {
-    title: 'Mainnet',
+    title: 'L2 Mainnet',
     items: [
       {
         name: 'Titan',
@@ -58,14 +58,14 @@ export const megaFooterCategorys: Category[] = [
     ],
   },
   {
-    title: 'Developers',
+    title: 'Developer',
     items: [
       {
         name: 'Grant',
         link: 'https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21',
       },
       {
-        name: 'Github',
+        name: 'GitHub',
         link: 'https://github.com/tokamak-network',
       },
       {

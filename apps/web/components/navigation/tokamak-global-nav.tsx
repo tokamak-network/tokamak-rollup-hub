@@ -73,14 +73,14 @@ export default function TokamakGlobalNav() {
   return (
     <div className="z-50 flex h-[45px] w-full justify-center bg-[#2775FF] font-titillium text-[15px] font-bold">
       <div className="z-50 p-[15px] md:hidden" onClick={scrollLeft}>
-        <ChevronLeftIcon className="h-[15px]" />
+        <ChevronLeftIcon className="h-[15px] light:invert" />
       </div>
       <div className="flex overflow-x-auto" ref={scrollContainerRef}>
         {menuList.map((menu, index) => (
           <MenuElement key={index} text={menu.text} url={menu.url} isSelected={menu.isSelected} />
         ))}
       </div>
-      <div className="z-50 p-[15px] md:hidden" onClick={scrollRight}>
+      <div className="z-50 p-[15px] light:invert md:hidden" onClick={scrollRight}>
         <ChevronRightIcon className="h-[15px]" />
       </div>
     </div>

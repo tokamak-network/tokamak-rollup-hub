@@ -1,7 +1,12 @@
+interface MultiLink {
+  items: Item[];
+}
+
 interface Item {
   name: string;
   super?: string;
   link: string;
+  multiLink?: MultiLink;
 }
 
 interface Category {
@@ -18,11 +23,11 @@ export const megaFooterCategorys: Category[] = [
         link: 'https://www.tokamak.network/about',
       },
       {
-        name: 'Careers',
+        name: 'Onboarding',
         link: 'https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1',
       },
       {
-        name: 'Partners',
+        name: 'Partners & Grant',
         link: 'https://www.tokamak.network/#partners',
       },
     ],
@@ -34,45 +39,21 @@ export const megaFooterCategorys: Category[] = [
         name: 'Titan',
         link: 'https://titan.tokamak.network/',
       },
-    ],
-  },
-  {
-    title: 'L2 On-Demand',
-    items: [
       {
-        name: 'Tokamak',
-        super: 'OP',
-        link: '/',
-      },
-      {
-        name: 'Tokamak',
-        super: 'ZK+',
-        link: '/',
-      },
-    ],
-  },
-  {
-    title: 'Ecosystem',
-    items: [
-      {
-        name: 'Bridge & Swap',
-        link: 'https://bridge.tokamak.network/',
-      },
-      {
-        name: 'Staking',
-        link: 'https://simple.staking.tokamak.network/staking',
-      },
-      {
-        name: 'DAO',
-        link: 'https://dao.tokamak.network/#/',
-      },
-      {
-        name: 'Price Dashboard',
-        link: 'https://price.tokamak.network/#/',
-      },
-      {
-        name: 'Block Explorer',
-        link: 'https://explorer.titan.tokamak.network/',
+        name: 'Titan multi link',
+        link: '#',
+        multiLink: {
+          items: [
+            {
+              name: 'ㄴExplorer',
+              link: 'https://explorer.titan.tokamak.network/',
+            },
+            {
+              name: ' / Bridge',
+              link: 'https://bridge.tokamak.network/',
+            },
+          ],
+        },
       },
     ],
   },
@@ -101,7 +82,7 @@ export const megaFooterCategorys: Category[] = [
         link: 'https://medium.com/tokamak-network',
       },
       {
-        name: 'X',
+        name: 'X (Twitter)',
         link: 'https://x.com/tokamak_network',
       },
       {

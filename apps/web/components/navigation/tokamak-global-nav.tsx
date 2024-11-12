@@ -56,7 +56,7 @@ function MenuElement({ text, url, isSelected = false }: MenuProps) {
   );
 }
 
-const titilliumWeb = Titillium_Web({ subsets: ['latin'], weight: '600' });
+const titilliumWeb = Titillium_Web({ subsets: ['latin'], weight: ['400', '600', '700', '900'] });
 
 export default function TokamakGlobalNav() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -75,7 +75,7 @@ export default function TokamakGlobalNav() {
 
   return (
     <div
-      className={`${titilliumWeb.className} z-50 flex h-[45px] w-full justify-center bg-[#2775FF] text-[15px]`}
+      className={`${titilliumWeb.className} z-50 flex h-[45px] w-full justify-center bg-[#2775FF] text-[15px] font-normal`}
     >
       <div className="z-50 p-[15px] md:hidden" onClick={scrollLeft}>
         <ChevronLeftIcon className="h-[15px] light:invert" />

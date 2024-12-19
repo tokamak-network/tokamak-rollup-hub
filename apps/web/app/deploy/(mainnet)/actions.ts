@@ -31,6 +31,43 @@ const formSchema = z.object({
   challengerAddress: addressSchema,
 });
 
+async function validateChainId(
+  chainId: string,
+): Promise<{ isValid: boolean; fieldErrors?: { chainId?: string[] } }> {
+  try {
+    const response = await fetch(`https://chainlist.org/chain/${chainId}`);
+
+    if (response.status === 404) {
+      console.log(`Chain ID ${chainId} does not exist on Chainlist.`);
+      return { isValid: true };
+    }
+
+    if (response.ok) {
+      console.log(`Chain ID exists: ${chainId}`);
+      return {
+        isValid: false,
+        fieldErrors: {
+          chainId: ['Chain ID already exists on Chainlist. Please choose a different one.'],
+        },
+      };
+    }
+
+    console.error(`Unexpected response status: ${response.status}`);
+    return {
+      isValid: false,
+      fieldErrors: { chainId: ['Unexpected response from the server. Please try again later.'] },
+    };
+  } catch (error) {
+    console.error('Error validating Chain ID:', error);
+    return {
+      isValid: false,
+      fieldErrors: {
+        chainId: ['Network error occurred while validating Chain ID. Please try again later.'],
+      },
+    };
+  }
+}
+
 export async function handleForm(prevState: any, formData: FormData) {
   const data = {
     rollupName: formData.get('rollup-name'),
@@ -43,10 +80,23 @@ export async function handleForm(prevState: any, formData: FormData) {
     challengerAddress: formData.get('challenger-address'),
   };
   const result = formSchema.safeParse(data);
+
   if (!result.success) {
     return {
       success: false,
       errors: result.error.flatten(),
+    };
+  }
+
+  const chainIdValidation = await validateChainId(data.chainId as string);
+  if (!chainIdValidation.isValid) {
+    return {
+      success: false,
+      errors: {
+        fieldErrors: {
+          ...chainIdValidation.fieldErrors,
+        },
+      },
     };
   }
 

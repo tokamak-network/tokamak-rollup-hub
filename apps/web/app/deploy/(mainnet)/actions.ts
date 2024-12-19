@@ -1,5 +1,6 @@
 'use server';
 import { mainnetTemplate } from '@/lib/constants';
+import { ethers } from 'ethers';
 import { isAddress } from 'viem';
 import { z } from 'zod';
 
@@ -24,6 +25,23 @@ const formSchema = z.object({
   proposerAddress: addressSchema,
   challengerAddress: addressSchema,
 });
+
+const ERC20_ABI = [
+  {
+    constant: true,
+    inputs: [],
+    name: 'name',
+    outputs: [{ name: '', type: 'string' }],
+    type: 'function',
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: 'symbol',
+    outputs: [{ name: '', type: 'string' }],
+    type: 'function',
+  },
+];
 
 async function validateChainId(
   chainId: string,
@@ -62,6 +80,20 @@ async function validateChainId(
   }
 }
 
+async function getTokenInfo(tokenAddress: string, rpcUrl: string) {
+  const provider = new ethers.JsonRpcProvider(rpcUrl);
+  const tokenContract = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
+
+  try {
+    const nativeTokenName = await tokenContract.name();
+    const nativeTokenSymbol = await tokenContract.symbol();
+    return { nativeTokenName, nativeTokenSymbol };
+  } catch (error) {
+    console.error('Error fetching token info:', error);
+    throw new Error('Unable to fetch token information. Please verify the token address.');
+  }
+}
+
 export async function handleForm(prevState: any, formData: FormData) {
   const data = {
     rollupName: formData.get('rollup-name'),
@@ -94,8 +126,18 @@ export async function handleForm(prevState: any, formData: FormData) {
     };
   }
 
+  const rpcUrl = 'https://sepolia.rpc.tokamak.network';
+  const { nativeTokenName, nativeTokenSymbol } = await getTokenInfo(
+    data.nativeToken as string,
+    rpcUrl,
+  );
+
   const template = mainnetTemplate;
   template['l2ChainID'] = +(data.chainId as string);
+
+  template['nativeTokenName'] = nativeTokenName;
+  template['nativeTokenSymbol'] = nativeTokenSymbol;
+  template['nativeTokenAddress'] = data.nativeToken as string;
 
   template['finalSystemOwner'] = data.adminAddress as string;
   template['superchainConfigGuardian'] = data.adminAddress as string;

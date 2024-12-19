@@ -39,7 +39,7 @@ export const deployEnvironment = [
     title: 'Mainnet',
     description:
       'Deploy your Rollup or Appchain in Mainnet mode using our Tokamak OP Stack, benefiting from Ethereum’s security. Enjoy additional features such as custom fee token for your appchain, extra incentives in TON for operators, and participation in the Tokamak DAO.',
-    isDisabled: true,
+    isDisabled: false,
   },
 ];
 

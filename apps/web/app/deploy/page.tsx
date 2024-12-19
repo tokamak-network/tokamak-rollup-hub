@@ -1,6 +1,6 @@
 'use client';
 import { DevResourceCard } from '@/components/cards/dev-resource-card';
-import { HorisonStack, VetrticalStack } from './shape-stack-animation';
+import { HorisonStack, VerticalStack } from './shape-stack-animation';
 import { deployEnvironment, opDevResource, zkDevResource } from '@/lib/constants';
 import { DataDisplayCard } from '@/components/cards/data-display-card';
 import { useRef, useState } from 'react';
@@ -54,7 +54,7 @@ export default function Deploy() {
       <div className="flex w-full flex-col items-center justify-center gap-[30px] md:flex-row">
         <div className="md:w-1/2">
           <div className="h-[200px] xl:h-[300px]">
-            <VetrticalStack />
+            <VerticalStack />
           </div>
           <DevResourceCard
             type={opDevResource.type as 'op' | 'zk+'}

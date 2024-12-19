@@ -6,7 +6,7 @@ import hStack1 from '../../public/horizon-shape-stack-1.svg';
 import hStack2 from '../../public/horizon-shape-stack-2.svg';
 import hStack3 from '../../public/horizon-shape-stack-3.svg';
 
-export function VetrticalStack() {
+export function VerticalStack() {
   return (
     <div className="flex animate-v-stacks-appear justify-center">
       <Image

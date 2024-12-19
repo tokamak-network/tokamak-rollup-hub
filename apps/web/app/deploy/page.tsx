@@ -115,7 +115,7 @@ export default function Deploy() {
       <div
         className={clsx({
           block: selectedEnv === 'devnet',
-          hidden: selectedEnv === '',
+          hidden: selectedEnv !== 'devnet',
         })}
         ref={rollupConfRef}
       >
@@ -133,6 +133,79 @@ export default function Deploy() {
         </div>
         <div className="mt-[39px] flex w-full justify-center pb-[60px]">
           <Link href={'/deploy/devnet'}>
+            <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />
+          </Link>
+        </div>
+      </div>
+      <div
+        className={clsx('flex w-full flex-col gap-[39px]', {
+          block: selectedEnv === 'mainnet',
+          hidden: selectedEnv !== 'mainnet',
+        })}
+        ref={rollupConfRef}
+      >
+        <div className="mt-[120px]">
+          <h1 className="mb-[18px] text-center text-4xl font-semibold">
+            Deployment Prerequisites and Features
+          </h1>
+          <div className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+            <p>
+              Gain insights into the key prerequisites and capabilities of the Tokamak OP stack
+              before proceeding to the deployment phase.
+            </p>
+          </div>
+        </div>
+        <div className="flex h-[293px] justify-center gap-[30px]">
+          <div className="w-full rounded-2xl px-[30px] pt-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+            <div className="mb-[15px]">
+              <h3 className="text-2xl font-[600px]">Requirements for Deployment</h3>
+            </div>
+            <div className="flex flex-col justify-between">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                1. An AWS account
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                2. Valid Chain ID and Contract Address of custom token.
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                3. Ensure at least 10 ETH in the mainnet wallet
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                4. Software Requirement (Link)
+              </p>
+            </div>
+          </div>
+          <div className="w-full rounded-2xl px-[30px] pb-[30px] pt-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+            <div className="mb-[15px]">
+              <h3 className="text-2xl font-[600px]">Key Capabilities</h3>
+            </div>
+            <div className="flex flex-col justify-between">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                1. Automated scripts for quick mainnet deployment
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                2. Custom native token support for L2 networks
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                3. Seigniorage revenue for TON deposits *
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                4. Blockscout-based block explorer
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                5. Graph Node and IPFS integration
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                6. Mini bridge Integration
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                7. Comprehensive SDK for developers
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full justify-center pb-[60px]">
+          <Link href={'/deploy/mainnet'}>
             <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />
           </Link>
         </div>

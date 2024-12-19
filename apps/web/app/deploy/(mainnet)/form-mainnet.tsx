@@ -107,7 +107,7 @@ export function FormMainnet() {
             type="text"
             label="Batcher Address"
             name="batcher-address"
-            placeholder="Enter batcher address"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.batcherAddress}
           />
@@ -117,7 +117,7 @@ export function FormMainnet() {
             type="text"
             label="Proposer Address"
             name="proposer-address"
-            placeholder="Enter proposer address"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.proposerAddress}
           />
@@ -127,7 +127,7 @@ export function FormMainnet() {
             type="text"
             label="Challenger Address"
             name="challenger-address"
-            placeholder="Enter challenger address"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.challengerAddress}
           />

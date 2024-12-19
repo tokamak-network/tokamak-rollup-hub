@@ -101,6 +101,23 @@ async function getTokenInfo(tokenAddress: string, rpcUrl: string) {
   }
 }
 
+async function getLatestBlockInfo(rpcUrl: string) {
+  const provider = new ethers.JsonRpcProvider(rpcUrl);
+
+  try {
+    const latestBlock = await provider.getBlock('latest');
+
+    if (!latestBlock) {
+      throw new Error('Latest block is null. Unable to fetch block information.');
+    }
+
+    return { hash: latestBlock.hash, timestamp: latestBlock.timestamp };
+  } catch (error) {
+    console.error('Error fetching latest block info:', error);
+    throw new Error('Unable to fetch the latest block information.');
+  }
+}
+
 export async function handleForm(prevState: any, formData: FormData) {
   const data = {
     rollupName: formData.get('rollup-name'),
@@ -139,6 +156,9 @@ export async function handleForm(prevState: any, formData: FormData) {
     rpcUrl,
   );
 
+  const { hash: l1StartingBlockHash, timestamp: l1StartingBlockTimestamp } =
+    await getLatestBlockInfo(rpcUrl);
+
   const template = mainnetTemplate;
   template['l2ChainID'] = +(data.chainId as string);
 
@@ -162,6 +182,9 @@ export async function handleForm(prevState: any, formData: FormData) {
 
   const paddedChainId = (data.chainId as string).padStart(38, '0');
   template['batchInboxAddress'] = `0xff${paddedChainId}`;
+
+  template['l1StartingBlockTag'] = l1StartingBlockHash as string;
+  template['l2OutputOracleStartingTimestamp'] = l1StartingBlockTimestamp as number;
 
   return {
     success: true,

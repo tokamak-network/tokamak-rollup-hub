@@ -67,7 +67,7 @@ export function FormMainnet() {
             type="number"
             label="Chain ID"
             name="chain-id"
-            placeholder="0x..."
+            placeholder="ID"
             required={true}
             errors={errors?.fieldErrors?.chainId}
           />

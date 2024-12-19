@@ -13,11 +13,17 @@ const rollupNameSchema = z
     'Rollup Name should contain only alphabets',
   );
 
+const chainIdSchema = z
+  .string()
+  .refine((value) => /^\d+$/.test(value), { message: 'Chain ID must be a numeric string.' })
+  .refine((value) => Number(value) > 0, { message: 'Chain ID must be greater than 0.' })
+  .refine((value) => value.length <= 38, { message: 'Chain ID must be 38 characters or fewer.' });
+
 const addressSchema = z.custom<string>(isAddress, 'Invalid Address');
 
 const formSchema = z.object({
   rollupName: rollupNameSchema,
-  chainId: z.string(),
+  chainId: chainIdSchema,
   nativeToken: addressSchema,
   adminAddress: addressSchema,
   sequencerAddress: addressSchema,
@@ -87,6 +93,7 @@ async function getTokenInfo(tokenAddress: string, rpcUrl: string) {
   try {
     const nativeTokenName = await tokenContract.name();
     const nativeTokenSymbol = await tokenContract.symbol();
+
     return { nativeTokenName, nativeTokenSymbol };
   } catch (error) {
     console.error('Error fetching token info:', error);
@@ -152,6 +159,9 @@ export async function handleForm(prevState: any, formData: FormData) {
   template['batchSenderAddress'] = data.batcherAddress as string;
   template['l2OutputOracleProposer'] = data.proposerAddress as string;
   template['l1GenesisBlockTimestamp'] = Math.floor(Date.now() / 1000).toString(16);
+
+  const paddedChainId = (data.chainId as string).padStart(38, '0');
+  template['batchInboxAddress'] = `0xff${paddedChainId}`;
 
   return {
     success: true,

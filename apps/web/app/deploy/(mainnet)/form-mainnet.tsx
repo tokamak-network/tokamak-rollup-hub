@@ -67,7 +67,7 @@ export function FormMainnet() {
             type="number"
             label="Chain ID"
             name="chain-id"
-            placeholder="ex. 111551119090"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.chainId}
           />
@@ -77,7 +77,7 @@ export function FormMainnet() {
             type="text"
             label="Native Token"
             name="native-token"
-            placeholder="Name your rollup"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.nativeToken}
           />
@@ -87,7 +87,7 @@ export function FormMainnet() {
             type="text"
             label="Admin Address"
             name="admin-address"
-            placeholder="Enter admin address"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.adminAddress}
           />
@@ -97,7 +97,7 @@ export function FormMainnet() {
             type="text"
             label="Sequencer Address"
             name="sequencer-address"
-            placeholder="Enter sequencer address"
+            placeholder="0x..."
             required={true}
             errors={errors?.fieldErrors?.sequencerAddress}
           />

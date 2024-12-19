@@ -3,10 +3,11 @@ import { FormInput } from '@/components/inputs/form-input';
 import { useState, useEffect } from 'react';
 import { handleForm } from './actions';
 import { MainnetTemplate } from '@/lib/constants';
-import { GeneralBtn } from '@/components/buttons/general-btn';
+import DownloadIcon from '@/public/icon-download.svg';
+import { IconBtn } from '@/components/buttons/icon-btn';
 
 export function FormMainnet() {
-  const [template, setTemplate] = useState<MainnetTemplate | null | undefined>(null); // 서버에서 반환된 템플릿 저장
+  const [template, setTemplate] = useState<MainnetTemplate | null | undefined>(null);
   const [errors, setErrors] = useState<any>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -37,7 +38,7 @@ export function FormMainnet() {
   useEffect(() => {
     if (template) {
       const json = JSON.stringify(template, null, 2);
-      const outputFileName = 'config.json';
+      const outputFileName = 'deploy-config.json';
       const link = document.createElement('a');
       const blob = new Blob([json], { type: 'application/json' });
       const href = URL.createObjectURL(blob);
@@ -134,11 +135,13 @@ export function FormMainnet() {
         </div>
       </div>
 
-      <GeneralBtn
-        text={isSubmitting ? 'Submitting...' : 'Generate and download config file'}
-        isDisabled={isSubmitting}
+      <IconBtn
+        text="Generate and download config file"
+        isDisabled={false}
+        isLoading={isSubmitting}
         styleType="primary"
         size="2xl"
+        icon={DownloadIcon}
       />
     </form>
   );

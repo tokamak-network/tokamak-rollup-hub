@@ -56,12 +56,12 @@ async function validateChainId(
     const response = await fetch(`https://chainlist.org/chain/${chainId}`);
 
     if (response.status === 404) {
-      console.log(`Chain ID ${chainId} does not exist on Chainlist.`);
+      console.error(`Chain ID ${chainId} does not exist on Chainlist.`);
       return { isValid: true };
     }
 
     if (response.ok) {
-      console.log(`Chain ID exists: ${chainId}`);
+      console.error(`Chain ID exists: ${chainId}`);
       return {
         isValid: false,
         fieldErrors: {

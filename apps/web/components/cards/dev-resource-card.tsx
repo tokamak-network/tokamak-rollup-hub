@@ -7,7 +7,6 @@ export interface DevResourceProps {
   btnText: string;
   isDisabled: boolean;
   description: string;
-  docsUrl: string;
   handler: React.MouseEventHandler<HTMLButtonElement>;
   superScriptColor: 'red' | 'green';
 }
@@ -17,7 +16,6 @@ export function DevResourceCard({
   btnText,
   isDisabled,
   description,
-  docsUrl,
   handler,
   superScriptColor,
 }: DevResourceProps) {
@@ -31,13 +29,8 @@ export function DevResourceCard({
       <h2 className="mb-[18px] text-[32px] font-bold">
         Tokamak <sup className={`${supColorVariants[superScriptColor]}`}>{type.toUpperCase()}</sup>
       </h2>
-      <div className="item-center mb-[30px] flex flex-col justify-between text-center text-[17px] font-medium md:h-[255px] xl:h-[153px]">
+      <div className="item-center mb-[30px] flex flex-col justify-between text-center text-[17.5px] font-medium md:h-[156px] xl:h-[78px]">
         <p className="text-[#7E7E8F] dark:text-trh-gray">{description}</p>
-        <p className="text-tokamak-blue underline underline-offset-4">
-          <Link href={docsUrl} rel="noopener noreferrer" target="_blank">
-            For additional information, check out Documentation.
-          </Link>
-        </p>
       </div>
       <GeneralBtn
         onClick={handler}

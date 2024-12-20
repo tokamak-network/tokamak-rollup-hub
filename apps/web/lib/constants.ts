@@ -4,7 +4,7 @@ export const opDevResource = {
   isDisabled: false,
   btnText: 'Choose',
   description:
-    'A tailored Layer 2 stack built on Optimism, offering fast and low-cost computation and state updates using optimistic rollup technology. Along with a flexible transaction fee structure, this stack introduces seigniorage as an additional revenue source for operators, and other features to optimize the user experience.',
+    'A customized fork of the OP Stack that enables ERC20 tokens as the native currency for the L2 chain.',
   docsUrl:
     'https://docs.tokamak.network/home/service-guide/rollup-hub/devnet/discover-l2-stack#tokamak-op',
   superScriptColor: 'red',
@@ -25,20 +25,17 @@ export const zkDevResource = {
 export const deployEnvironment = [
   {
     title: 'Devnet',
-    description:
-      'Deploy in devnet mode to run your rollup or Appchain locally. This approach is ideal for development and testing before moving to a Testnet or Mainnet deployment.',
+    description: 'Use Devnet mode to run your rollup or Appchain locally for development.',
     isDisabled: false,
   },
   {
     title: 'Testnet',
-    description:
-      'Deploy your Rollup or Appchain in Testnet mode using the TRH service. Inspired from the Thanos testnet, this mode ensures robust security, tools, and features for seamless deployment and functionality.',
+    description: 'Use Testnet mode to run your rollup or Appchain before deploying to Mainnet.',
     isDisabled: true,
   },
   {
     title: 'Mainnet',
-    description:
-      'Deploy your Rollup or Appchain in Mainnet mode using our Tokamak OP Stack, benefiting from Ethereum’s security. Enjoy additional features such as custom fee token for your appchain, extra incentives in TON for operators, and participation in the Tokamak DAO.',
+    description: 'Use Mainnet mode to run your Tokamak OP-based rollup or Appchain on the mainnet.',
     isDisabled: false,
   },
 ];

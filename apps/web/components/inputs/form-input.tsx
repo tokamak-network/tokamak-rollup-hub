@@ -13,6 +13,7 @@ interface FormInputProps {
   required: boolean;
   errors?: string[];
   address?: `0x${string}` | undefined;
+  tooltip?: string;
 }
 
 export function FormInput({

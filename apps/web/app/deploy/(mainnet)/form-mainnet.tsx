@@ -5,6 +5,7 @@ import { handleForm } from './actions';
 import { MainnetTemplate } from '@/lib/constants';
 import DownloadIcon from '@/public/icon-download.svg';
 import { IconBtn } from '@/components/buttons/icon-btn';
+import { Tooltip } from '@/components/tooltip/tooltip';
 
 export function FormMainnet() {
   const [template, setTemplate] = useState<MainnetTemplate | null | undefined>(null);
@@ -63,7 +64,28 @@ export function FormMainnet() {
             errors={errors?.fieldErrors?.rollupName}
           />
         </div>
-        <div className="w-full">
+        <div className="relative w-full">
+          <div className="absolute left-[65px] top-[6.4px]">
+            <Tooltip
+              content={
+                <div className="flex min-w-[200px] flex-col items-center">
+                  <div>Get a Chain ID</div>
+                  <div className="flex">
+                    <p>in advance from&nbsp;</p>
+                    <a
+                      href="https://chainlist.org"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="text-tokamak-blue underline"
+                    >
+                      ChainList
+                    </a>
+                  </div>
+                </div>
+              }
+              position="bottom"
+            />
+          </div>
           <FormInput
             type="number"
             label="Chain ID"
@@ -73,7 +95,18 @@ export function FormMainnet() {
             errors={errors?.fieldErrors?.chainId}
           />
         </div>
-        <div className="w-full">
+        <div className="relative w-full">
+          <div className="absolute left-[97px] top-[6.4px]">
+            <Tooltip
+              content={
+                <div className="flex min-w-[250px] flex-col items-center">
+                  <div>In Tokamak OP,</div>
+                  <div className="flex">you cannot use ETH as a native token.</div>
+                </div>
+              }
+              position="bottom"
+            />
+          </div>
           <FormInput
             type="text"
             label="Native Token"
@@ -82,6 +115,28 @@ export function FormMainnet() {
             required={true}
             errors={errors?.fieldErrors?.nativeToken}
           />
+          <div className="min-h-[40px]">
+            {errors?.fieldErrors?.nativeToken ? null : (
+              <div className="ml-1 mt-2">
+                <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
+                  <p>Ensure the token's contract address is on &nbsp;</p>
+                  <div className="text-[#FFF]">Ethereum</div>
+                </div>
+                <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
+                  <p>Requirements for native tokens can be found&nbsp; </p>
+                  <a
+                    href="https://chainlist.org"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-tokamak-blue underline"
+                  >
+                    here
+                  </a>
+                  .
+                </div>
+              </div>
+            )}
+          </div>
         </div>
         <div className="w-full">
           <FormInput

@@ -76,8 +76,22 @@ export default function DeployMainnetPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="flex w-full flex-col gap-[33px] p-5">
+      <div className="flex w-full flex-col">
+        <div className="w-full">
+          <div className="mb-[39px]">
+            <h1 className="mb-[18px] text-center text-4xl font-semibold">
+              Prepare your config file
+            </h1>
+            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+              The following fields must be completed to customize your rollup chain configuration.
+            </p>
+            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+              Once filled out, users can download the configuration file and use it during
+              deployment.
+            </p>
+          </div>
+        </div>
+        <div className="flex w-full flex-col gap-[33px]">
           <FormMainnet />
         </div>
       </div>

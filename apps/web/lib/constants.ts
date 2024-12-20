@@ -342,3 +342,19 @@ export const mainnetTemplate: MainnetTemplate = {
   poolInitCodeHash: '0xe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b54',
   universalRouterRewardsDistributor: '0xa0Ee7A142d267C1f36714E4a8F75612F20a79720',
 };
+
+export const fqaContent = [
+  {
+    title: 'Frequently Asked Question',
+    content:
+      'Answers or Explanation about Frequently Asked Questions Answers or Explanation about Frequently Asked Questions Answers or Explanation about Frequently Asked Questions.',
+  },
+  {
+    title: 'Another Question',
+    content: 'This is an explanation or answer to another question.',
+  },
+  {
+    title: 'Yet Another Question',
+    content: 'This is the response to yet another question.',
+  },
+];

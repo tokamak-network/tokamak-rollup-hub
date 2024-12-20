@@ -95,6 +95,142 @@ export default function DeployMainnetPage() {
           <FormMainnet />
         </div>
       </div>
+      <div className="flex w-full flex-col">
+        <h1 className="mb-[18px] text-center text-4xl font-semibold">Deployment Guide</h1>
+        <div>
+          <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+            We aim to simplify the deployment of Tokamak OP Stack-based rollups on user-managed
+          </p>
+        </div>
+        <div>
+          <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+            cloud infrastructure(AWS) by minimizing the required configuration.
+          </p>
+        </div>
+        <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+          You can access the deployment guide&nbsp;
+          <a
+            href="https://chainlist.org"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-tokamak-blue underline"
+          >
+            here
+          </a>
+        </p>
+      </div>
+      <div className="flex w-full flex-col text-center">
+        <h1 className="text-4xl font-semibold">Additional Features</h1>
+        <div className="my-[39px] flex h-[290px] justify-center gap-[28px]">
+          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+            <div className="mb-[15px]">
+              <h3 className="text-2xl font-[600px]">Mini Bridge</h3>
+            </div>
+            <div className="flex flex-col justify-between">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                The mini bridge can be configured and integrated into the deployed
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                L2 network. Its key functionality includes Deposit/Withdraw support
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                for ETH or the native token. You can learn more about the mini
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                bridge here. As the code is open source, operators and developers
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                can extend its functionalities to suit their specific needs.
+              </p>
+            </div>
+            <div className="flex gap-[30px]">
+              <a
+                href="https://chainlist.org"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                >
+                  <path
+                    d="M14.5 7.49763C14.4995 6.21192 14.1449 4.9512 13.4751 3.85375C12.8052 2.7563 11.8461 1.86451 10.7029 1.27622C9.55969 0.687937 8.27653 0.425884 6.99418 0.518791C5.71183 0.611698 4.47984 1.05598 3.43336 1.80291C2.38687 2.54985 1.5663 3.57057 1.06169 4.75311C0.557068 5.93565 0.387886 7.23434 0.572698 8.50669C0.75751 9.77905 1.28918 10.9759 2.10938 11.966C2.92958 12.9561 4.00662 13.7012 5.22236 14.1196C5.32066 14.069 5.40497 13.995 5.46782 13.9041C5.53068 13.8131 5.57016 13.7081 5.58273 13.5983C5.58273 13.2133 5.57425 12.2231 5.57425 12.2231C5.33003 12.259 5.08343 12.2762 4.83659 12.2747C4.48804 12.2967 4.14199 12.2029 3.85222 12.008C3.56246 11.813 3.34521 11.5278 3.23424 11.1967C3.08156 10.808 2.80498 10.4805 2.44732 10.265C2.26637 10.148 2.22478 10.0101 2.43422 9.97162C3.40133 9.79067 3.64851 11.0619 4.29453 11.2652C4.74106 11.4043 5.22401 11.3657 5.64277 11.1574C5.70262 10.7958 5.90231 10.4722 6.19872 10.2565C4.55555 10.1025 3.58074 9.53195 3.07717 8.61951L3.02326 8.51788L2.89622 8.22835L2.85849 8.12442C2.69508 7.61219 2.61704 7.07655 2.62749 6.53899C2.61174 6.16929 2.67193 5.80029 2.80437 5.45477C2.9368 5.10925 3.13866 4.79454 3.39749 4.53009C3.18604 3.86586 3.22941 3.14672 3.51915 2.51271C3.51915 2.51271 4.23061 2.36565 5.57425 3.32275C6.74784 3.00932 7.98002 2.9858 9.16471 3.25421C9.72835 2.88308 10.7609 2.3564 11.1767 2.50424C11.4546 3.08519 11.5073 3.74855 11.3246 4.36608C11.9122 4.99278 12.2281 5.82653 12.2031 6.68529C12.2014 7.17077 12.1409 7.65424 12.0229 8.12517L11.9629 8.33076C11.9629 8.33076 11.9282 8.42779 11.8905 8.52096L11.8458 8.62259C11.3584 9.68748 10.359 10.0856 8.74431 10.2504C9.2679 10.5784 9.41727 10.9895 9.41727 12.0983C9.41727 13.2071 9.40266 13.3604 9.40574 13.6168C9.42103 13.7228 9.46016 13.8239 9.52017 13.9126C9.58019 14.0013 9.65952 14.0752 9.75222 14.1288C11.1367 13.6572 12.3389 12.7643 13.1903 11.5751C14.0417 10.386 14.4997 8.96018 14.5 7.49763Z"
+                    fill="white"
+                  />
+                </svg>
+                <div className="text-[16px] font-[500px]">Github</div>
+              </a>
+              <a
+                href="https://chainlist.org"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                >
+                  <path
+                    d="M13.864 6.8635V10.6817C13.864 13.2271 13.2276 13.8635 10.6822 13.8635H4.31854C1.77308 13.8635 1.13672 13.2271 1.13672 10.6817V4.31805C1.13672 1.77259 1.77308 1.13623 4.31854 1.13623H5.27308C6.22763 1.13623 6.43763 1.41623 6.80035 1.89987L7.7549 3.17259C7.99672 3.49078 8.13672 3.68168 8.77308 3.68168H10.6822C13.2276 3.68168 13.864 4.31805 13.864 6.8635Z"
+                    stroke="white"
+                    strokeMiterlimit="10"
+                  />
+                  <path
+                    d="M4.9541 1.13623H10.6814C11.9541 1.13623 12.5905 1.77259 12.5905 3.04532V3.9235"
+                    stroke="white"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div className="text-[16px] font-[500px]">Docs</div>
+              </a>
+            </div>
+          </div>
+          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+            <div className="mb-[15px]">
+              <h3 className="text-2xl font-[600px]">Earn Rewards for operating L2</h3>
+            </div>
+            <div className="flex flex-col justify-between">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                L2 operators can generate additional revenue through TON
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                seigniorage by attracting TON deposits to their network. Currently,
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                this revenue opportunity is available only if the network uses TON
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                as its native token. Learn more about registering your L2 network
+              </p>
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+                with Tokamak Staking v2.5 here.
+              </p>
+            </div>
+            <div className="mt-[24px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+              Coming Soon
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col">
+          <h1 className="mb-[15px] text-center text-[21px] font-semibold text-[#7E7E8F]">
+            Coming Soon
+          </h1>
+          <div>
+            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+              Additional features will be introduced over time based on needs and requirements.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

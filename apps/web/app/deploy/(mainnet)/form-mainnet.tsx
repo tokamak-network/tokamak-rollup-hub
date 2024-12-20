@@ -115,27 +115,23 @@ export function FormMainnet() {
             required={true}
             errors={errors?.fieldErrors?.nativeToken}
           />
-          <div className="min-h-[40px]">
-            {errors?.fieldErrors?.nativeToken ? null : (
-              <div className="ml-1 mt-2">
-                <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
-                  <p>Ensure the token's contract address is on &nbsp;</p>
-                  <div className="text-[#FFF]">Ethereum</div>
-                </div>
-                <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
-                  <p>Requirements for native tokens can be found&nbsp; </p>
-                  <a
-                    href="https://chainlist.org"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-tokamak-blue underline"
-                  >
-                    here
-                  </a>
-                  .
-                </div>
-              </div>
-            )}
+          <div className="mt-[8px]">
+            <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
+              <p>Ensure the token's contract address is on &nbsp;</p>
+              <div className="text-[#FFF]">Ethereum</div>
+            </div>
+            <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
+              <p>Requirements for native tokens can be found&nbsp; </p>
+              <a
+                href="https://chainlist.org"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-tokamak-blue underline"
+              >
+                here
+              </a>
+              .
+            </div>
           </div>
         </div>
         <div className="w-full">

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import vStack1 from '@/public/vertical-shape-stack-1.svg';
 import vStack2 from '@/public/vertical-shape-stack-2.svg';
 import vStack3 from '@/public/vertical-shape-stack-3.svg';
+import { Accordion } from '@/components/accordion/accordion';
+import { fqaContent } from '@/lib/constants';
 
 // TODO: documents link
 export default function DeployMainnetPage() {
@@ -110,7 +112,7 @@ export default function DeployMainnetPage() {
         <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
           You can access the deployment guide&nbsp;
           <a
-            href="https://chainlist.org"
+            href="https://docs.tokamak.network/home/service-guide/rollup-hub"
             target="_blank"
             rel="noreferrer noopener"
             className="text-tokamak-blue underline"
@@ -229,6 +231,35 @@ export default function DeployMainnetPage() {
               Additional features will be introduced over time based on needs and requirements.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="flex w-full flex-col items-center gap-[39px]">
+        <div>
+          <h1 className="mb-[18px] text-center text-4xl font-semibold">If you need more help?</h1>
+          <div>
+            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+              Our goal is to make your experience seamless, but sometimes things don’t go as
+              planned.
+            </p>
+          </div>
+          <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+            Explore &nbsp;
+            <a
+              href="https://docs.tokamak.network/home/service-guide/rollup-hub"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-tokamak-blue underline"
+            >
+              troubleshooting guide
+            </a>
+            &nbsp;to quickly resolve any issues.
+          </p>
+        </div>
+        <div className="mb-[18px] text-center text-[21px] font-semibold">FAQ</div>
+        <div className="flex w-[790px] flex-col gap-[16px]">
+          {fqaContent.map((item, index) => (
+            <Accordion key={index} title={item.title} content={item.content} />
+          ))}
         </div>
       </div>
     </div>

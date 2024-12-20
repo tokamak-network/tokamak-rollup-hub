@@ -61,7 +61,6 @@ export default function Deploy() {
             btnText={opDevResource.btnText}
             isDisabled={opDevResource.isDisabled}
             description={opDevResource.description}
-            docsUrl={opDevResource.docsUrl}
             handler={() => handleResourceClick(opDevResource.type)}
             superScriptColor={opDevResource.superScriptColor as 'red' | 'green'}
           />
@@ -75,7 +74,6 @@ export default function Deploy() {
             btnText={zkDevResource.btnText}
             isDisabled={zkDevResource.isDisabled}
             description={zkDevResource.description}
-            docsUrl={zkDevResource.docsUrl}
             handler={() => handleResourceClick(zkDevResource.type)}
             superScriptColor={zkDevResource.superScriptColor as 'red' | 'green'}
           />
@@ -177,7 +175,7 @@ export default function Deploy() {
           </div>
           <div className="w-full rounded-2xl px-[30px] pb-[30px] pt-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
-              <h3 className="text-2xl font-[600px]">Key Capabilities</h3>
+              <h3 className="text-2xl font-[600px]">Key Features/Capabilities</h3>
             </div>
             <div className="flex flex-col justify-between">
               <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
@@ -187,7 +185,7 @@ export default function Deploy() {
                 2. Custom native token support for L2 networks
               </p>
               <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                3. Seigniorage revenue for TON deposits *
+                3. Integrated Fault Proof System
               </p>
               <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
                 4. Blockscout-based block explorer

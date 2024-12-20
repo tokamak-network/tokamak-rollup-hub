@@ -55,10 +55,13 @@ export function FormInput({
       <span className="text-[#7E7E8F] dark:text-[#7D899A]">{label}</span>
       <div
         className={clsx(
+          'flex items-center gap-2 rounded-md px-[15px] py-[10px] outline-none ring-1 dark:bg-[#080A0E]',
           {
-            'ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:ring-2': errorState,
+            'border-[#FD3D51] ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:shadow-[0_0_0_2px_#FD3D51]':
+              errorState,
+            'border border-[#192232] focus-within:ring-tokamak-blue dark:border-[#192232]':
+              !errorState,
           },
-          'flex items-center gap-2 rounded-md border-none px-[15px] py-[10px] outline-none ring-1 ring-[#E8EDF2] focus-within:ring-tokamak-blue dark:bg-[#080A0E] dark:ring-[#303F5A]',
         )}
       >
         <input

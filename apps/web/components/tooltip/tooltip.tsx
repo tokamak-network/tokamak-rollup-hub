@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, ReactNode } from 'react';
+import React, { useState, useRef, ReactNode } from 'react';
 import clsx from 'clsx';
 
 interface TooltipProps {
@@ -10,12 +10,13 @@ interface TooltipProps {
 
 export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Element {
   const [showTooltip, setShowTooltip] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const tooltipPositionClasses = {
-    top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-3',
-    bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-3',
-    left: 'right-full top-1/2 transform -translate-y-1/2 mr-3',
-    right: 'left-full top-1/2 transform -translate-y-1/2 ml-3',
+    top: 'bottom-full left-1/2 transform -translate-x-1/2 -translate-y-4',
+    bottom: 'top-full left-1/2 transform -translate-x-1/2 translate-y-4',
+    left: 'right-full top-1/2 transform -translate-y-1/2 -translate-x-4',
+    right: 'left-full top-1/2 transform -translate-y-1/2 translate-x-4',
   };
 
   const arrowPositionClasses = {
@@ -27,14 +28,26 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
       'left-[-6px] top-1/2 transform -translate-y-1/2 border-r-[#4B5563] border-r-[6px] border-y-transparent border-y-[6px]',
   };
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setShowTooltip(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setShowTooltip(false);
+    }, 300);
+  };
+
   return (
-    <div className="relative flex items-center">
-      {/* Trigger Icon */}
-      <span
-        className="flex cursor-pointer items-center text-[#7E7E8F] dark:text-[#D8DFE9]"
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
-      >
+    <div
+      className="relative flex items-center"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <span className="flex cursor-pointer items-center text-[#7E7E8F] dark:text-[#D8DFE9]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="13"
@@ -61,17 +74,17 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
         </svg>
       </span>
 
-      {/* Tooltip */}
       {showTooltip && (
         <div
           className={clsx(
             'absolute z-10 rounded-md bg-[#192232] px-3 py-2 text-sm text-[#D8DFE9] shadow-lg',
-            'border border-[#4B5563] dark:border-[#4B5563] dark:bg-[#080A0E]',
+            'border border-[#4B5563] dark:border-[#4B5563] dark:bg-[#13131A]',
             tooltipPositionClasses[position],
           )}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {content}
-          {/* Arrow */}
           <span className={clsx('absolute h-0 w-0', arrowPositionClasses[position])}></span>
         </div>
       )}

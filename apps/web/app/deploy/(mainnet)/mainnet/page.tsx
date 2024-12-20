@@ -7,14 +7,20 @@ import vStack2 from '@/public/vertical-shape-stack-2.svg';
 import vStack3 from '@/public/vertical-shape-stack-3.svg';
 import { Accordion } from '@/components/accordion/accordion';
 import { fqaContent } from '@/lib/constants';
+import { useParams } from 'next/navigation';
 
 // TODO: documents link
 export default function DeployMainnetPage() {
   const [mount, setMount] = useState<boolean>(false);
+  const pathname = useParams();
 
   useEffect(() => {
     setMount(true);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   if (!mount) {
     return null;

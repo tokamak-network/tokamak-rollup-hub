@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { GeneralBtn } from '../buttons/general-btn';
 import React from 'react';
 

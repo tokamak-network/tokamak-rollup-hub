@@ -53,7 +53,7 @@ export function FormMainnet() {
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-col items-center">
-      <div className="mb-[39px] grid w-full grid-cols-3 gap-[30px] rounded-2xl px-5 pb-6 pt-5 light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+      <div className="mb-[39px] grid w-full grid-cols-3 gap-[30px] rounded-2xl px-5 pb-6 pt-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
         <div className="w-full">
           <FormInput
             type="text"

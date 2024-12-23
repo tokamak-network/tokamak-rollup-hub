@@ -38,10 +38,7 @@ export const IconBtn: React.FC<IconBtnProps> = ({
     <button
       disabled={isDisabled || isLoading}
       className={clsx(
-        {
-          'text-[#626D7D] hover:bg-[#0F141C]': isDisabled || isLoading,
-        },
-        `${sizeVariants[size]} ${styleVariants[styleType]} disabled:hover:cursor-not-allowed`,
+        `${sizeVariants[size]} ${styleVariants[styleType]} disabled:cursor-not-allowed`,
       )}
       {...props}
     >

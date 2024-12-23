@@ -56,11 +56,11 @@ export function FormInput({
       <span className="text-[#7E7E8F] dark:text-[#7D899A]">{label}</span>
       <div
         className={clsx(
-          'flex items-center gap-2 rounded-md px-[15px] py-[10px] outline-none ring-1 dark:bg-[#080A0E]',
+          'flex items-center gap-2 rounded-md px-[15px] py-[10px] outline-none ring-1 ring-[#E8EDF2] dark:bg-[#080A0E] dark:ring-[#192232]',
           {
-            'border-[#FD3D51] ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:shadow-[0_0_0_2px_#FD3D51]':
+            'ring-1 ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:shadow-[0_0_0_2px_#FD3D51] dark:ring-[#FD3D51]':
               errorState,
-            'border border-[#192232] focus-within:ring-tokamak-blue dark:border-[#192232]':
+            'focus-within:ring-tokamak-blue-dark dark:focus-within:ring-tokamak-blue-dark':
               !errorState,
           },
         )}
@@ -88,7 +88,7 @@ export function FormInput({
             <Image
               className="opacity-25 light:invert dark:opacity-50"
               src={CircleCancel}
-              alt="error"
+              alt="clear"
             />
           )}
         </button>

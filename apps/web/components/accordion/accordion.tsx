@@ -12,13 +12,13 @@ export function Accordion({ title, content }: AccordionProps): JSX.Element {
 
   return (
     <div
-      className={`min-h-[59px] w-full rounded-2xl p-[20px] shadow-md light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card`}
+      className={`min-h-[59px] w-full rounded-2xl p-[20px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card`}
     >
       <div
         className="flex cursor-pointer items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="text-[16px] font-semibold text-[#D8DFE9]">{title}</h3>
+        <h3 className="text-[16px] font-semibold">{title}</h3>
         {isOpen ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,14 +29,14 @@ export function Accordion({ title, content }: AccordionProps): JSX.Element {
           >
             <path
               d="M10.5502 0.950195L1.4502 10.0502"
-              stroke="white"
+              className={`${isOpen ? 'light:stroke-black dark:stroke-white' : ''}`}
               strokeWidth="1.3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M1.4502 0.950195L10.5502 10.0502"
-              stroke="white"
+              className={`${isOpen ? 'light:stroke-black dark:stroke-white' : ''}`}
               strokeWidth="1.3"
               strokeLinecap="round"
               strokeLinejoin="round"

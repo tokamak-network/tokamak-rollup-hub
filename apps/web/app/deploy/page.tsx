@@ -29,23 +29,20 @@ export default function Deploy() {
     });
   };
 
-  const promiseEnvCard = (title: string) =>
-    new Promise((resolve) => {
-      if (selectedEnv === '') {
-        setEnv(title.toLowerCase());
-        resolve(true);
-      } else {
-        setEnv('');
-        resolve(false);
-      }
+  const promiseEnvCard = async (title: string) => {
+    const newEnv = selectedEnv === title.toLowerCase() ? '' : title.toLowerCase();
+    await new Promise((resolve) => {
+      setEnv(newEnv);
+      resolve(true);
     });
+    return newEnv !== '';
+  };
 
-  const handleEnvCardClick = (title: string) => {
-    promiseEnvCard(title).then((message) => {
-      if (message && rollupConfRef.current !== null) {
-        rollupConfRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+  const handleEnvCardClick = async (title: string) => {
+    const isEnvSet = await promiseEnvCard(title);
+    if (isEnvSet && rollupConfRef.current) {
+      rollupConfRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

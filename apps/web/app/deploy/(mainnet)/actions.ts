@@ -86,7 +86,14 @@ async function validateChainId(
   }
 }
 
-async function getTokenInfo(tokenAddress: string, rpcUrl: string) {
+async function getTokenInfo(
+  tokenAddress: string,
+  rpcUrl: string,
+): Promise<{
+  isValid: boolean;
+  data?: { nativeTokenName: string; nativeTokenSymbol: string };
+  fieldErrors?: { nativeToken?: string[] };
+}> {
   const provider = new ethers.JsonRpcProvider(rpcUrl);
   const tokenContract = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
 
@@ -94,10 +101,19 @@ async function getTokenInfo(tokenAddress: string, rpcUrl: string) {
     const nativeTokenName = await tokenContract.name();
     const nativeTokenSymbol = await tokenContract.symbol();
 
-    return { nativeTokenName, nativeTokenSymbol };
+    return {
+      isValid: true,
+      data: { nativeTokenName, nativeTokenSymbol },
+    };
   } catch (error) {
     console.error('Error fetching token info:', error);
-    throw new Error('Unable to fetch token information. Please verify the token address.');
+
+    return {
+      isValid: false,
+      fieldErrors: {
+        nativeToken: ['Unable to fetch token information. Please verify the token address.'],
+      },
+    };
   }
 }
 
@@ -139,6 +155,7 @@ export async function handleForm(prevState: any, formData: FormData) {
   }
 
   const chainIdValidation = await validateChainId(data.chainId as string);
+
   if (!chainIdValidation.isValid) {
     return {
       success: false,
@@ -151,10 +168,20 @@ export async function handleForm(prevState: any, formData: FormData) {
   }
 
   const rpcUrl = 'https://sepolia.rpc.tokamak.network';
-  const { nativeTokenName, nativeTokenSymbol } = await getTokenInfo(
-    data.nativeToken as string,
-    rpcUrl,
-  );
+  const tokenInfo = await getTokenInfo(data.nativeToken as string, rpcUrl);
+
+  if (!tokenInfo.isValid) {
+    return {
+      success: false,
+      errors: {
+        fieldErrors: {
+          ...tokenInfo.fieldErrors,
+        },
+      },
+    };
+  }
+
+  const { nativeTokenName, nativeTokenSymbol } = tokenInfo.data!;
 
   const { hash: l1StartingBlockHash, timestamp: l1StartingBlockTimestamp } =
     await getLatestBlockInfo(rpcUrl);

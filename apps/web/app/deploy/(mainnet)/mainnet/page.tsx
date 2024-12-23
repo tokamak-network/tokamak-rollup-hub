@@ -130,7 +130,7 @@ export default function DeployMainnetPage() {
       <div className="flex w-full flex-col text-center">
         <h1 className="text-4xl font-semibold">Additional Features</h1>
         <div className="my-[39px] flex h-[290px] justify-center gap-[28px]">
-          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Mini Bridge</h3>
             </div>
@@ -202,7 +202,7 @@ export default function DeployMainnetPage() {
               </a>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Earn Rewards for operating L2</h3>
             </div>

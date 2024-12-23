@@ -208,14 +208,14 @@ export default function DeployMainnetPage() {
                     <path
                       d="M13.864 6.8635V10.6817C13.864 13.2271 13.2276 13.8635 10.6822 13.8635H4.31854C1.77308 13.8635 1.13672 13.2271 1.13672 10.6817V4.31805C1.13672 1.77259 1.77308 1.13623 4.31854 1.13623H5.27308C6.22763 1.13623 6.43763 1.41623 6.80035 1.89987L7.7549 3.17259C7.99672 3.49078 8.13672 3.68168 8.77308 3.68168H10.6822C13.2276 3.68168 13.864 4.31805 13.864 6.8635Z"
                       stroke="white"
-                      stroke-miterlimit="10"
+                      strokeMiterlimit="10"
                     />
                     <path
                       d="M4.9541 1.13623H10.6814C11.9541 1.13623 12.5905 1.77259 12.5905 3.04532V3.9235"
                       stroke="white"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>
@@ -230,14 +230,14 @@ export default function DeployMainnetPage() {
                     <path
                       d="M13.864 6.86399V10.6822C13.864 13.2276 13.2276 13.864 10.6822 13.864H4.31854C1.77308 13.864 1.13672 13.2276 1.13672 10.6822V4.31854C1.13672 1.77308 1.77308 1.13672 4.31854 1.13672H5.27308C6.22763 1.13672 6.43763 1.41672 6.80035 1.90036L7.7549 3.17308C7.99672 3.49126 8.13672 3.68217 8.77308 3.68217H10.6822C13.2276 3.68217 13.864 4.31854 13.864 6.86399Z"
                       stroke="#07070C"
-                      stroke-miterlimit="10"
+                      strokeMiterlimit="10"
                     />
                     <path
                       d="M4.9541 1.13672H10.6814C11.9541 1.13672 12.5905 1.77308 12.5905 3.04581V3.92399"
                       stroke="#07070C"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>

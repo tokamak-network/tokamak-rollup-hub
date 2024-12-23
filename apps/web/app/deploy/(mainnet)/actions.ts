@@ -167,7 +167,7 @@ export async function handleForm(prevState: any, formData: FormData) {
     };
   }
 
-  const rpcUrl = 'https://sepolia.rpc.tokamak.network';
+  const rpcUrl = process.env.CHAIN_RPC_URL as string;
   const tokenInfo = await getTokenInfo(data.nativeToken as string, rpcUrl);
 
   if (!tokenInfo.isValid) {

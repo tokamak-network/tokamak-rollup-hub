@@ -65,7 +65,7 @@ export function FormMainnet() {
           />
         </div>
         <div className="relative w-full">
-          <div className="absolute left-[65px] top-[6.4px]">
+          <div className="absolute left-[65px] top-[5.3px]">
             <Tooltip
               content={
                 <div className="flex min-w-[200px] flex-col items-center">
@@ -96,7 +96,7 @@ export function FormMainnet() {
           />
         </div>
         <div className="relative w-full">
-          <div className="absolute left-[97px] top-[6.4px]">
+          <div className="absolute left-[97px] top-[5.3px]">
             <Tooltip
               content={
                 <div className="flex min-w-[250px] flex-col items-center">

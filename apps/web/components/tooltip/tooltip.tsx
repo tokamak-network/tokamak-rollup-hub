@@ -20,12 +20,12 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
   };
 
   const arrowPositionClasses = {
-    top: 'bottom-[-6px] left-1/2 transform -translate-x-1/2 border-t-[#4B5563] border-t-[6px] border-x-transparent border-x-[6px]',
+    top: 'bottom-[-6px] left-1/2 transform -translate-x-1/2 border-t-[#E8EDF2] dark:border-t-[#4B5563] border-t-[6px] border-x-transparent border-x-[6px]',
     bottom:
-      'top-[-6px] left-1/2 transform -translate-x-1/2 border-b-[#4B5563] border-b-[6px] border-x-transparent border-x-[6px]',
-    left: 'right-[-6px] top-1/2 transform -translate-y-1/2 border-l-[#4B5563] border-l-[6px] border-y-transparent border-y-[6px]',
+      'top-[-6px] left-1/2 transform -translate-x-1/2 border-b-[#E8EDF2] dark:border-b-[#4B5563] border-b-[6px] border-x-transparent border-x-[6px]',
+    left: 'right-[-6px] top-1/2 transform -translate-y-1/2 border-l-[#E8EDF2] dark:border-l-[#4B5563] border-l-[6px] border-y-transparent border-y-[6px]',
     right:
-      'left-[-6px] top-1/2 transform -translate-y-1/2 border-r-[#4B5563] border-r-[6px] border-y-transparent border-y-[6px]',
+      'left-[-6px] top-1/2 transform -translate-y-1/2 border-r-[#E8EDF2] dark:border-r-[#4B5563] border-r-[6px] border-y-transparent border-y-[6px]',
   };
 
   const handleMouseEnter = () => {
@@ -50,8 +50,8 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
       <span className="flex cursor-pointer items-center text-[#7E7E8F] dark:text-[#D8DFE9]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="13"
-          height="13"
+          width="15"
+          height="15"
           viewBox="0 0 16 15"
           fill="none"
         >
@@ -77,8 +77,8 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
       {showTooltip && (
         <div
           className={clsx(
-            'absolute z-10 rounded-md bg-[#192232] px-3 py-2 text-sm text-[#D8DFE9] shadow-lg',
-            'border border-[#4B5563] dark:border-[#4B5563] dark:bg-[#13131A]',
+            'absolute z-10 rounded-md bg-white px-3 py-2 text-sm text-[#2E2E3A] shadow-lg dark:bg-[#192232] dark:text-[#D8DFE9]',
+            'border border-[#E8EDF2] dark:border-[#4B5563] dark:bg-[#13131A]',
             tooltipPositionClasses[position],
           )}
           onMouseEnter={handleMouseEnter}

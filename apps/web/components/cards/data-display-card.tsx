@@ -25,7 +25,7 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
           'ring-tokamak-blue': selectedState === title.toLowerCase(),
           'ring-[#E8EDF2] dark:ring-transparent': selectedState !== title.toLowerCase(),
         },
-        'mb-[25px] flex flex-col items-center rounded-2xl p-[20px] text-center ring-2 last:mb-0 light:bg-white dark:bg-gradient-card md:mb-0 md:w-1/3',
+        'mb-[25px] flex flex-col items-center rounded-2xl p-[20px] text-center ring-2 last:mb-0 light:bg-white light:ring-1 dark:bg-gradient-card md:mb-0 md:w-1/3',
       )}
       {...props}
     >

@@ -154,7 +154,7 @@ export default function Deploy() {
           </div>
         </div>
         <div className="flex h-[293px] justify-center gap-[30px]">
-          <div className="w-full rounded-2xl px-[30px] pt-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="w-full rounded-2xl px-[30px] pt-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Requirements for Deployment</h3>
             </div>
@@ -173,7 +173,7 @@ export default function Deploy() {
               </p>
             </div>
           </div>
-          <div className="w-full rounded-2xl px-[30px] pb-[30px] pt-[30px] light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="w-full rounded-2xl px-[30px] pb-[30px] pt-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Key Features/Capabilities</h3>
             </div>

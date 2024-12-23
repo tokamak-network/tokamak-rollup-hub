@@ -74,6 +74,10 @@ export function FormInput({
           onChange={handleInputChange}
           required={required}
           className="w-full bg-transparent caret-tokamak-blue outline-none placeholder:text-[#626D7D] [&::-webkit-inner-spin-button]:appearance-none"
+          onInvalid={(e) =>
+            (e.target as HTMLInputElement).setCustomValidity('This field is required.')
+          }
+          onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
         />
         <button
           className={clsx({

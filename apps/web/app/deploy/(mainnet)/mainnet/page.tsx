@@ -29,8 +29,12 @@ export default function DeployMainnetPage() {
   return (
     <div className="flex max-w-[355px] flex-col items-center gap-[120px] md:max-w-[740px] xl:max-w-[1200px]">
       <div>
-        <h1 className="mb-[90px] text-center text-4xl font-semibold">Mainnet Deployment Guide</h1>
-        <div className="flex gap-[30px]">
+        <h1 className="mb-[90px] text-center text-4xl font-semibold">
+          <span className="block md:inline md:whitespace-nowrap">Devnet</span>
+          <span className="block md:inline md:whitespace-nowrap"> Deployment</span>
+          <span className="block md:inline md:whitespace-nowrap"> Guide</span>
+        </h1>
+        <div className="flex flex-col items-center gap-[30px] md:flex-row md:gap-[60px] xl:gap-[30px]">
           <div className="h-[156px] w-[330px] xl:h-[156px]">
             <div className="flex animate-v-stacks-appear justify-center">
               <Image
@@ -50,36 +54,17 @@ export default function DeployMainnetPage() {
               />
             </div>
           </div>
-          <div>
-            <h2 className="mb-[15px] text-[30px] font-bold">
+          <div className="w-full">
+            <h2 className="mb-[15px] text-center text-[30px] font-bold md:text-start">
               Tokamak
               <sup className="text-trh-red">OP</sup>
             </h2>
-            <div className="flex flex-col">
-              <div className="w-[870px] text-left text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-                <p>
-                  customized fork of the OP Stack that enables ERC20 tokens as the native currency
-                  for the L2 chain.
-                </p>
-              </div>
-              <div className="w-[870px] text-left text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-                <p>
-                  This stack lets users deploy their chain with a custom L2 native token which can
-                  be used instead of ETH for
-                </p>
-              </div>
-              <div className="w-[870px] text-left text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-                <p>
-                  transactions. It uses Ethereum as the settlement and data availability layer. The
-                  stack offers a built-in
-                </p>
-              </div>
-              <div className="w-[870px] text-left text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-                <p>
-                  Blockscout explorer and the flexibility to integrate a mini bridge, enhancing its
-                  usability.
-                </p>
-              </div>
+            <div className="w-full text-center text-[16px] text-[#7E7E8F] dark:text-trh-gray md:text-start">
+              A customized fork of the OP Stack that enables ERC20 tokens as the native currency for
+              the L2 chain. This stack lets users deploy their chain with a custom L2 native token
+              which can be used instead of ETH for transactions. It uses Ethereum as the settlement
+              and data availability layer. The stack offers a built-in Blockscout explorer and the
+              flexibility to integrate a mini bridge, enhancing its usability.
             </div>
           </div>
         </div>
@@ -129,26 +114,17 @@ export default function DeployMainnetPage() {
       </div>
       <div className="flex w-full flex-col text-center">
         <h1 className="text-4xl font-semibold">Additional Features</h1>
-        <div className="my-[39px] flex h-[290px] justify-center gap-[28px]">
-          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+        <div className="flex flex-col justify-center gap-[28px] py-[39px] md:flex-row">
+          <div className="flex w-full flex-col items-center rounded-2xl px-[21px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Mini Bridge</h3>
             </div>
             <div className="flex flex-col justify-between">
               <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                The mini bridge can be configured and integrated into the deployed
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                L2 network. Its key functionality includes Deposit/Withdraw support
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                for ETH or the native token. You can learn more about the mini
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                bridge here. As the code is open source, operators and developers
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                can extend its functionalities to suit their specific needs.
+                The mini bridge can be configured and integrated into the deployed L2 network. Its
+                key functionality includes Deposit/Withdraw support for ETH or the native token. You
+                can learn more about the mini bridge here. As the code is open source, operators and
+                developers can extend its functionalities to suit their specific needs.
               </p>
             </div>
             <div className="flex gap-[30px]">
@@ -245,25 +221,16 @@ export default function DeployMainnetPage() {
               </a>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center rounded-2xl px-[10px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="flex w-full flex-col items-center justify-between rounded-2xl px-[21px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Earn Rewards for operating L2</h3>
             </div>
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col">
               <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                L2 operators can generate additional revenue through TON
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                seigniorage by attracting TON deposits to their network. Currently,
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                this revenue opportunity is available only if the network uses TON
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                as its native token. Learn more about registering your L2 network
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                with Tokamak Staking v2.5 here.
+                L2 operators can generate additional revenue through TON seigniorage by attracting
+                TON deposits to their network. Currently, this revenue opportunity is available only
+                if the network uses TON as its native token. Learn more about registering your L2
+                network with Tokamak Staking v2.5 here.
               </p>
             </div>
             <div className="mt-[24px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
@@ -272,9 +239,7 @@ export default function DeployMainnetPage() {
           </div>
         </div>
         <div className="flex w-full flex-col">
-          <h1 className="mb-[15px] text-center text-[21px] font-semibold text-[#7E7E8F]">
-            Coming Soon
-          </h1>
+          <h1 className="text-center text-[21px] font-semibold text-[#7E7E8F]">Coming Soon</h1>
           <div>
             <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
               Additional features will be introduced over time based on needs and requirements.
@@ -305,7 +270,7 @@ export default function DeployMainnetPage() {
           </p>
         </div>
         <div className="mb-[18px] text-center text-[21px] font-semibold">FAQ</div>
-        <div className="mb-[60px] flex w-[790px] flex-col gap-[16px]">
+        <div className="mb-[60px] flex flex-col gap-[16px]">
           {fqaContent.map((item, index) => (
             <Accordion key={index} title={item.title} content={item.content} />
           ))}

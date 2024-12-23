@@ -150,55 +150,57 @@ export default function Deploy() {
             </p>
           </div>
         </div>
-        <div className="flex h-[293px] justify-center gap-[30px]">
-          <div className="w-full rounded-2xl px-[30px] pt-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+        <div className="h-min-[293px] flex flex-col justify-center gap-[30px] md:flex-row">
+          <div className="w-full rounded-2xl p-[18px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card md:px-[30px] md:pt-[30px]">
             <div className="mb-[15px]">
-              <h3 className="text-2xl font-[600px]">Requirements for Deployment</h3>
+              <h3 className="text-2xl">Requirements for Deployment</h3>
             </div>
-            <div className="flex flex-col justify-between">
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                1. An AWS account
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                2. Valid Chain ID and Contract Address of custom token.
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                3. Ensure at least 10 ETH in the mainnet wallet
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                4. Software Requirement (Link)
-              </p>
-            </div>
+            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+              <li>
+                <span>An AWS account</span>
+              </li>
+              <li>
+                <span>Valid Chain ID and Contract Address of custom token.</span>
+              </li>
+              <li>
+                <span>Ensure at least 10 ETH in the mainnet wallet</span>
+              </li>
+              <li>
+                <span>Software Requirement (Link)</span>
+              </li>
+            </ul>
           </div>
-          <div className="w-full rounded-2xl px-[30px] pb-[30px] pt-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+
+          <div className="w-full rounded-2xl p-[18px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card md:px-[30px] md:pb-[30px] md:pt-[30px]">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Key Features/Capabilities</h3>
             </div>
-            <div className="flex flex-col justify-between">
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                1. Automated scripts for quick mainnet deployment
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                2. Custom native token support for L2 networks
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                3. Integrated Fault Proof System
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                4. Blockscout-based block explorer
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                5. Graph Node and IPFS integration
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                6. Mini bridge Integration
-              </p>
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
-                7. Comprehensive SDK for developers
-              </p>
-            </div>
+            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+              <li>
+                <span>Automated scripts for quick mainnet deployment</span>
+              </li>
+              <li>
+                <span>Custom native token support for L2 networks</span>
+              </li>
+              <li>
+                <span>Integrated Fault Proof System</span>
+              </li>
+              <li>
+                <span>Blockscout-based block explorer</span>
+              </li>
+              <li>
+                <span>Graph Node and IPFS integration</span>
+              </li>
+              <li>
+                <span>Mini bridge Integration</span>
+              </li>
+              <li>
+                <span>Comprehensive SDK for developers</span>
+              </li>
+            </ul>
           </div>
         </div>
+
         <div className="flex w-full justify-center pb-[60px]">
           <Link href={'/deploy/mainnet'}>
             <GeneralBtn isDisabled={false} text="Deploy Rollup" styleType="primary" size="2xl" />

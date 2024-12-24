@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
 interface DataDisplyCardProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -15,17 +16,25 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
   selectedState,
   ...props
 }) => {
+  const isSelected = selectedState === title.toLowerCase();
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    setKey((prev) => prev + 1);
+  }, [selectedState]);
+
   return (
     <button
+      key={key}
       disabled={isDisabled}
       className={clsx(
+        'mb-[25px] flex flex-col items-center rounded-2xl p-[20px] text-center ring-2 last:mb-0 light:bg-white dark:bg-gradient-card md:mb-0 md:w-1/3',
         {
           'hover:ring-tokamak-blue': !isDisabled,
           'cursor-not-allowed opacity-60': isDisabled,
-          'ring-tokamak-blue': selectedState === title.toLowerCase(),
-          'ring-[#E8EDF2] dark:ring-transparent': selectedState !== title.toLowerCase(),
+          'ring-tokamak-blue': isSelected,
+          'ring-[#E8EDF2] dark:ring-transparent': !isSelected,
         },
-        'mb-[25px] flex flex-col items-center rounded-2xl p-[20px] text-center ring-2 last:mb-0 light:bg-white light:ring-1 dark:bg-gradient-card md:mb-0 md:w-1/3',
       )}
       {...props}
     >

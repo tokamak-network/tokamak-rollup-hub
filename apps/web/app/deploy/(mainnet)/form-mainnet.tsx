@@ -126,7 +126,7 @@ export function FormMainnet() {
                 href="https://docs.tokamak.network/home/service-guide/rollup-hub"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="text-tokamak-blue underline"
+                className="text-tokamak-blue underline underline-offset-[3px]"
               >
                 here
               </a>

@@ -13,7 +13,8 @@ export default function Deploy() {
   const [selectedDevResource, setResource] = useState('');
   const [selectedEnv, setEnv] = useState('');
   const envRef = useRef<HTMLDivElement>(null);
-  const rollupConfRef = useRef<HTMLDivElement>(null);
+  const devnetRef = useRef<HTMLDivElement>(null);
+  const mainnetRef = useRef<HTMLDivElement>(null);
 
   const promiseResource = (type: string) =>
     new Promise((resolve) => {
@@ -40,8 +41,12 @@ export default function Deploy() {
 
   const handleEnvCardClick = async (title: string) => {
     const isEnvSet = await promiseEnvCard(title);
-    if (isEnvSet && rollupConfRef.current) {
-      rollupConfRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (isEnvSet) {
+      if (title.toLowerCase() === 'devnet' && devnetRef.current) {
+        devnetRef.current.scrollIntoView({ behavior: 'smooth' });
+      } else if (title.toLowerCase() === 'mainnet' && mainnetRef.current) {
+        mainnetRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -112,7 +117,7 @@ export default function Deploy() {
           block: selectedEnv === 'devnet',
           hidden: selectedEnv !== 'devnet',
         })}
-        ref={rollupConfRef}
+        ref={devnetRef}
       >
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">Rollup Configuration</h1>
@@ -137,7 +142,7 @@ export default function Deploy() {
           block: selectedEnv === 'mainnet',
           hidden: selectedEnv !== 'mainnet',
         })}
-        ref={rollupConfRef}
+        ref={mainnetRef}
       >
         <div className="mt-[120px]">
           <h1 className="mb-[18px] text-center text-4xl font-semibold">

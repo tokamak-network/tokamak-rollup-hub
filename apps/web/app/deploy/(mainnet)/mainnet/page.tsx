@@ -27,10 +27,10 @@ export default function DeployMainnetPage() {
   }
 
   return (
-    <div className="flex max-w-[355px] flex-col items-center gap-[120px] md:max-w-[740px] xl:max-w-[1200px]">
+    <div className="flex max-w-[355px] flex-col items-center gap-[120px] overflow-x-hidden md:max-w-[740px] xl:max-w-[1200px]">
       <div>
         <h1 className="mb-[90px] text-center text-4xl font-semibold">
-          <span className="block md:inline md:whitespace-nowrap">Devnet</span>
+          <span className="block md:inline md:whitespace-nowrap">Mainnet</span>
           <span className="block md:inline md:whitespace-nowrap"> Deployment</span>
           <span className="block md:inline md:whitespace-nowrap"> Guide</span>
         </h1>
@@ -106,7 +106,7 @@ export default function DeployMainnetPage() {
             href="https://docs.tokamak.network/home/service-guide/rollup-hub"
             target="_blank"
             rel="noreferrer noopener"
-            className="text-tokamak-blue underline"
+            className="text-tokamak-blue underline underline-offset-[4px]"
           >
             here
           </a>
@@ -262,7 +262,7 @@ export default function DeployMainnetPage() {
               href="https://docs.tokamak.network/home/service-guide/rollup-hub"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-tokamak-blue underline"
+              className="text-tokamak-blue underline underline-offset-[4px]"
             >
               troubleshooting guide
             </a>

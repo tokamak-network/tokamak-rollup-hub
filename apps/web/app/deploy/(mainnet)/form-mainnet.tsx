@@ -54,7 +54,18 @@ export function FormMainnet() {
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-col items-center">
       <div className="mb-[39px] grid w-full grid-cols-1 gap-[30px] rounded-2xl px-5 pb-6 pt-5 light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card md:grid-cols-2 xl:grid-cols-3">
-        <div className="w-full">
+        <div className="relative w-full">
+          <div className="absolute left-[109px] top-[5.3px] md:left-[113px] md:top-[5.3px]">
+            <Tooltip
+              content={
+                <div className="flex min-w-[250px] flex-col items-center">
+                  <div>Rollup Name:</div>
+                  <div className="flex">2+ letters, alphabets only, no spaces.</div>
+                </div>
+              }
+              position="bottom"
+            />
+          </div>
           <FormInput
             type="text"
             label="Network Name"
@@ -65,7 +76,7 @@ export function FormMainnet() {
           />
         </div>
         <div className="relative w-full">
-          <div className="absolute left-[65px] top-[5.3px]">
+          <div className="absolute left-[65px] top-[5px] md:left-[65px] md:top-[5px]">
             <Tooltip
               content={
                 <div className="flex min-w-[200px] flex-col items-center">
@@ -76,7 +87,7 @@ export function FormMainnet() {
                       href="https://chainlist.org"
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-tokamak-blue underline"
+                      className="text-tokamak-blue underline underline-offset-4"
                     >
                       ChainList
                     </a>
@@ -96,7 +107,7 @@ export function FormMainnet() {
           />
         </div>
         <div className="relative w-full">
-          <div className="absolute left-[97px] top-[5.3px]">
+          <div className="absolute left-[96px] top-[5.3px] md:left-[98px] md:top-[5.3px]">
             <Tooltip
               content={
                 <div className="flex min-w-[250px] flex-col items-center">

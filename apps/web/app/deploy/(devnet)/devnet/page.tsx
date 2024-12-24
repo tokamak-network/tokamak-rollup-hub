@@ -8,16 +8,22 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { devnetTemplate } from '@/lib/constants';
 import { CopyInput } from '@/components/inputs/copy-input';
+import { useParams } from 'next/navigation';
 
 // TODO: documents link
 export default function DeployDevnetPage() {
   const [mount, setMount] = useState<boolean>(false);
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  const pathname = useParams();
 
   useEffect(() => {
     setMount(true);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   if (!mount) {
     return null;

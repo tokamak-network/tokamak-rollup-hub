@@ -205,7 +205,12 @@ export async function handleForm(prevState: any, formData: FormData) {
   template['p2pSequencerAddress'] = data.sequencerAddress as string;
   template['batchSenderAddress'] = data.batcherAddress as string;
   template['l2OutputOracleProposer'] = data.proposerAddress as string;
-  template['l1GenesisBlockTimestamp'] = Math.floor(Date.now() / 1000).toString(16);
+
+  template['newPauser'] = data.adminAddress as string;
+  template['newBlacklister'] = data.adminAddress as string;
+  template['masterMinterOwner'] = data.adminAddress as string;
+  template['fiatTokenOwner'] = data.adminAddress as string;
+  template['uniswapV3FactoryOwner'] = data.adminAddress as string;
 
   const paddedChainId = (data.chainId as string).padStart(38, '0');
   template['batchInboxAddress'] = `0xff${paddedChainId}`;

@@ -79,7 +79,7 @@ export function FormMainnet() {
           <div className="absolute left-[65px] top-[5px] md:left-[65px] md:top-[5px]">
             <Tooltip
               content={
-                <div className="flex min-w-[200px] flex-col items-center">
+                <div className="flex min-w-[168px] flex-col items-center">
                   <div>Get a Chain ID</div>
                   <div className="flex">
                     <p>in advance from&nbsp;</p>
@@ -110,11 +110,11 @@ export function FormMainnet() {
           <div className="absolute left-[96px] top-[5.3px] md:left-[98px] md:top-[5.3px]">
             <Tooltip
               content={
-                <div className="flex min-w-[350px] flex-col items-center">
-                  <div>
+                <div className="flex min-w-[220px] flex-col items-center">
+                  <div className="text-center">
                     Please provide the token address of the ERC20 token. Refer{' '}
                     <a
-                      href="https://www.notion.so/tokamak/1-Overview-137d96a400a380ce9d38e73035fbeaca?pvs=4#12fd96a400a38168af40f6ff221da460"
+                      href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deployment-configuration-parameters?r=Bh1VAMnTuMd0VgUBzoKr"
                       target="_blank"
                       rel="noreferrer noopener"
                       className="text-tokamak-blue underline underline-offset-[3px]"
@@ -136,24 +136,6 @@ export function FormMainnet() {
             required={true}
             errors={errors?.fieldErrors?.nativeToken}
           />
-          <div className="mt-[8px]">
-            <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
-              <p>Ensure the token&apos;s contract address is on&nbsp;</p>
-              <div className="text-black dark:text-[#FFF]">Ethereum</div>.
-            </div>
-            <div className="flex w-[870px] text-left text-[13px] text-[#7E7E8F] dark:text-trh-gray">
-              <p>Requirements for native tokens can be found&nbsp; </p>
-              <a
-                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deployment-configuration-parameters?r=Bh1VAMnTuMd0VgUBzoKr"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-tokamak-blue underline underline-offset-[3px]"
-              >
-                here
-              </a>
-              .
-            </div>
-          </div>
         </div>
         <div className="w-full">
           <FormInput

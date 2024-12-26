@@ -31,7 +31,7 @@ export default function DeployMainnetPage() {
   }
 
   return (
-    <div className="flex max-w-[355px] flex-col items-center gap-[120px] overflow-x-hidden md:max-w-[740px] xl:max-w-[1200px]">
+    <div className="flex max-w-[355px] flex-col items-center gap-[120px] md:max-w-[740px] xl:max-w-[1200px]">
       <div>
         <h1 className="mb-[90px] text-center text-4xl font-semibold">
           <span className="block md:inline md:whitespace-nowrap">Mainnet</span>

@@ -87,7 +87,7 @@ export function FormMainnet() {
                       href="https://chainlist.org"
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-tokamak-blue underline underline-offset-4"
+                      className="text-tokamak-blue underline underline-offset-[3px]"
                     >
                       ChainList
                     </a>

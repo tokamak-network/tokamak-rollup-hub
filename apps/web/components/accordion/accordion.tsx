@@ -20,7 +20,7 @@ export function Accordion({ title, content, links }: AccordionProps): JSX.Elemen
             href={links[part]}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#0070ED] underline underline-offset-4"
+            className="text-[#0070ED] underline underline-offset-[3px]"
           >
             {part}
           </a>

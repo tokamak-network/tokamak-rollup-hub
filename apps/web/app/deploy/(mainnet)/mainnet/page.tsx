@@ -125,6 +125,7 @@ export default function DeployMainnetPage() {
           >
             here
           </a>
+          .
         </p>
       </div>
       <div className="flex w-full flex-col text-center">

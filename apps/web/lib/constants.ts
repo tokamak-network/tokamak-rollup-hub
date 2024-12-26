@@ -321,16 +321,31 @@ export const mainnetTemplate: MainnetTemplate = {
 
 export const fqaContent = [
   {
-    title: 'Frequently Asked Question',
+    title: 'Has the code undergone an audit? If so, could you share the audit details?',
     content:
-      'Answers or Explanation about Frequently Asked Questions Answers or Explanation about Frequently Asked Questions Answers or Explanation about Frequently Asked Questions.',
+      'L2 Native Token Bridge in Thanos Stack has been audited by Sherlock. Please refer to {{Audit report}}.',
+    links: {
+      'Audit report':
+        'https://drive.google.com/drive/u/1/folders/1JE8_aMI6y6-yxq88Tu0TxA06flEBSkWH',
+    },
   },
   {
-    title: 'Another Question',
-    content: 'This is an explanation or answer to another question.',
+    title: 'What is the relationship between Thanos and the Tokamak OP Stack?',
+    content:
+      'Tokamak OP and Tokamak ZK+ are service classifications based on roll-up method and the Thanos Stack is L2 stack that is included in Tokamak OP. If the LeanBase Stack is released next year, it will fit inside Tokamak OP. So the Tokamak OP is to support two L2 stacks.',
+    links: {},
   },
   {
-    title: 'Yet Another Question',
-    content: 'This is the response to yet another question.',
+    title: 'Can any token be configured as the native token in the deployment?',
+    content: 'No. We have a requirement for selecting native token. Please refer to {{here}}.',
+    links: {
+      here: 'https://www.notion.so/tokamak/1-Overview-137d96a400a380ce9d38e73035fbeaca?pvs=4#12fd96a400a38168af40f6ff221da460',
+    },
+  },
+  {
+    title: 'How is the mini bridge different from a fully functional bridge?',
+    content:
+      'The mini bridge includes essential features for depositing and withdrawing limited tokens but lacks the enhanced user experience and transaction history found in a fully functional backend-supported bridge.',
+    links: {},
   },
 ];

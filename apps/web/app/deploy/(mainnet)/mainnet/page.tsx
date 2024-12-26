@@ -195,10 +195,9 @@ export default function DeployMainnetPage() {
           </div>
         </div>
         <div className="flex w-full flex-col">
-          <h1 className="text-center text-[21px] font-semibold text-[#7E7E8F]">Coming Soon</h1>
           <div>
             <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-              Additional features will be introduced over time based on needs and requirements.
+              More features will be introduced over time based on needs and requirements.
             </p>
           </div>
         </div>
@@ -228,7 +227,7 @@ export default function DeployMainnetPage() {
         <div className="mb-[18px] text-center text-[21px] font-semibold">FAQ</div>
         <div className="mb-[60px] flex flex-col gap-[16px]">
           {fqaContent.map((item, index) => (
-            <Accordion key={index} title={item.title} content={item.content} />
+            <Accordion key={index} title={item.title} content={item.content} links={item.links} />
           ))}
         </div>
       </div>

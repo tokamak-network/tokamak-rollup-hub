@@ -170,9 +170,6 @@ export default function Deploy() {
               <li>
                 <span>Ensure at least 10 ETH in the mainnet wallet</span>
               </li>
-              <li>
-                <span>Software Requirement (Link)</span>
-              </li>
             </ul>
           </div>
 

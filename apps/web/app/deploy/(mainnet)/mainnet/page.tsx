@@ -36,7 +36,6 @@ export default function DeployMainnetPage() {
         <h1 className="mb-[90px] text-center text-4xl font-semibold">
           <span className="block md:inline md:whitespace-nowrap">Mainnet</span>
           <span className="block md:inline md:whitespace-nowrap"> Deployment</span>
-          <span className="block md:inline md:whitespace-nowrap"> Guide</span>
         </h1>
         <div className="flex flex-col items-center gap-[30px] md:flex-row md:gap-[60px] xl:gap-[30px]">
           <div className="h-[156px] w-[330px] xl:h-[156px]">
@@ -86,6 +85,18 @@ export default function DeployMainnetPage() {
               Once filled out, users can download the configuration file and use it during
               deployment.
             </p>
+            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+              Please refer&nbsp;
+              <a
+                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deployment-configuration-parameters"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-tokamak-blue underline underline-offset-[4px]"
+              >
+                here
+              </a>{' '}
+              if you want to know more about each of these parameters.
+            </p>
           </div>
         </div>
         <div className="flex w-full flex-col gap-[33px]">
@@ -107,7 +118,7 @@ export default function DeployMainnetPage() {
         <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
           You can access the deployment guide&nbsp;
           <a
-            href="https://docs.tokamak.network/home/service-guide/rollup-hub"
+            href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deploy-with-aws"
             target="_blank"
             rel="noreferrer noopener"
             className="text-tokamak-blue underline underline-offset-[4px]"
@@ -134,7 +145,7 @@ export default function DeployMainnetPage() {
             <div className="flex gap-[30px]">
               {/* GitHub Icon */}
               <a
-                href="https://chainlist.org"
+                href="https://github.com/tokamak-network/trh-op-bridge"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
@@ -156,7 +167,7 @@ export default function DeployMainnetPage() {
 
               {/* Docs Icon */}
               <a
-                href="https://chainlist.org"
+                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/additional-features/mini-bridge"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
@@ -204,7 +215,7 @@ export default function DeployMainnetPage() {
       </div>
       <div className="flex w-full flex-col items-center gap-[39px]">
         <div>
-          <h1 className="mb-[18px] text-center text-4xl font-semibold">If you need more help?</h1>
+          <h1 className="mb-[18px] text-center text-4xl font-semibold">Need Help?</h1>
           <div>
             <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
               Our goal is to make your experience seamless, but sometimes things don’t go as
@@ -212,16 +223,25 @@ export default function DeployMainnetPage() {
             </p>
           </div>
           <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
-            Explore &nbsp;
+            Reach out for assistance{' '}
             <a
-              href="https://docs.tokamak.network/home/service-guide/rollup-hub"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform"
               target="_blank"
               rel="noreferrer noopener"
               className="text-tokamak-blue underline underline-offset-[4px]"
             >
-              troubleshooting guide
+              here
+            </a>{' '}
+            or visit our{' '}
+            <a
+              href="https://docs.tokamak.network/home/service-guide/rollup-hub/troubleshooting"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-tokamak-blue underline underline-offset-[4px]"
+            >
+              troubleshooting section
             </a>
-            &nbsp;to quickly resolve any issues.
+            .
           </p>
         </div>
         <div className="mb-[18px] text-center text-[21px] font-semibold">FAQ</div>

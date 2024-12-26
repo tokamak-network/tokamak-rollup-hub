@@ -245,7 +245,9 @@ export default function DeployMainnetPage() {
             .
           </p>
         </div>
-        <div className="mb-[18px] text-center text-[21px] font-semibold">FAQ</div>
+        <div className="mb-[18px] text-center text-[21px] font-semibold">
+          Frequently Asked Questions
+        </div>
         <div className="mb-[60px] flex flex-col gap-[16px]">
           {fqaContent.map((item, index) => (
             <Accordion key={index} title={item.title} content={item.content} links={item.links} />

@@ -1,14 +1,34 @@
-'use client';
-
 import React, { useState } from 'react';
-
 interface AccordionProps {
   title: string;
   content: string;
+  links: Record<string, string | undefined>;
 }
 
-export function Accordion({ title, content }: AccordionProps): JSX.Element {
+export function Accordion({ title, content, links }: AccordionProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
+
+  const parseContent = (text: string): React.ReactNode => {
+    const regex = /{{(.*?)}}/g;
+    const parts = text.split(regex);
+
+    return parts.map((part, index) => {
+      if (index % 2 === 1 && links[part]) {
+        return (
+          <a
+            key={index}
+            href={links[part]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0070ED] underline underline-offset-4"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
 
   return (
     <div
@@ -53,7 +73,7 @@ export function Accordion({ title, content }: AccordionProps): JSX.Element {
         }`}
       >
         <div className="mt-4 text-[14px] font-[500px] text-[#7E7E8F] dark:text-[#7E7E8F]">
-          {content}
+          {parseContent(content)}
         </div>
       </div>
     </div>

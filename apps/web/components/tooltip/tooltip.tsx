@@ -77,7 +77,7 @@ export function Tooltip({ content, position = 'bottom' }: TooltipProps): JSX.Ele
       {showTooltip && (
         <div
           className={clsx(
-            'absolute z-10 rounded-md bg-white px-3 py-2 text-sm text-[#2E2E3A] shadow-lg dark:bg-[#192232] dark:text-[#D8DFE9]',
+            'absolute z-10 rounded-md bg-white px-3 py-2 text-[12px] text-[#2E2E3A] shadow-lg dark:bg-[#192232] dark:text-[#D8DFE9]',
             'border border-[#E8EDF2] dark:border-[#4B5563] dark:bg-[#13131A]',
             tooltipPositionClasses[position],
           )}

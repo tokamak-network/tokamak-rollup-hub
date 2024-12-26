@@ -58,7 +58,7 @@ export function FormMainnet() {
           <div className="absolute left-[109px] top-[5.3px] md:left-[113px] md:top-[5.3px]">
             <Tooltip
               content={
-                <div className="flex min-w-[250px] flex-col items-center">
+                <div className="flex min-w-[220px] flex-col items-center">
                   <div>Rollup Name:</div>
                   <div className="flex">2+ letters, alphabets only, no spaces.</div>
                 </div>
@@ -79,7 +79,7 @@ export function FormMainnet() {
           <div className="absolute left-[65px] top-[5px] md:left-[65px] md:top-[5px]">
             <Tooltip
               content={
-                <div className="flex min-w-[168px] flex-col items-center">
+                <div className="flex min-w-[150px] flex-col items-center">
                   <div>Get a Chain ID</div>
                   <div className="flex">
                     <p>in advance from&nbsp;</p>
@@ -110,7 +110,7 @@ export function FormMainnet() {
           <div className="absolute left-[96px] top-[5.3px] md:left-[98px] md:top-[5.3px]">
             <Tooltip
               content={
-                <div className="flex min-w-[220px] flex-col items-center">
+                <div className="flex min-w-[210px] flex-col items-center">
                   <div className="text-center">
                     Please provide the token address of the ERC20 token. Refer{' '}
                     <a

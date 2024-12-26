@@ -33,7 +33,7 @@ export default function DeployMainnetPage() {
   return (
     <div className="flex max-w-[355px] flex-col items-center gap-[120px] md:max-w-[740px] xl:max-w-[1200px]">
       <div>
-        <h1 className="mb-[90px] text-center text-4xl font-semibold">
+        <h1 className="mb-[90px] text-center text-[42px] font-semibold">
           <span className="block md:inline md:whitespace-nowrap">Mainnet</span>
           <span className="block md:inline md:whitespace-nowrap"> Deployment</span>
         </h1>
@@ -62,7 +62,7 @@ export default function DeployMainnetPage() {
               Tokamak
               <sup className="text-trh-red">OP</sup>
             </h2>
-            <div className="w-full text-center text-[16px] text-[#7E7E8F] dark:text-trh-gray md:text-start">
+            <div className="w-full text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray md:text-start">
               A customized fork of the OP Stack that enables ERC20 tokens as the native currency for
               the L2 chain. This stack lets users deploy their chain with a custom L2 native token
               which can be used instead of ETH for transactions. It uses Ethereum as the settlement
@@ -136,7 +136,7 @@ export default function DeployMainnetPage() {
               <h3 className="text-2xl font-[600px]">Mini Bridge</h3>
             </div>
             <div className="flex flex-col justify-between">
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-[#7D899A]">
                 The mini bridge can be configured and integrated into the deployed L2 network. Its
                 key functionality includes Deposit/Withdraw support for ETH or the native token. You
                 can learn more about the mini bridge here. As the code is open source, operators and
@@ -189,26 +189,26 @@ export default function DeployMainnetPage() {
               </a>
             </div>
           </div>
-          <div className="flex w-full flex-col items-center justify-between rounded-2xl px-[21px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
+          <div className="flex w-full flex-col items-center rounded-2xl px-[21px] py-[30px] light:bg-white light:ring-1 light:ring-[#E8EDF2] dark:bg-gradient-card">
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Earn Rewards for operating L2</h3>
             </div>
             <div className="flex flex-col">
-              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+              <p className="text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-[#7D899A]">
                 L2 operators can generate additional revenue through TON seigniorage by attracting
                 TON deposits to their network. Currently, this revenue opportunity is available only
                 if the network uses TON as its native token. Learn more about registering your L2
                 network with Tokamak Staking v2.5 here.
               </p>
             </div>
-            <div className="mt-[24px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+            <div className="mt-auto text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-[#7D899A]">
               Coming Soon
             </div>
           </div>
         </div>
         <div className="flex w-full flex-col">
           <div>
-            <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
+            <p className="text-center text-[16px] text-[#7E7E8F] dark:text-[#7D899A]">
               More features will be introduced over time based on needs and requirements.
             </p>
           </div>

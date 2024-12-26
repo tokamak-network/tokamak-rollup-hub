@@ -31,7 +31,7 @@ export default function DeployDevnetPage() {
 
   return (
     <div className="max-w-[355px] items-center py-[60px] md:max-w-[740px] xl:max-w-[1200px] xl:flex-row">
-      <h1 className="mb-[39px] text-center text-4xl font-semibold">Devnet Deployment Guide</h1>
+      <h1 className="mb-[39px] text-center text-[42px] font-semibold">Devnet Deployment Guide</h1>
       <div className="flex flex-col xl:flex-row">
         <div className="flex w-full flex-col gap-[33px] p-5 xl:w-1/2">
           <h3 className="block text-[21px] font-semibold">How to deploy rollup locally</h3>

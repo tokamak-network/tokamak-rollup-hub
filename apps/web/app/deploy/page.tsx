@@ -160,7 +160,7 @@ export default function Deploy() {
             <div className="mb-[15px]">
               <h3 className="text-2xl">Requirements for Deployment</h3>
             </div>
-            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-[#7D899A]">
               <li>
                 <span>An AWS account</span>
               </li>
@@ -177,7 +177,7 @@ export default function Deploy() {
             <div className="mb-[15px]">
               <h3 className="text-2xl font-[600px]">Key Features/Capabilities</h3>
             </div>
-            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-trh-gray">
+            <ul className="list-decimal space-y-[10px] pl-[20px] text-[18px] font-medium leading-[27px] text-[#7E7E8F] dark:text-[#7D899A]">
               <li>
                 <span>Automated scripts for quick mainnet deployment</span>
               </li>

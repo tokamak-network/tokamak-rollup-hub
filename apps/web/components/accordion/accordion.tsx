@@ -39,33 +39,35 @@ export function Accordion({ title, content, links }: AccordionProps): JSX.Elemen
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3 className="text-[16px] font-semibold">{title}</h3>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="15"
-          viewBox="0 0 14 15"
-          fill="none"
-          className={`transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}
-        >
-          <path
-            d="M7 1.5V13.5"
-            className={`transition-colors ${
-              isOpen ? 'light:stroke-black dark:stroke-white' : 'stroke-[#0070ED]'
-            }`}
-            strokeWidth="1.32353"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M13 7.5H1"
-            className={`transition-colors ${
-              isOpen ? 'light:stroke-black dark:stroke-white' : 'stroke-[#0070ED]'
-            }`}
-            strokeWidth="1.32353"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 14 15"
+            fill="none"
+            className={`transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}
+          >
+            <path
+              d="M7 1.5V13.5"
+              className={`transition-colors ${
+                isOpen ? 'light:stroke-black dark:stroke-white' : 'stroke-[#0070ED]'
+              }`}
+              strokeWidth="1.32353"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M13 7.5H1"
+              className={`transition-colors ${
+                isOpen ? 'light:stroke-black dark:stroke-white' : 'stroke-[#0070ED]'
+              }`}
+              strokeWidth="1.32353"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
       <div
         className={`overflow-hidden transition-all duration-200 ease-in-out ${

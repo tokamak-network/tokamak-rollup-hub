@@ -235,7 +235,7 @@ export default function DeployMainnetPage() {
             </a>{' '}
             or visit our{' '}
             <a
-              href="https://docs.tokamak.network/home/service-guide/rollup-hub/troubleshooting"
+              href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/troubleshooting"
               target="_blank"
               rel="noreferrer noopener"
               className="text-tokamak-blue underline underline-offset-[4px]"

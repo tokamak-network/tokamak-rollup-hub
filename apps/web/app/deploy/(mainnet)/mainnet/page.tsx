@@ -168,7 +168,7 @@ export default function DeployMainnetPage() {
 
               {/* Docs Icon */}
               <a
-                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/additional-features/mini-bridge"
+                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/additional-features/mini-bridge/deployment-guide"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="mt-[24px] flex cursor-pointer items-center gap-[6px]"

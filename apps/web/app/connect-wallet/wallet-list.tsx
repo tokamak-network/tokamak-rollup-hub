@@ -63,7 +63,11 @@ export default function WalletList() {
       </div>
       <p className="mt-6 text-sm text-[#7E7E8F] dark:text-[#C1C2D9]">
         <span>New to Ethereum? </span>
-        <Link href="https://learn.metamask.io/lessons/what-is-a-crypto-wallet" rel="noopener noreferrer" target="_blank">
+        <Link
+          href="https://learn.metamask.io/lessons/what-is-a-crypto-wallet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <span className="underline">Learn more about wallets</span>
         </Link>
       </p>

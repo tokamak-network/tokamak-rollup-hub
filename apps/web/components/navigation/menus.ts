@@ -30,7 +30,7 @@ export const menus: ItemInfo[] = [
       {
         name: 'User Guide',
         externalLink: true,
-        href: 'https://docs.tokamak.network/home/service-guide/rollup-hub',
+        href: 'https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub',
       },
       {
         name: 'Get Help',

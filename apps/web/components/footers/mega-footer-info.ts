@@ -16,6 +16,40 @@ interface Category {
 
 export const megaFooterCategorys: Category[] = [
   {
+    title: 'Developer',
+    items: [
+      {
+        name: 'Documents',
+        link: 'https://docs.tokamak.network/home',
+      },
+      {
+        name: 'GitHub',
+        link: 'https://github.com/tokamak-network',
+      },
+      {
+        name: 'Grant',
+        link: 'https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21',
+      },
+    ],
+  },
+  {
+    title: 'Features',
+    items: [
+      {
+        name: 'Rollup Hub',
+        link: 'https://rolluphub.tokamak.network/',
+      },
+      {
+        name: 'Staking',
+        link: 'https://simple.staking.tokamak.network/home',
+      },
+      {
+        name: 'DAO',
+        link: 'https://dao.tokamak.network/#/',
+      },
+    ],
+  },
+  {
     title: 'About',
     items: [
       {
@@ -26,56 +60,10 @@ export const megaFooterCategorys: Category[] = [
         name: 'Onboarding',
         link: 'https://tokamak.notion.site/Tokamak-Network-Onboarding-523bc627bd374326b5dfbec3d3b0a8e1',
       },
-      {
-        name: 'Partners & Grant',
-        link: 'https://www.tokamak.network/#partners',
-      },
     ],
   },
   {
-    title: 'L2 Mainnet',
-    items: [
-      {
-        name: 'Titan',
-        link: 'https://titan.tokamak.network/',
-      },
-      {
-        name: 'Titan multi link',
-        link: '#',
-        multiLink: {
-          items: [
-            {
-              name: 'ㄴExplorer',
-              link: 'https://explorer.titan.tokamak.network/',
-            },
-            {
-              name: ' / Bridge',
-              link: 'https://bridge.tokamak.network/',
-            },
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: 'Developer',
-    items: [
-      {
-        name: 'Grant',
-        link: 'https://tokamak.notion.site/Tokamak-Network-Grant-Program-GranTON-f2384b458ea341a0987c7e73a909aa21',
-      },
-      {
-        name: 'GitHub',
-        link: 'https://github.com/tokamak-network',
-      },
-      {
-        name: 'Documentation',
-        link: 'https://docs.tokamak.network/home',
-      },
-    ],
-  },
-  {
-    title: 'Community',
+    title: 'Social',
     items: [
       {
         name: 'Medium',

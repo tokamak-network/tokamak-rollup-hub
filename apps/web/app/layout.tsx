@@ -4,7 +4,6 @@ import GlobalNav from '@/components/navigation/global-nav';
 import Footer from '@/components/footers/footer';
 import { Web3Providers } from './web3provider';
 import ThemeProvider from './theme-provider';
-import TokamakGlobalNav from '@/components/navigation/tokamak-global-nav';
 
 export const metadata: Metadata = {
   title: 'Tokamak Rollup Hub',

@@ -170,20 +170,18 @@ export default function Deploy() {
               </li>
               <li>
                 <span>Ensure at least 10 ETH in the mainnet wallet</span>
-                <div className="mt-[10px] flex">
-                  (Please refer here for detailed calculation&nbsp;
-                  <div>
-                    <a
-                      href="https://docs.google.com/spreadsheets/d/1RmyIg38Kkbf7ZFTG5LEqkBeaBRJ6Ohmsyg_mtZhsmDI/edit?gid=0#gid=0"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="text-tokamak-blue underline underline-offset-[3px]"
-                    >
-                      link
-                    </a>
-                    )
-                  </div>
-                </div>
+                <p className="mt-[10px] text-[15px]">
+                  (Please refer&nbsp;
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1RmyIg38Kkbf7ZFTG5LEqkBeaBRJ6Ohmsyg_mtZhsmDI/edit?gid=0#gid=0"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-tokamak-blue underline underline-offset-[3px]"
+                  >
+                    here
+                  </a>
+                  &nbsp;for detailed calculation)
+                </p>
               </li>
             </ul>
           </div>

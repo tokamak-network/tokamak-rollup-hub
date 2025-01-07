@@ -98,13 +98,14 @@ export default function Deploy() {
           </p>
         </div>
         <div className="mt-[39px] md:flex md:gap-[25px]">
-          {deployEnvironment.map(({ title, description, isDisabled }, index) => {
+          {deployEnvironment.map(({ title, description, isDisabled, isBeta }, index) => {
             return (
               <DataDisplayCard
                 key={index}
                 title={title}
                 description={description}
                 isDisabled={isDisabled}
+                isBeta={isBeta}
                 selectedState={selectedEnv}
                 onClick={() => handleEnvCardClick(title)}
               />
@@ -169,6 +170,20 @@ export default function Deploy() {
               </li>
               <li>
                 <span>Ensure at least 10 ETH in the mainnet wallet</span>
+                <div className="mt-[10px] flex">
+                  (Please refer here for detailed calculation&nbsp;
+                  <div>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1RmyIg38Kkbf7ZFTG5LEqkBeaBRJ6Ohmsyg_mtZhsmDI/edit?gid=0#gid=0"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="text-tokamak-blue underline underline-offset-[3px]"
+                    >
+                      link
+                    </a>
+                    )
+                  </div>
+                </div>
               </li>
             </ul>
           </div>

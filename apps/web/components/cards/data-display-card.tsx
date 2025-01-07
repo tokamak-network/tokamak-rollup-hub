@@ -6,6 +6,7 @@ interface DataDisplyCardProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   title: string;
   description: string;
   isDisabled: boolean;
+  isBeta: boolean;
   selectedState: string;
 }
 
@@ -13,6 +14,7 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
   title,
   description,
   isDisabled,
+  isBeta,
   selectedState,
   ...props
 }) => {
@@ -38,8 +40,13 @@ export const DataDisplayCard: React.FC<DataDisplyCardProps> = ({
       )}
       {...props}
     >
-      <div className="mb-[15px]">
-        <h3 className="text-3xl font-bold">{title}</h3>
+      <div className="mb-[15px] flex">
+        <h3 className="pt-[3px] text-3xl font-bold">{title}</h3>
+        {isBeta && (
+          <div className="font-georgia ml-[7px] text-[20px] font-normal italic text-tokamak-blue">
+            Beta
+          </div>
+        )}
       </div>
       <div className="flex h-full flex-col items-center gap-[15px]">
         <p className="font-medium text-[#7E7E8F] dark:text-trh-gray">{description}</p>

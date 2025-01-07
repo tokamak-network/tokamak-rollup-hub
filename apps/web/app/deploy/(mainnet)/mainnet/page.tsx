@@ -33,10 +33,15 @@ export default function DeployMainnetPage() {
   return (
     <div className="flex max-w-[355px] flex-col items-center gap-[120px] md:max-w-[740px] xl:max-w-[1200px]">
       <div>
-        <h1 className="mb-[90px] text-center text-[42px] font-semibold">
-          <span className="block md:inline md:whitespace-nowrap">Mainnet</span>
-          <span className="block md:inline md:whitespace-nowrap"> Deployment</span>
-        </h1>
+        <div className="mb-[90px] flex flex-col text-center text-[42px] font-semibold md:flex-row md:justify-center">
+          <div className="ml-4 flex justify-center md:whitespace-nowrap">
+            <div className="md:whitespace-nowrap">Mainnet</div>
+            <div className="ml-2 mt-2 font-georgia text-[24px] font-normal italic text-tokamak-blue md:whitespace-nowrap">
+              Beta
+            </div>
+          </div>
+          <div className="md:inline md:whitespace-nowrap">&nbsp; Deployment</div>
+        </div>
         <div className="flex flex-col items-center gap-[30px] md:flex-row md:gap-[60px] xl:gap-[30px]">
           <div className="h-[156px] w-[330px] xl:h-[156px]">
             <div className="flex animate-v-stacks-appear justify-center">

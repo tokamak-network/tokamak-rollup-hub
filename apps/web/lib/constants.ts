@@ -27,16 +27,19 @@ export const deployEnvironment = [
     title: 'Devnet',
     description: 'Use Devnet mode to run your rollup or Appchain locally for development.',
     isDisabled: false,
+    isBeta: false,
   },
   {
     title: 'Testnet',
     description: 'Use Testnet mode to run your rollup or Appchain before deploying to Mainnet.',
     isDisabled: true,
+    isBeta: false,
   },
   {
     title: 'Mainnet',
     description: 'Use Mainnet mode to run your Tokamak OP-based rollup or Appchain on the mainnet.',
     isDisabled: false,
+    isBeta: true,
   },
 ];
 

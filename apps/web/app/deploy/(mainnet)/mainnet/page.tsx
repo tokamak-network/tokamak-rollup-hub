@@ -12,7 +12,6 @@ import githubIconLight from '@/public/icon-github-light.svg';
 import docsIconLight from '@/public/icon-docs-light.svg';
 import githubIconDark from '@/public/icon-github-dark.svg';
 import docsIconDark from '@/public/icon-docs-dark.svg';
-import { TOKAMAK_DISCORD_URL } from '@/consts/urls';
 
 // TODO: documents link
 export default function DeployMainnetPage() {
@@ -246,16 +245,7 @@ export default function DeployMainnetPage() {
               rel="noreferrer noopener"
               className="text-tokamak-blue underline underline-offset-[4px]"
             >
-              troubleshooting
-            </a>{' '}
-            and{' '}
-            <a
-              href={TOKAMAK_DISCORD_URL}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-tokamak-blue underline underline-offset-[4px]"
-            >
-              Discord
+              troubleshooting section
             </a>
             .
           </p>

@@ -10,3 +10,6 @@ export const HELP_FORM_URL =
 export const MINI_BRIDGE_GUIDE_URL =
   'https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/additional-features/mini-bridge';
 export const MINI_BRIDGE_GITHUB_URL = 'https://github.com/tokamak-network/thanos-bridge';
+export const TRH_USER_DOC_URL = 'https://docs.tokamak.network/home/service-guide/rollup-hub';
+export const FUNDING_REQUIREMENTS_URL =
+  'https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/deploy-with-aws/prerequisites#id-1.-funding-requirements';

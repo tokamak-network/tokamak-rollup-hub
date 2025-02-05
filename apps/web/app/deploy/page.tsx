@@ -7,6 +7,7 @@ import { useRef, useState } from 'react';
 import clsx from 'clsx';
 import { GeneralBtn } from '@/components/buttons/general-btn';
 import Link from 'next/link';
+import { FUNDING_REQUIREMENTS_URL } from '@/consts/urls';
 
 // TODO: documents link
 export default function Deploy() {
@@ -169,11 +170,11 @@ export default function Deploy() {
                 <span>Valid Chain ID and Contract Address of custom token.</span>
               </li>
               <li>
-                <span>Ensure at least 10 ETH in the mainnet wallet</span>
+                <span>Funding requirments</span>
                 <p className="mt-[10px] text-[15px]">
                   (Please refer&nbsp;
                   <a
-                    href="https://docs.google.com/spreadsheets/d/1RmyIg38Kkbf7ZFTG5LEqkBeaBRJ6Ohmsyg_mtZhsmDI/edit?gid=0#gid=0"
+                    href={FUNDING_REQUIREMENTS_URL}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="text-tokamak-blue underline underline-offset-[3px]"
@@ -198,19 +199,16 @@ export default function Deploy() {
                 <span>Custom native token support for L2 networks</span>
               </li>
               <li>
-                <span>Integrated Fault Proof System</span>
-              </li>
-              <li>
-                <span>Blockscout-based block explorer</span>
-              </li>
-              <li>
-                <span>Graph Node and IPFS integration</span>
-              </li>
-              <li>
                 <span>Mini bridge Integration</span>
               </li>
               <li>
                 <span>Comprehensive SDK for developers</span>
+              </li>
+              <li>
+                <span>Integrated Fault proof System (Optional)</span>
+              </li>
+              <li>
+                <span>Blockscout-based block explorer (Optional)</span>
               </li>
             </ul>
           </div>

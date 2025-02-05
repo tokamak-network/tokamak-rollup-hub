@@ -1,3 +1,5 @@
+import { THANOS_AUDIT_REPORT_URL } from '@/consts/urls';
+
 // TODO: documents link
 export const opDevResource = {
   type: 'op',
@@ -322,8 +324,7 @@ export const fqaContent = [
     content:
       'L2 Native Token Bridge in Thanos Stack has been audited by Sherlock. Please refer to {{Audit report}}.',
     links: {
-      'Audit report':
-        'https://drive.google.com/drive/u/1/folders/1JE8_aMI6y6-yxq88Tu0TxA06flEBSkWH',
+      'Audit report': THANOS_AUDIT_REPORT_URL,
     },
   },
   {

@@ -13,3 +13,5 @@ export const MINI_BRIDGE_GITHUB_URL = 'https://github.com/tokamak-network/thanos
 export const TRH_USER_DOC_URL = 'https://docs.tokamak.network/home/service-guide/rollup-hub';
 export const FUNDING_REQUIREMENTS_URL =
   'https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/deploy-with-aws/prerequisites#id-1.-funding-requirements';
+export const THANOS_AUDIT_REPORT_URL =
+  'https://github.com/tokamak-network/tokamak-thanos/blob/main/packages/tokamak/contracts-bedrock/audit-report/Thanos_L2_Native_Token_Bridge_Audit_Report.pdf';

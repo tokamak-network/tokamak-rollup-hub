@@ -170,7 +170,7 @@ export default function Deploy() {
                 <span>Valid Chain ID and Contract Address of custom token.</span>
               </li>
               <li>
-                <span>Funding requirments</span>
+                <span>Funding requirements</span>
                 <p className="mt-[10px] text-[15px]">
                   (Please refer&nbsp;
                   <a

@@ -98,7 +98,7 @@ export default function Deploy() {
             Thanos Sepolia testnet and mainnet are supported.
           </p>
         </div>
-        <div className="mt-[39px] flex justify-center md:flex-row md:gap-[40px]">
+        <div className="mt-[39px] md:flex md:flex-row md:justify-center md:gap-[40px]">
           {deployEnvironment.map(({ title, description, isDisabled, isBeta }, index) => {
             return (
               <DataDisplayCard

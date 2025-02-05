@@ -12,7 +12,15 @@ import githubIconLight from '@/public/icon-github-light.svg';
 import docsIconLight from '@/public/icon-docs-light.svg';
 import githubIconDark from '@/public/icon-github-dark.svg';
 import docsIconDark from '@/public/icon-docs-dark.svg';
-import { TOKAMAK_DISCORD_URL } from '@/consts/urls';
+import {
+  DEPLOYMENT_GUIDE_URL,
+  HELP_FORM_URL,
+  MINI_BRIDGE_GITHUB_URL,
+  MINI_BRIDGE_GUIDE_URL,
+  ROLLUP_CONFIG_FILE_URL,
+  TOKAMAK_DISCORD_URL,
+  TROUBLESHOOTING_URL,
+} from '@/consts/urls';
 
 // TODO: documents link
 export default function DeployMainnetPage() {
@@ -94,7 +102,7 @@ export default function DeployMainnetPage() {
             <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
               Please refer&nbsp;
               <a
-                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deployment-configuration-parameters"
+                href={ROLLUP_CONFIG_FILE_URL}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-tokamak-blue underline underline-offset-[4px]"
@@ -124,7 +132,7 @@ export default function DeployMainnetPage() {
         <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
           You can access the deployment guide&nbsp;
           <a
-            href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deploy-with-aws"
+            href={DEPLOYMENT_GUIDE_URL}
             target="_blank"
             rel="noreferrer noopener"
             className="text-tokamak-blue underline underline-offset-[4px]"
@@ -152,7 +160,7 @@ export default function DeployMainnetPage() {
             <div className="flex gap-[30px]">
               {/* GitHub Icon */}
               <a
-                href="https://github.com/tokamak-network/trh-op-bridge"
+                href={MINI_BRIDGE_GITHUB_URL}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
@@ -174,7 +182,7 @@ export default function DeployMainnetPage() {
 
               {/* Docs Icon */}
               <a
-                href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/additional-features/mini-bridge/deployment-guide"
+                href={MINI_BRIDGE_GUIDE_URL}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="mt-[24px] flex cursor-pointer items-center gap-[6px]"
@@ -232,7 +240,7 @@ export default function DeployMainnetPage() {
           <p className="text-center text-[18px] text-[#7E7E8F] dark:text-trh-gray">
             Reach out for assistance{' '}
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc6pHHABsnIZ2MvcEa57VCtSNTRXHAaFjBLQYf1LbiMB_81OA/viewform"
+              href={HELP_FORM_URL}
               target="_blank"
               rel="noreferrer noopener"
               className="text-tokamak-blue underline underline-offset-[4px]"
@@ -241,14 +249,14 @@ export default function DeployMainnetPage() {
             </a>{' '}
             or visit our{' '}
             <a
-              href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/troubleshooting"
+              href={TROUBLESHOOTING_URL}
               target="_blank"
               rel="noreferrer noopener"
               className="text-tokamak-blue underline underline-offset-[4px]"
             >
               troubleshooting
-            </a>
-            {' '}and {' '}
+            </a>{' '}
+            and{' '}
             <a
               href={TOKAMAK_DISCORD_URL}
               target="_blank"
@@ -256,7 +264,8 @@ export default function DeployMainnetPage() {
               className="text-tokamak-blue underline underline-offset-[4px]"
             >
               Discord
-            </a>.
+            </a>
+            .
           </p>
         </div>
         <div className="mb-[18px] text-center text-[21px] font-semibold">

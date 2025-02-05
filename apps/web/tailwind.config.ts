@@ -144,6 +144,7 @@ const config: Config = {
     },
     fontFamily: {
       sans: ['Proxima Nova', ...fontFamily.sans],
+      georgia: ['Georgia', 'serif'],
     },
   },
   plugins: [

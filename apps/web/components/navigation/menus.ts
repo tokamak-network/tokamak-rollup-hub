@@ -1,3 +1,5 @@
+import { TRH_USER_DOC_URL } from '@/consts/urls';
+
 interface ItemInfo {
   name: string;
   href?: string;
@@ -30,7 +32,7 @@ export const menus: ItemInfo[] = [
       {
         name: 'User Guide',
         externalLink: true,
-        href: 'https://docs.tokamak.network/home/service-guide/rollup-hub',
+        href: TRH_USER_DOC_URL,
       },
       {
         name: 'Get Help',

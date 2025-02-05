@@ -13,6 +13,7 @@ interface FormInputProps {
   required: boolean;
   errors?: string[];
   address?: `0x${string}` | undefined;
+  tooltip?: string;
 }
 
 export function FormInput({
@@ -55,10 +56,13 @@ export function FormInput({
       <span className="text-[#7E7E8F] dark:text-[#7D899A]">{label}</span>
       <div
         className={clsx(
+          'flex items-center gap-2 rounded-md px-[15px] py-[10px] outline-none ring-1 ring-[#E8EDF2] dark:bg-[#080A0E] dark:ring-[#192232]',
           {
-            'ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:ring-2': errorState,
+            'ring-1 ring-[#FD3D51] focus-within:ring-[#FD3D51] hover:shadow-[0_0_0_2px_#FD3D51] dark:ring-[#FD3D51]':
+              errorState,
+            'focus-within:ring-tokamak-blue-dark dark:focus-within:ring-tokamak-blue-dark':
+              !errorState,
           },
-          'flex items-center gap-2 rounded-md border-none px-[15px] py-[10px] outline-none ring-1 ring-[#E8EDF2] focus-within:ring-tokamak-blue dark:bg-[#080A0E] dark:ring-[#303F5A]',
         )}
       >
         <input
@@ -70,6 +74,10 @@ export function FormInput({
           onChange={handleInputChange}
           required={required}
           className="w-full bg-transparent caret-tokamak-blue outline-none placeholder:text-[#626D7D] [&::-webkit-inner-spin-button]:appearance-none"
+          onInvalid={(e) =>
+            (e.target as HTMLInputElement).setCustomValidity('This field is required.')
+          }
+          onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
         />
         <button
           className={clsx({
@@ -84,7 +92,7 @@ export function FormInput({
             <Image
               className="opacity-25 light:invert dark:opacity-50"
               src={CircleCancel}
-              alt="error"
+              alt="clear"
             />
           )}
         </button>

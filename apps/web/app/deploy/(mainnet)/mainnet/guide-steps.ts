@@ -5,6 +5,24 @@ export const leftSectionGuide: StepCardProps[] = [
     step: 1,
     descriptions: [
       {
+        text: 'Before deploying Devnet, you must first install and version check the required software to run the system. Please make sure you have the appropriate versions installed before proceeding with the deployment.',
+        fontStyle: 'medium',
+        margin: true,
+      },
+      {
+        text: "※ For Mac OS or Linux users, we've configured a script to allow for a one-step installation. After you Git clone the repo per Step 2 below, enter the following script to complete the Dependencies installation.",
+        fontStyle: 'normal',
+        margin: false,
+      },
+    ],
+    copyInputProps: {
+      text: './install-devnet-packages.sh',
+    },
+  },
+  {
+    step: 2,
+    descriptions: [
+      {
         text: 'Copy the repository below to the PCs you want to deploy locally.',
         fontStyle: 'medium',
         margin: false,
@@ -14,26 +32,6 @@ export const leftSectionGuide: StepCardProps[] = [
       text: 'git clone https://github.com/tokamak-network/tokamak-thanos',
     },
   },
-  {
-    step: 2,
-    descriptions: [
-      {
-        text: 'Before deploying Devnet, you must first install and version check the required software to run the system. Please make sure you have the appropriate versions installed before proceeding with the deployment.',
-        fontStyle: 'medium',
-        margin: true,
-      },
-      {
-        text: "※ For Mac OS or Linux users, we've configured a script to allow for a one-step installation.",
-        fontStyle: 'normal',
-        margin: false,
-      },
-    ],
-    copyInputProps: {
-      text: 'cd tokamak-thanos\n\
-./install-devnet-packages.sh',
-    },
-  },
-
   {
     step: 3,
     descriptions: [

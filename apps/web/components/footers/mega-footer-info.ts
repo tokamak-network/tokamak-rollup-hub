@@ -1,3 +1,5 @@
+import { TOKAMAK_DISCORD_URL } from '@/consts/urls';
+
 interface MultiLink {
   items: Item[];
 }
@@ -75,7 +77,7 @@ export const megaFooterCategorys: Category[] = [
       },
       {
         name: 'Discord',
-        link: 'https://discord.com/invite/J4chV2zuAK',
+        link: TOKAMAK_DISCORD_URL,
       },
       {
         name: 'Telegram (EN)',

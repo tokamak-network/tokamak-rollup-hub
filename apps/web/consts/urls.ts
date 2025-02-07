@@ -1,4 +1,4 @@
-export const TOKAMAK_DISCORD_URL = 'https://discord.gg/UbFFKucu';
+export const TOKAMAK_DISCORD_URL = 'https://discord.gg/J5jC9gJpYb';
 export const ROLLUP_CONFIG_FILE_URL =
   'https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/deployment-configuration-parameters';
 export const DEPLOYMENT_GUIDE_URL =

@@ -5,9 +5,9 @@ import Symbol from '../../public/symbol-trh.svg';
 import TokamakRollupHub from '../../public/tokamakRollupHub-nav.svg';
 import { NavMenu } from './global-nav-menu';
 import { BurgerBtn } from '../buttons/burger-btn';
-import { WalletBoard } from '@/app/connect-wallet/wallet-board';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
+import VersionDropDownComponent from './version-dropdown';
 
 export default function GlobalNav() {
   const [isScroll, setIsScroll] = useState(false);
@@ -50,11 +50,13 @@ export default function GlobalNav() {
           />
         </Link>
       </div>
-      <nav className="absolute left-[50%] ml-[-156px]">
+      <nav className="absolute right-[228px]">
         <NavMenu />
       </nav>
+      <div>
+        <VersionDropDownComponent />
+      </div>
       <div className="z-10 flex items-center gap-4">
-        <WalletBoard />
         <BurgerBtn />
       </div>
     </div>

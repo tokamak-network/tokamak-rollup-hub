@@ -15,3 +15,5 @@ export const FUNDING_REQUIREMENTS_URL =
   'https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/deploy-with-aws/prerequisites#id-1.-funding-requirements';
 export const THANOS_AUDIT_REPORT_URL =
   'https://github.com/tokamak-network/tokamak-thanos/blob/main/packages/tokamak/contracts-bedrock/audit-report/Thanos_L2_Native_Token_Bridge_Audit_Report.pdf';
+
+export const TRH_V2_URL = 'https://dev-rolluphub.vercel.app/';

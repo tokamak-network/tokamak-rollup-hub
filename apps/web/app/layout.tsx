@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#FAFBFC] text-[#1C1C1C] *:transition-colors dark:bg-black dark:text-white">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <Web3Providers>
             <GlobalNav />
             <div className="min-h-[calc(100vh-78px)]">

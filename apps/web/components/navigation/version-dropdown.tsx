@@ -22,7 +22,7 @@ export default function VersionDropDownComponent() {
   return (
     <div
       ref={dropdownRef}
-      className="absolute right-[76px] top-5 cursor-pointer flex-col items-start gap-2.5 rounded-[8px] border border-[#E8EDF2] bg-white py-[9px] md:right-[30px] md:flex"
+      className="absolute right-[76px] top-5 flex cursor-pointer flex-col items-start gap-2.5 rounded-[8px] border border-[#E8EDF2] bg-white py-[9px] md:right-[30px]"
     >
       <div
         className="flex cursor-pointer items-center gap-[12px] bg-white px-[12px]"

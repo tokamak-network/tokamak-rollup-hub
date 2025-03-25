@@ -114,7 +114,7 @@ export function FormMainnet() {
                   <div className="text-center">
                     Please provide the token address of the ERC20 token. Refer{' '}
                     <a
-                      href="https://docs.tokamak.network/home/~/changes/agYOWEeK7NUEeofss2bX/service-guide/rollup-hub/mainnet/deployment-configuration-parameters?r=Bh1VAMnTuMd0VgUBzoKr"
+                      href="https://docs.tokamak.network/home/service-guide/rollup-hub/mainnet-beta/deployment-configuration-parameters"
                       target="_blank"
                       rel="noreferrer noopener"
                       className="text-tokamak-blue underline underline-offset-[3px]"

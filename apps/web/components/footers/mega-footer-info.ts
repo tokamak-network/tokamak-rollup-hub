@@ -56,7 +56,7 @@ export const megaFooterCategorys: Category[] = [
     items: [
       {
         name: 'Team',
-        link: 'https://www.tokamak.network/about',
+        link: 'https://www.tokamak.network/about/team',
       },
       {
         name: 'Onboarding',
